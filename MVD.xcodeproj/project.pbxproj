@@ -11,7 +11,6 @@
 		B90A92651859C8AA00BFE4CD /* HumanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90A92641859C8AA00BFE4CD /* HumanCell.xib */; };
 		B90A92681859C9BF00BFE4CD /* HumanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A92671859C9BF00BFE4CD /* HumanCell.m */; };
 		B90A926C1859CCE600BFE4CD /* HumanInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A926B1859CCE600BFE4CD /* HumanInformation.m */; };
-		B90A92781859DE9200BFE4CD /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B90A92771859DE9200BFE4CD /* 3.png */; };
 		B90A9280185A033D00BFE4CD /* HumanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A927E185A033D00BFE4CD /* HumanViewController.m */; };
 		B90A928418630CEC00BFE4CD /* HumanNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B90A928318630CEC00BFE4CD /* HumanNameCell.xib */; };
 		B90A928718630D5F00BFE4CD /* HumanNameCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A928618630D5F00BFE4CD /* HumanNameCell.m */; };
@@ -19,16 +18,66 @@
 		B90A928C18630E4600BFE4CD /* RankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B90A928B18630E4600BFE4CD /* RankCell.m */; };
 		B919D51718B41F8A00AFC0A2 /* BiographyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B919D51518B41F8A00AFC0A2 /* BiographyViewController.m */; };
 		B919D51818B41F8A00AFC0A2 /* BiographyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B919D51618B41F8A00AFC0A2 /* BiographyViewController.xib */; };
-		B919D51A18B4212700AFC0A2 /* карта.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D51918B4212700AFC0A2 /* карта.png */; };
 		B919D51D18B42ED300AFC0A2 /* ClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = B919D51C18B42ED300AFC0A2 /* ClipView.m */; };
 		B919D52018B6BAA500AFC0A2 /* BiographyUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = B919D51F18B6BAA500AFC0A2 /* BiographyUnitView.m */; };
 		B919D52218B6BAB900AFC0A2 /* BiographyUnitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B919D52118B6BAB900AFC0A2 /* BiographyUnitView.xib */; };
-		B92250A41834D72700B09C30 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B92250A31834D72700B09C30 /* TestViewController.m */; };
+		B919D56518B6C6EB00AFC0A2 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53018B6C6EB00AFC0A2 /* 1.png */; };
+		B919D56618B6C6EB00AFC0A2 /* 122.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53118B6C6EB00AFC0A2 /* 122.png */; };
+		B919D56718B6C6EB00AFC0A2 /* 123.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53218B6C6EB00AFC0A2 /* 123.png */; };
+		B919D56818B6C6EB00AFC0A2 /* 147591.b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B919D53318B6C6EB00AFC0A2 /* 147591.b.jpg */; };
+		B919D56918B6C6EB00AFC0A2 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53418B6C6EB00AFC0A2 /* 2.png */; };
+		B919D56A18B6C6EB00AFC0A2 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53518B6C6EB00AFC0A2 /* 3.png */; };
+		B919D56B18B6C6EB00AFC0A2 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B919D53618B6C6EB00AFC0A2 /* background.jpg */; };
+		B919D56C18B6C6EB00AFC0A2 /* background_tab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B919D53718B6C6EB00AFC0A2 /* background_tab.jpg */; };
+		B919D56D18B6C6EB00AFC0A2 /* grayBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B919D53818B6C6EB00AFC0A2 /* grayBackground.jpg */; };
+		B919D56E18B6C6EB00AFC0A2 /* icon-person-add.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53918B6C6EB00AFC0A2 /* icon-person-add.png */; };
+		B919D56F18B6C6EB00AFC0A2 /* IMG_0792.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B919D53A18B6C6EB00AFC0A2 /* IMG_0792.PNG */; };
+		B919D57018B6C6EB00AFC0A2 /* mchs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B919D53B18B6C6EB00AFC0A2 /* mchs.jpg */; };
+		B919D57118B6C6EB00AFC0A2 /* message-512.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53C18B6C6EB00AFC0A2 /* message-512.png */; };
+		B919D57218B6C6EB00AFC0A2 /* mvd_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53D18B6C6EB00AFC0A2 /* mvd_dark.png */; };
+		B919D57318B6C6EB00AFC0A2 /* mvdFrame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B919D53E18B6C6EB00AFC0A2 /* mvdFrame.jpg */; };
+		B919D57418B6C6EB00AFC0A2 /* p.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D53F18B6C6EB00AFC0A2 /* p.png */; };
+		B919D57518B6C6EB00AFC0A2 /* photo_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54018B6C6EB00AFC0A2 /* photo_frame.png */; };
+		B919D57618B6C6EB00AFC0A2 /* аналитика статистика.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54118B6C6EB00AFC0A2 /* аналитика статистика.png */; };
+		B919D57718B6C6EB00AFC0A2 /* биография.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54218B6C6EB00AFC0A2 /* биография.png */; };
+		B919D57818B6C6EB00AFC0A2 /* в кругу друзей.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54318B6C6EB00AFC0A2 /* в кругу друзей.png */; };
+		B919D57918B6C6EB00AFC0A2 /* герб мчс.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54418B6C6EB00AFC0A2 /* герб мчс.png */; };
+		B919D57A18B6C6EB00AFC0A2 /* герб мэр.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54518B6C6EB00AFC0A2 /* герб мэр.png */; };
+		B919D57B18B6C6EB00AFC0A2 /* домой.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54618B6C6EB00AFC0A2 /* домой.png */; };
+		B919D57C18B6C6EB00AFC0A2 /* домой@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54718B6C6EB00AFC0A2 /* домой@2x.png */; };
+		B919D57D18B6C6EB00AFC0A2 /* доходы.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54818B6C6EB00AFC0A2 /* доходы.png */; };
+		B919D57E18B6C6EB00AFC0A2 /* жилая недвижимость.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54918B6C6EB00AFC0A2 /* жилая недвижимость.png */; };
+		B919D57F18B6C6EB00AFC0A2 /* звезда.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54A18B6C6EB00AFC0A2 /* звезда.png */; };
+		B919D58018B6C6EB00AFC0A2 /* земельные участки.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54B18B6C6EB00AFC0A2 /* земельные участки.png */; };
+		B919D58118B6C6EB00AFC0A2 /* иконка.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54C18B6C6EB00AFC0A2 /* иконка.png */; };
+		B919D58218B6C6EB00AFC0A2 /* история просмотров@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54D18B6C6EB00AFC0A2 /* история просмотров@2x.png */; };
+		B919D58318B6C6EB00AFC0A2 /* история.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54E18B6C6EB00AFC0A2 /* история.png */; };
+		B919D58418B6C6EB00AFC0A2 /* кадры.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54F18B6C6EB00AFC0A2 /* кадры.png */; };
+		B919D58518B6C6EB00AFC0A2 /* карта.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55018B6C6EB00AFC0A2 /* карта.png */; };
+		B919D58618B6C6EB00AFC0A2 /* награждены.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55118B6C6EB00AFC0A2 /* награждены.png */; };
+		B919D58718B6C6EB00AFC0A2 /* настройки@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55218B6C6EB00AFC0A2 /* настройки@2x.png */; };
+		B919D58818B6C6EB00AFC0A2 /* обновление@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55318B6C6EB00AFC0A2 /* обновление@2x.png */; };
+		B919D58918B6C6EB00AFC0A2 /* Описание_главы.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55418B6C6EB00AFC0A2 /* Описание_главы.png */; };
+		B919D58A18B6C6EB00AFC0A2 /* персон в базе.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55518B6C6EB00AFC0A2 /* персон в базе.png */; };
+		B919D58B18B6C6EB00AFC0A2 /* погон.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55618B6C6EB00AFC0A2 /* погон.png */; };
+		B919D58C18B6C6EB00AFC0A2 /* подарить.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55718B6C6EB00AFC0A2 /* подарить.png */; };
+		B919D58D18B6C6EB00AFC0A2 /* подписка.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55818B6C6EB00AFC0A2 /* подписка.png */; };
+		B919D58E18B6C6EB00AFC0A2 /* поиск.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55918B6C6EB00AFC0A2 /* поиск.png */; };
+		B919D58F18B6C6EB00AFC0A2 /* поиск@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55A18B6C6EB00AFC0A2 /* поиск@2x.png */; };
+		B919D59018B6C6EB00AFC0A2 /* поиск_карта.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55B18B6C6EB00AFC0A2 /* поиск_карта.png */; };
+		B919D59118B6C6EB00AFC0A2 /* Путов.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B919D55C18B6C6EB00AFC0A2 /* Путов.jpg */; };
+		B919D59218B6C6EB00AFC0A2 /* рейтинг.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55D18B6C6EB00AFC0A2 /* рейтинг.png */; };
+		B919D59318B6C6EB00AFC0A2 /* сми.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55E18B6C6EB00AFC0A2 /* сми.png */; };
+		B919D59418B6C6EB00AFC0A2 /* стрелка.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55F18B6C6EB00AFC0A2 /* стрелка.png */; };
+		B919D59518B6C6EB00AFC0A2 /* стрелка_вправо.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D56018B6C6EB00AFC0A2 /* стрелка_вправо.png */; };
+		B919D59618B6C6EB00AFC0A2 /* стрелочка светлая.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D56118B6C6EB00AFC0A2 /* стрелочка светлая.png */; };
+		B919D59718B6C6EB00AFC0A2 /* структура.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D56218B6C6EB00AFC0A2 /* структура.png */; };
+		B919D59818B6C6EB00AFC0A2 /* транспорт.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D56318B6C6EB00AFC0A2 /* транспорт.png */; };
+		B919D59918B6C6EB00AFC0A2 /* уволен2.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D56418B6C6EB00AFC0A2 /* уволен2.png */; };
 		B92250A61834D87700B09C30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92250A51834D87700B09C30 /* QuartzCore.framework */; };
 		B9306E2D186CE4760002678A /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9306E2C186CE4760002678A /* PointView.m */; };
 		B9306E31186CFB3F0002678A /* MinistryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9306E2F186CFB3F0002678A /* MinistryViewController.m */; };
 		B9306E32186CFB3F0002678A /* MinistryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9306E30186CFB3F0002678A /* MinistryViewController.xib */; };
-		B9381AC9188DD4A100019552 /* стрелка_вправо.png in Resources */ = {isa = PBXBuildFile; fileRef = B9381AC8188DD4A100019552 /* стрелка_вправо.png */; };
 		B95C075018AC368B00BAD18C /* MinistryInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B95C074F18AC368B00BAD18C /* MinistryInformation.m */; };
 		B95C075518ACE0DE00BAD18C /* MinistryStructureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B95C075318ACE0DE00BAD18C /* MinistryStructureViewController.m */; };
 		B95C075618ACE0DE00BAD18C /* MinistryStructureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95C075418ACE0DE00BAD18C /* MinistryStructureViewController.xib */; };
@@ -40,64 +89,23 @@
 		B95C076618ACFBB900BAD18C /* CounterComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B95C076518ACFBB900BAD18C /* CounterComponentView.m */; };
 		B95C076818ACFF4500BAD18C /* AnalyticsInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B95C076718ACFF4500BAD18C /* AnalyticsInfoCell.xib */; };
 		B95C076B18ACFFA800BAD18C /* AnalyticaInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B95C076A18ACFFA800BAD18C /* AnalyticaInfoCell.m */; };
-		B95C076D18AD053A00BAD18C /* Описание_главы.png in Resources */ = {isa = PBXBuildFile; fileRef = B95C076C18AD053A00BAD18C /* Описание_главы.png */; };
-		B9903D09189BD55D003E8F5F /* поиск_карта.png in Resources */ = {isa = PBXBuildFile; fileRef = B9903D08189BD55D003E8F5F /* поиск_карта.png */; };
 		B9903D0E189BD5B4003E8F5F /* ATPictureDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9903D0D189BD5B4003E8F5F /* ATPictureDescriptionViewController.m */; };
 		B9903D11189BD62A003E8F5F /* UIImage+resize.m in Sources */ = {isa = PBXBuildFile; fileRef = B9903D10189BD62A003E8F5F /* UIImage+resize.m */; };
-		B9903D15189BE056003E8F5F /* appIcon@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9903D14189BE056003E8F5F /* appIcon@2x.jpg */; };
-		B9903D17189EA8FE003E8F5F /* иконка.png in Resources */ = {isa = PBXBuildFile; fileRef = B9903D16189EA8FE003E8F5F /* иконка.png */; };
 		B9903D1C18A432A6003E8F5F /* MinistryAnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9903D1A18A432A6003E8F5F /* MinistryAnalyticsViewController.m */; };
 		B9903D1D18A432A6003E8F5F /* MinistryAnalyticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9903D1B18A432A6003E8F5F /* MinistryAnalyticsViewController.xib */; };
-		B9903D2218A43B39003E8F5F /* награждены.png in Resources */ = {isa = PBXBuildFile; fileRef = B9903D1E18A43B39003E8F5F /* награждены.png */; };
-		B9903D2318A43B39003E8F5F /* рейтинг.png in Resources */ = {isa = PBXBuildFile; fileRef = B9903D1F18A43B39003E8F5F /* рейтинг.png */; };
-		B9903D2418A43B39003E8F5F /* уволен2.png in Resources */ = {isa = PBXBuildFile; fileRef = B9903D2018A43B39003E8F5F /* уволен2.png */; };
-		B9903D2518A43B39003E8F5F /* icon-person-add.png in Resources */ = {isa = PBXBuildFile; fileRef = B9903D2118A43B39003E8F5F /* icon-person-add.png */; };
-		B99BCC511887DF1D000DA9B4 /* домой@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC501887DF1D000DA9B4 /* домой@2x.png */; };
-		B99BCC531887E051000DA9B4 /* поиск@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC521887E051000DA9B4 /* поиск@2x.png */; };
-		B99BCC551887E287000DA9B4 /* настройки@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC541887E287000DA9B4 /* настройки@2x.png */; };
-		B99BCC591887E2B0000DA9B4 /* обновление@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC581887E2B0000DA9B4 /* обновление@2x.png */; };
-		B99BCC5B18894C1E000DA9B4 /* структура.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC5A18894C1E000DA9B4 /* структура.png */; };
-		B99BCC5D18894C2D000DA9B4 /* кадры.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC5C18894C2D000DA9B4 /* кадры.png */; };
-		B99BCC5F18894C5D000DA9B4 /* аналитика статистика.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC5E18894C5D000DA9B4 /* аналитика статистика.png */; };
 		B99BCC6118894CCC000DA9B4 /* история.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC6018894CCC000DA9B4 /* история.png */; };
-		B99BCC6318894E5E000DA9B4 /* стрелочка светлая.png in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC6218894E5E000DA9B4 /* стрелочка светлая.png */; };
 		B99BCC69188DCD76000DA9B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99BCC67188DCD76000DA9B4 /* Main.storyboard */; };
 		B9AA6221189B0A7200D3244D /* AnalyticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AA6220189B0A7200D3244D /* AnalyticsViewController.m */; };
 		B9AA6224189BA92300D3244D /* RectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9AA6223189BA92300D3244D /* RectButton.m */; };
 		B9AD5EB71891B86300093C7A /* HumanSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EB61891B86300093C7A /* HumanSectionHeader.xib */; };
-		B9AD5EB91891BFE400093C7A /* p.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EB81891BFE400093C7A /* p.png */; };
-		B9AD5EBE1891E00A00093C7A /* персон в базе.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EBA1891E00A00093C7A /* персон в базе.png */; };
-		B9AD5EBF1891E00A00093C7A /* подписка.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EBB1891E00A00093C7A /* подписка.png */; };
-		B9AD5EC01891E00A00093C7A /* подарить.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EBC1891E00A00093C7A /* подарить.png */; };
-		B9AD5EC11891E00A00093C7A /* message-512.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EBD1891E00A00093C7A /* message-512.png */; };
-		B9AD5EC318928E5400093C7A /* звезда.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EC218928E5400093C7A /* звезда.png */; };
-		B9AD5EC6189297E500093C7A /* в кругу друзей.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EC4189297E500093C7A /* в кругу друзей.png */; };
-		B9AD5EC7189297E500093C7A /* биография.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EC5189297E500093C7A /* биография.png */; };
-		B9AD5EC91892AC8100093C7A /* история просмотров@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9AD5EC81892AC8100093C7A /* история просмотров@2x.png */; };
-		B9B5820218662B4900653AE5 /* IMG_0792.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B9B581FC18662B4900653AE5 /* IMG_0792.PNG */; };
-		B9B5820318662B4900653AE5 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B581FD18662B4900653AE5 /* 2.png */; };
-		B9B5820418662B4900653AE5 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B581FE18662B4900653AE5 /* 1.png */; };
-		B9B5820518662B4900653AE5 /* mchs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B581FF18662B4900653AE5 /* mchs.jpg */; };
-		B9B5820618662B4900653AE5 /* mvdFrame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B5820018662B4900653AE5 /* mvdFrame.jpg */; };
-		B9B5820718662B4900653AE5 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B5820118662B4900653AE5 /* background.jpg */; };
-		B9B5820918662DF900653AE5 /* grayBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B5820818662DF900653AE5 /* grayBackground.jpg */; };
-		B9B5820B18662FFB00653AE5 /* mvd_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B5820A18662FFB00653AE5 /* mvd_dark.png */; };
-		B9B5820D1866366000653AE5 /* background_tab.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B5820C1866366000653AE5 /* background_tab.jpg */; };
-		B9B5820F18663BD700653AE5 /* photo_frame.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B5820E18663BD700653AE5 /* photo_frame.png */; };
 		B9B5821218663FB700653AE5 /* CommonInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B5821118663FB700653AE5 /* CommonInfoCell.xib */; };
 		B9B582151866408200653AE5 /* CommonInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B582141866408200653AE5 /* CommonInfoCell.m */; };
-		B9B58223186641A600653AE5 /* сми.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B5821F186641A600653AE5 /* сми.png */; };
-		B9B58225186641A600653AE5 /* доходы.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B58221186641A600653AE5 /* доходы.png */; };
 		B9B582B6186BA08A00653AE5 /* HumanIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B582B4186BA08A00653AE5 /* HumanIncomeViewController.m */; };
 		B9B582B7186BA08A00653AE5 /* HumanIncomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B582B5186BA08A00653AE5 /* HumanIncomeViewController.xib */; };
-		B9B582B9186BAD3800653AE5 /* Путов.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B582B8186BAD3800653AE5 /* Путов.jpg */; };
-		B9B582BB186BAE1B00653AE5 /* погон.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B582BA186BAE1B00653AE5 /* погон.png */; };
 		B9B582BD186BAF8B00653AE5 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B582BC186BAF8B00653AE5 /* NewsCell.xib */; };
 		B9B582C0186BAFA500653AE5 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B582BF186BAFA500653AE5 /* NewsCell.m */; };
 		B9B582C5186BB23000653AE5 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B582C3186BB23000653AE5 /* NewsViewController.m */; };
 		B9B582C6186BB23000653AE5 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B582C4186BB23000653AE5 /* NewsViewController.xib */; };
-		B9B582C8186BBB4500653AE5 /* 147591.b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9B582C7186BBB4500653AE5 /* 147591.b.jpg */; };
-		B9B582CA186BBBF000653AE5 /* стрелка.png in Resources */ = {isa = PBXBuildFile; fileRef = B9B582C9186BBBF000653AE5 /* стрелка.png */; };
 		B9B5EEE21829545200E8B8F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B5EEE11829545200E8B8F2 /* Foundation.framework */; };
 		B9B5EEE41829545200E8B8F2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B5EEE31829545200E8B8F2 /* CoreGraphics.framework */; };
 		B9B5EEE61829545200E8B8F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B5EEE51829545200E8B8F2 /* UIKit.framework */; };
@@ -131,7 +139,6 @@
 		B90A92671859C9BF00BFE4CD /* HumanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanCell.m; sourceTree = "<group>"; };
 		B90A926A1859CCE600BFE4CD /* HumanInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanInformation.h; sourceTree = "<group>"; };
 		B90A926B1859CCE600BFE4CD /* HumanInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanInformation.m; sourceTree = "<group>"; };
-		B90A92771859DE9200BFE4CD /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = ../../../../Downloads/3.png; sourceTree = "<group>"; };
 		B90A927D185A033D00BFE4CD /* HumanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanViewController.h; sourceTree = "<group>"; };
 		B90A927E185A033D00BFE4CD /* HumanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanViewController.m; sourceTree = "<group>"; };
 		B90A928318630CEC00BFE4CD /* HumanNameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HumanNameCell.xib; sourceTree = "<group>"; };
@@ -143,21 +150,70 @@
 		B919D51418B41F8A00AFC0A2 /* BiographyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiographyViewController.h; sourceTree = "<group>"; };
 		B919D51518B41F8A00AFC0A2 /* BiographyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiographyViewController.m; sourceTree = "<group>"; };
 		B919D51618B41F8A00AFC0A2 /* BiographyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiographyViewController.xib; sourceTree = "<group>"; };
-		B919D51918B4212700AFC0A2 /* карта.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "карта.png"; path = "Images/карта.png"; sourceTree = "<group>"; };
 		B919D51B18B42ED300AFC0A2 /* ClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipView.h; sourceTree = "<group>"; };
 		B919D51C18B42ED300AFC0A2 /* ClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipView.m; sourceTree = "<group>"; };
 		B919D51E18B6BAA500AFC0A2 /* BiographyUnitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiographyUnitView.h; sourceTree = "<group>"; };
 		B919D51F18B6BAA500AFC0A2 /* BiographyUnitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiographyUnitView.m; sourceTree = "<group>"; };
 		B919D52118B6BAB900AFC0A2 /* BiographyUnitView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BiographyUnitView.xib; sourceTree = "<group>"; };
-		B92250A21834D72700B09C30 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestViewController.h; path = ../../Carousel/TestViewController.h; sourceTree = "<group>"; };
-		B92250A31834D72700B09C30 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestViewController.m; path = ../../Carousel/TestViewController.m; sourceTree = "<group>"; };
+		B919D53018B6C6EB00AFC0A2 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		B919D53118B6C6EB00AFC0A2 /* 122.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 122.png; sourceTree = "<group>"; };
+		B919D53218B6C6EB00AFC0A2 /* 123.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 123.png; sourceTree = "<group>"; };
+		B919D53318B6C6EB00AFC0A2 /* 147591.b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 147591.b.jpg; sourceTree = "<group>"; };
+		B919D53418B6C6EB00AFC0A2 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		B919D53518B6C6EB00AFC0A2 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		B919D53618B6C6EB00AFC0A2 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		B919D53718B6C6EB00AFC0A2 /* background_tab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background_tab.jpg; sourceTree = "<group>"; };
+		B919D53818B6C6EB00AFC0A2 /* grayBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grayBackground.jpg; sourceTree = "<group>"; };
+		B919D53918B6C6EB00AFC0A2 /* icon-person-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-person-add.png"; sourceTree = "<group>"; };
+		B919D53A18B6C6EB00AFC0A2 /* IMG_0792.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0792.PNG; sourceTree = "<group>"; };
+		B919D53B18B6C6EB00AFC0A2 /* mchs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mchs.jpg; sourceTree = "<group>"; };
+		B919D53C18B6C6EB00AFC0A2 /* message-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message-512.png"; sourceTree = "<group>"; };
+		B919D53D18B6C6EB00AFC0A2 /* mvd_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mvd_dark.png; sourceTree = "<group>"; };
+		B919D53E18B6C6EB00AFC0A2 /* mvdFrame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mvdFrame.jpg; sourceTree = "<group>"; };
+		B919D53F18B6C6EB00AFC0A2 /* p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = p.png; sourceTree = "<group>"; };
+		B919D54018B6C6EB00AFC0A2 /* photo_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_frame.png; sourceTree = "<group>"; };
+		B919D54118B6C6EB00AFC0A2 /* аналитика статистика.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "аналитика статистика.png"; sourceTree = "<group>"; };
+		B919D54218B6C6EB00AFC0A2 /* биография.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "биография.png"; sourceTree = "<group>"; };
+		B919D54318B6C6EB00AFC0A2 /* в кругу друзей.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "в кругу друзей.png"; sourceTree = "<group>"; };
+		B919D54418B6C6EB00AFC0A2 /* герб мчс.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "герб мчс.png"; sourceTree = "<group>"; };
+		B919D54518B6C6EB00AFC0A2 /* герб мэр.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "герб мэр.png"; sourceTree = "<group>"; };
+		B919D54618B6C6EB00AFC0A2 /* домой.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "домой.png"; sourceTree = "<group>"; };
+		B919D54718B6C6EB00AFC0A2 /* домой@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "домой@2x.png"; sourceTree = "<group>"; };
+		B919D54818B6C6EB00AFC0A2 /* доходы.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "доходы.png"; sourceTree = "<group>"; };
+		B919D54918B6C6EB00AFC0A2 /* жилая недвижимость.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "жилая недвижимость.png"; sourceTree = "<group>"; };
+		B919D54A18B6C6EB00AFC0A2 /* звезда.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "звезда.png"; sourceTree = "<group>"; };
+		B919D54B18B6C6EB00AFC0A2 /* земельные участки.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "земельные участки.png"; sourceTree = "<group>"; };
+		B919D54C18B6C6EB00AFC0A2 /* иконка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "иконка.png"; sourceTree = "<group>"; };
+		B919D54D18B6C6EB00AFC0A2 /* история просмотров@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "история просмотров@2x.png"; sourceTree = "<group>"; };
+		B919D54E18B6C6EB00AFC0A2 /* история.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "история.png"; sourceTree = "<group>"; };
+		B919D54F18B6C6EB00AFC0A2 /* кадры.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "кадры.png"; sourceTree = "<group>"; };
+		B919D55018B6C6EB00AFC0A2 /* карта.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "карта.png"; sourceTree = "<group>"; };
+		B919D55118B6C6EB00AFC0A2 /* награждены.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "награждены.png"; sourceTree = "<group>"; };
+		B919D55218B6C6EB00AFC0A2 /* настройки@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "настройки@2x.png"; sourceTree = "<group>"; };
+		B919D55318B6C6EB00AFC0A2 /* обновление@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "обновление@2x.png"; sourceTree = "<group>"; };
+		B919D55418B6C6EB00AFC0A2 /* Описание_главы.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Описание_главы.png"; sourceTree = "<group>"; };
+		B919D55518B6C6EB00AFC0A2 /* персон в базе.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "персон в базе.png"; sourceTree = "<group>"; };
+		B919D55618B6C6EB00AFC0A2 /* погон.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "погон.png"; sourceTree = "<group>"; };
+		B919D55718B6C6EB00AFC0A2 /* подарить.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "подарить.png"; sourceTree = "<group>"; };
+		B919D55818B6C6EB00AFC0A2 /* подписка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "подписка.png"; sourceTree = "<group>"; };
+		B919D55918B6C6EB00AFC0A2 /* поиск.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "поиск.png"; sourceTree = "<group>"; };
+		B919D55A18B6C6EB00AFC0A2 /* поиск@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "поиск@2x.png"; sourceTree = "<group>"; };
+		B919D55B18B6C6EB00AFC0A2 /* поиск_карта.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "поиск_карта.png"; sourceTree = "<group>"; };
+		B919D55C18B6C6EB00AFC0A2 /* Путов.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Путов.jpg"; sourceTree = "<group>"; };
+		B919D55D18B6C6EB00AFC0A2 /* рейтинг.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "рейтинг.png"; sourceTree = "<group>"; };
+		B919D55E18B6C6EB00AFC0A2 /* сми.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "сми.png"; sourceTree = "<group>"; };
+		B919D55F18B6C6EB00AFC0A2 /* стрелка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "стрелка.png"; sourceTree = "<group>"; };
+		B919D56018B6C6EB00AFC0A2 /* стрелка_вправо.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "стрелка_вправо.png"; sourceTree = "<group>"; };
+		B919D56118B6C6EB00AFC0A2 /* стрелочка светлая.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "стрелочка светлая.png"; sourceTree = "<group>"; };
+		B919D56218B6C6EB00AFC0A2 /* структура.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "структура.png"; sourceTree = "<group>"; };
+		B919D56318B6C6EB00AFC0A2 /* транспорт.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "транспорт.png"; sourceTree = "<group>"; };
+		B919D56418B6C6EB00AFC0A2 /* уволен2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "уволен2.png"; sourceTree = "<group>"; };
 		B92250A51834D87700B09C30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B9306E2B186CE4760002678A /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
 		B9306E2C186CE4760002678A /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
 		B9306E2E186CFB3F0002678A /* MinistryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinistryViewController.h; sourceTree = "<group>"; };
 		B9306E2F186CFB3F0002678A /* MinistryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinistryViewController.m; sourceTree = "<group>"; };
 		B9306E30186CFB3F0002678A /* MinistryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MinistryViewController.xib; sourceTree = "<group>"; };
-		B9381AC8188DD4A100019552 /* стрелка_вправо.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "стрелка_вправо.png"; path = "Images/стрелка_вправо.png"; sourceTree = "<group>"; };
 		B95C074E18AC368B00BAD18C /* MinistryInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinistryInformation.h; path = Ministry/MinistryInformation.h; sourceTree = "<group>"; };
 		B95C074F18AC368B00BAD18C /* MinistryInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MinistryInformation.m; path = Ministry/MinistryInformation.m; sourceTree = "<group>"; };
 		B95C075218ACE0DE00BAD18C /* MinistryStructureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinistryStructureViewController.h; sourceTree = "<group>"; };
@@ -176,31 +232,15 @@
 		B95C076718ACFF4500BAD18C /* AnalyticsInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnalyticsInfoCell.xib; sourceTree = "<group>"; };
 		B95C076918ACFFA800BAD18C /* AnalyticaInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalyticaInfoCell.h; sourceTree = "<group>"; };
 		B95C076A18ACFFA800BAD18C /* AnalyticaInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalyticaInfoCell.m; sourceTree = "<group>"; };
-		B95C076C18AD053A00BAD18C /* Описание_главы.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Описание_главы.png"; path = "Images/Описание_главы.png"; sourceTree = "<group>"; };
 		B981D49818830CC3006A22BE /* MVD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MVD.entitlements; sourceTree = "<group>"; };
-		B9903D08189BD55D003E8F5F /* поиск_карта.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "поиск_карта.png"; path = "Images/поиск_карта.png"; sourceTree = "<group>"; };
 		B9903D0C189BD5B4003E8F5F /* ATPictureDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATPictureDescriptionViewController.h; sourceTree = "<group>"; };
 		B9903D0D189BD5B4003E8F5F /* ATPictureDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATPictureDescriptionViewController.m; sourceTree = "<group>"; };
 		B9903D0F189BD62A003E8F5F /* UIImage+resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+resize.h"; sourceTree = "<group>"; };
 		B9903D10189BD62A003E8F5F /* UIImage+resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+resize.m"; sourceTree = "<group>"; };
-		B9903D14189BE056003E8F5F /* appIcon@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "appIcon@2x.jpg"; sourceTree = "<group>"; };
-		B9903D16189EA8FE003E8F5F /* иконка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "иконка.png"; path = "Images/иконка.png"; sourceTree = "<group>"; };
 		B9903D1918A432A6003E8F5F /* MinistryAnalyticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinistryAnalyticsViewController.h; sourceTree = "<group>"; };
 		B9903D1A18A432A6003E8F5F /* MinistryAnalyticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinistryAnalyticsViewController.m; sourceTree = "<group>"; };
 		B9903D1B18A432A6003E8F5F /* MinistryAnalyticsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MinistryAnalyticsViewController.xib; sourceTree = "<group>"; };
-		B9903D1E18A43B39003E8F5F /* награждены.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "награждены.png"; path = "Images/награждены.png"; sourceTree = "<group>"; };
-		B9903D1F18A43B39003E8F5F /* рейтинг.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "рейтинг.png"; path = "Images/рейтинг.png"; sourceTree = "<group>"; };
-		B9903D2018A43B39003E8F5F /* уволен2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "уволен2.png"; path = "Images/уволен2.png"; sourceTree = "<group>"; };
-		B9903D2118A43B39003E8F5F /* icon-person-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-person-add.png"; path = "Images/icon-person-add.png"; sourceTree = "<group>"; };
-		B99BCC501887DF1D000DA9B4 /* домой@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "домой@2x.png"; path = "Images/домой@2x.png"; sourceTree = "<group>"; };
-		B99BCC521887E051000DA9B4 /* поиск@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "поиск@2x.png"; path = "Images/поиск@2x.png"; sourceTree = "<group>"; };
-		B99BCC541887E287000DA9B4 /* настройки@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "настройки@2x.png"; path = "Images/настройки@2x.png"; sourceTree = "<group>"; };
-		B99BCC581887E2B0000DA9B4 /* обновление@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "обновление@2x.png"; path = "Images/обновление@2x.png"; sourceTree = "<group>"; };
-		B99BCC5A18894C1E000DA9B4 /* структура.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "структура.png"; path = "Images/структура.png"; sourceTree = "<group>"; };
-		B99BCC5C18894C2D000DA9B4 /* кадры.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "кадры.png"; path = "Images/кадры.png"; sourceTree = "<group>"; };
-		B99BCC5E18894C5D000DA9B4 /* аналитика статистика.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "аналитика статистика.png"; path = "Images/аналитика статистика.png"; sourceTree = "<group>"; };
 		B99BCC6018894CCC000DA9B4 /* история.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "история.png"; path = "Images/история.png"; sourceTree = "<group>"; };
-		B99BCC6218894E5E000DA9B4 /* стрелочка светлая.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "стрелочка светлая.png"; path = "../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/4C1C0B81-396F-42D9-A00F-BB7F097FA443/стрелочка светлая.png"; sourceTree = "<group>"; };
 		B99BCC6B188DD003000DA9B4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B99BCC6C188DD003000DA9B4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B99BCC6D188DD003000DA9B4 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -209,43 +249,18 @@
 		B9AA6222189BA92200D3244D /* RectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RectButton.h; sourceTree = "<group>"; };
 		B9AA6223189BA92300D3244D /* RectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RectButton.m; sourceTree = "<group>"; };
 		B9AD5EB61891B86300093C7A /* HumanSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HumanSectionHeader.xib; sourceTree = "<group>"; };
-		B9AD5EB81891BFE400093C7A /* p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = p.png; path = Images/p.png; sourceTree = "<group>"; };
-		B9AD5EBA1891E00A00093C7A /* персон в базе.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "персон в базе.png"; path = "Images/персон в базе.png"; sourceTree = "<group>"; };
-		B9AD5EBB1891E00A00093C7A /* подписка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "подписка.png"; path = "Images/подписка.png"; sourceTree = "<group>"; };
-		B9AD5EBC1891E00A00093C7A /* подарить.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "подарить.png"; path = "Images/подарить.png"; sourceTree = "<group>"; };
-		B9AD5EBD1891E00A00093C7A /* message-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "message-512.png"; path = "Images/message-512.png"; sourceTree = "<group>"; };
-		B9AD5EC218928E5400093C7A /* звезда.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "звезда.png"; path = "Images/звезда.png"; sourceTree = "<group>"; };
-		B9AD5EC4189297E500093C7A /* в кругу друзей.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "в кругу друзей.png"; path = "Images/в кругу друзей.png"; sourceTree = "<group>"; };
-		B9AD5EC5189297E500093C7A /* биография.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "биография.png"; path = "Images/биография.png"; sourceTree = "<group>"; };
-		B9AD5EC81892AC8100093C7A /* история просмотров@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "история просмотров@2x.png"; path = "Images/история просмотров@2x.png"; sourceTree = "<group>"; };
-		B9B581FC18662B4900653AE5 /* IMG_0792.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = IMG_0792.PNG; path = Images/IMG_0792.PNG; sourceTree = "<group>"; };
-		B9B581FD18662B4900653AE5 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = Images/2.png; sourceTree = "<group>"; };
-		B9B581FE18662B4900653AE5 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Images/1.png; sourceTree = "<group>"; };
-		B9B581FF18662B4900653AE5 /* mchs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mchs.jpg; path = Images/mchs.jpg; sourceTree = "<group>"; };
-		B9B5820018662B4900653AE5 /* mvdFrame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mvdFrame.jpg; path = Images/mvdFrame.jpg; sourceTree = "<group>"; };
-		B9B5820118662B4900653AE5 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Images/background.jpg; sourceTree = "<group>"; };
-		B9B5820818662DF900653AE5 /* grayBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = grayBackground.jpg; path = Images/grayBackground.jpg; sourceTree = "<group>"; };
-		B9B5820A18662FFB00653AE5 /* mvd_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mvd_dark.png; path = Images/mvd_dark.png; sourceTree = "<group>"; };
-		B9B5820C1866366000653AE5 /* background_tab.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background_tab.jpg; path = Images/background_tab.jpg; sourceTree = "<group>"; };
-		B9B5820E18663BD700653AE5 /* photo_frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = photo_frame.png; path = Images/photo_frame.png; sourceTree = "<group>"; };
 		B9B5821118663FB700653AE5 /* CommonInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonInfoCell.xib; sourceTree = "<group>"; };
 		B9B582131866408200653AE5 /* CommonInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonInfoCell.h; sourceTree = "<group>"; };
 		B9B582141866408200653AE5 /* CommonInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonInfoCell.m; sourceTree = "<group>"; };
-		B9B5821F186641A600653AE5 /* сми.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "сми.png"; path = "Images/сми.png"; sourceTree = "<group>"; };
-		B9B58221186641A600653AE5 /* доходы.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "доходы.png"; path = "Images/доходы.png"; sourceTree = "<group>"; };
 		B9B582B3186BA08A00653AE5 /* HumanIncomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HumanIncomeViewController.h; path = ../HumanIncomeViewController.h; sourceTree = "<group>"; };
 		B9B582B4186BA08A00653AE5 /* HumanIncomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HumanIncomeViewController.m; path = ../HumanIncomeViewController.m; sourceTree = "<group>"; };
 		B9B582B5186BA08A00653AE5 /* HumanIncomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HumanIncomeViewController.xib; path = ../HumanIncomeViewController.xib; sourceTree = "<group>"; };
-		B9B582B8186BAD3800653AE5 /* Путов.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Путов.jpg"; path = "../../../../Desktop/Mephi/Work/для дениса/Путов.jpg"; sourceTree = "<group>"; };
-		B9B582BA186BAE1B00653AE5 /* погон.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "погон.png"; path = "../../../../Downloads/погон.png"; sourceTree = "<group>"; };
 		B9B582BC186BAF8B00653AE5 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		B9B582BE186BAFA500653AE5 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		B9B582BF186BAFA500653AE5 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
 		B9B582C2186BB23000653AE5 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		B9B582C3186BB23000653AE5 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		B9B582C4186BB23000653AE5 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
-		B9B582C7186BBB4500653AE5 /* 147591.b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 147591.b.jpg; path = ../../../../Downloads/147591.b.jpg; sourceTree = "<group>"; };
-		B9B582C9186BBBF000653AE5 /* стрелка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "стрелка.png"; path = "../../../../Downloads/стрелка.png"; sourceTree = "<group>"; };
 		B9B5EEDE1829545200E8B8F2 /* MVD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B5EEE11829545200E8B8F2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B9B5EEE31829545200E8B8F2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -342,55 +357,64 @@
 			name = Biography;
 			sourceTree = "<group>";
 		};
-		B922508F1834D39600B09C30 /* Images */ = {
+		B919D52F18B6C6EB00AFC0A2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B919D51918B4212700AFC0A2 /* карта.png */,
-				B95C076C18AD053A00BAD18C /* Описание_главы.png */,
-				B9903D1E18A43B39003E8F5F /* награждены.png */,
-				B9903D1F18A43B39003E8F5F /* рейтинг.png */,
-				B9903D2018A43B39003E8F5F /* уволен2.png */,
-				B9903D2118A43B39003E8F5F /* icon-person-add.png */,
-				B9903D16189EA8FE003E8F5F /* иконка.png */,
-				B9903D14189BE056003E8F5F /* appIcon@2x.jpg */,
-				B9903D08189BD55D003E8F5F /* поиск_карта.png */,
-				B9AD5EC81892AC8100093C7A /* история просмотров@2x.png */,
-				B9AD5EC4189297E500093C7A /* в кругу друзей.png */,
-				B9AD5EC5189297E500093C7A /* биография.png */,
-				B9AD5EC218928E5400093C7A /* звезда.png */,
-				B9AD5EBA1891E00A00093C7A /* персон в базе.png */,
-				B9AD5EBB1891E00A00093C7A /* подписка.png */,
-				B9AD5EBC1891E00A00093C7A /* подарить.png */,
-				B9AD5EBD1891E00A00093C7A /* message-512.png */,
-				B9AD5EB81891BFE400093C7A /* p.png */,
-				B9381AC8188DD4A100019552 /* стрелка_вправо.png */,
-				B99BCC5E18894C5D000DA9B4 /* аналитика статистика.png */,
-				B99BCC5C18894C2D000DA9B4 /* кадры.png */,
-				B99BCC5A18894C1E000DA9B4 /* структура.png */,
-				B99BCC541887E287000DA9B4 /* настройки@2x.png */,
-				B99BCC521887E051000DA9B4 /* поиск@2x.png */,
-				B99BCC581887E2B0000DA9B4 /* обновление@2x.png */,
-				B99BCC501887DF1D000DA9B4 /* домой@2x.png */,
-				B9B5821F186641A600653AE5 /* сми.png */,
-				B9B582C7186BBB4500653AE5 /* 147591.b.jpg */,
-				B9B582B8186BAD3800653AE5 /* Путов.jpg */,
-				B9B582C9186BBBF000653AE5 /* стрелка.png */,
-				B9B58221186641A600653AE5 /* доходы.png */,
-				B9B5820E18663BD700653AE5 /* photo_frame.png */,
-				B9B5820C1866366000653AE5 /* background_tab.jpg */,
-				B9B582BA186BAE1B00653AE5 /* погон.png */,
-				B9B5820A18662FFB00653AE5 /* mvd_dark.png */,
-				B9B5820818662DF900653AE5 /* grayBackground.jpg */,
-				B9B581FC18662B4900653AE5 /* IMG_0792.PNG */,
-				B9B581FD18662B4900653AE5 /* 2.png */,
-				B9B581FE18662B4900653AE5 /* 1.png */,
-				B9B581FF18662B4900653AE5 /* mchs.jpg */,
-				B9B5820018662B4900653AE5 /* mvdFrame.jpg */,
-				B9B5820118662B4900653AE5 /* background.jpg */,
-				B90A92771859DE9200BFE4CD /* 3.png */,
-				B99BCC6218894E5E000DA9B4 /* стрелочка светлая.png */,
+				B919D53018B6C6EB00AFC0A2 /* 1.png */,
+				B919D53118B6C6EB00AFC0A2 /* 122.png */,
+				B919D53218B6C6EB00AFC0A2 /* 123.png */,
+				B919D53318B6C6EB00AFC0A2 /* 147591.b.jpg */,
+				B919D53418B6C6EB00AFC0A2 /* 2.png */,
+				B919D53518B6C6EB00AFC0A2 /* 3.png */,
+				B919D53618B6C6EB00AFC0A2 /* background.jpg */,
+				B919D53718B6C6EB00AFC0A2 /* background_tab.jpg */,
+				B919D53818B6C6EB00AFC0A2 /* grayBackground.jpg */,
+				B919D53918B6C6EB00AFC0A2 /* icon-person-add.png */,
+				B919D53A18B6C6EB00AFC0A2 /* IMG_0792.PNG */,
+				B919D53B18B6C6EB00AFC0A2 /* mchs.jpg */,
+				B919D53C18B6C6EB00AFC0A2 /* message-512.png */,
+				B919D53D18B6C6EB00AFC0A2 /* mvd_dark.png */,
+				B919D53E18B6C6EB00AFC0A2 /* mvdFrame.jpg */,
+				B919D53F18B6C6EB00AFC0A2 /* p.png */,
+				B919D54018B6C6EB00AFC0A2 /* photo_frame.png */,
+				B919D54118B6C6EB00AFC0A2 /* аналитика статистика.png */,
+				B919D54218B6C6EB00AFC0A2 /* биография.png */,
+				B919D54318B6C6EB00AFC0A2 /* в кругу друзей.png */,
+				B919D54418B6C6EB00AFC0A2 /* герб мчс.png */,
+				B919D54518B6C6EB00AFC0A2 /* герб мэр.png */,
+				B919D54618B6C6EB00AFC0A2 /* домой.png */,
+				B919D54718B6C6EB00AFC0A2 /* домой@2x.png */,
+				B919D54818B6C6EB00AFC0A2 /* доходы.png */,
+				B919D54918B6C6EB00AFC0A2 /* жилая недвижимость.png */,
+				B919D54A18B6C6EB00AFC0A2 /* звезда.png */,
+				B919D54B18B6C6EB00AFC0A2 /* земельные участки.png */,
+				B919D54C18B6C6EB00AFC0A2 /* иконка.png */,
+				B919D54D18B6C6EB00AFC0A2 /* история просмотров@2x.png */,
+				B919D54E18B6C6EB00AFC0A2 /* история.png */,
+				B919D54F18B6C6EB00AFC0A2 /* кадры.png */,
+				B919D55018B6C6EB00AFC0A2 /* карта.png */,
+				B919D55118B6C6EB00AFC0A2 /* награждены.png */,
+				B919D55218B6C6EB00AFC0A2 /* настройки@2x.png */,
+				B919D55318B6C6EB00AFC0A2 /* обновление@2x.png */,
+				B919D55418B6C6EB00AFC0A2 /* Описание_главы.png */,
+				B919D55518B6C6EB00AFC0A2 /* персон в базе.png */,
+				B919D55618B6C6EB00AFC0A2 /* погон.png */,
+				B919D55718B6C6EB00AFC0A2 /* подарить.png */,
+				B919D55818B6C6EB00AFC0A2 /* подписка.png */,
+				B919D55918B6C6EB00AFC0A2 /* поиск.png */,
+				B919D55A18B6C6EB00AFC0A2 /* поиск@2x.png */,
+				B919D55B18B6C6EB00AFC0A2 /* поиск_карта.png */,
+				B919D55C18B6C6EB00AFC0A2 /* Путов.jpg */,
+				B919D55D18B6C6EB00AFC0A2 /* рейтинг.png */,
+				B919D55E18B6C6EB00AFC0A2 /* сми.png */,
+				B919D55F18B6C6EB00AFC0A2 /* стрелка.png */,
+				B919D56018B6C6EB00AFC0A2 /* стрелка_вправо.png */,
+				B919D56118B6C6EB00AFC0A2 /* стрелочка светлая.png */,
+				B919D56218B6C6EB00AFC0A2 /* структура.png */,
+				B919D56318B6C6EB00AFC0A2 /* транспорт.png */,
+				B919D56418B6C6EB00AFC0A2 /* уволен2.png */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		B9306E33186CFB470002678A /* Ministry */ = {
@@ -544,11 +568,11 @@
 		B9B5EEE71829545200E8B8F2 /* MVD */ = {
 			isa = PBXGroup;
 			children = (
+				B919D52F18B6C6EB00AFC0A2 /* Images */,
 				B919D51318B41F4E00AFC0A2 /* Biography */,
 				B9903D0B189BD5B4003E8F5F /* Photo browser */,
 				B9AA621E189B0A3600D3244D /* Analytics */,
 				B981D49818830CC3006A22BE /* MVD.entitlements */,
-				B922508F1834D39600B09C30 /* Images */,
 				B9B5821018663F9B00653AE5 /* CommonCells */,
 				B90A92691859CCBB00BFE4CD /* Human */,
 				B9B5EEF01829545200E8B8F2 /* AppDelegate.h */,
@@ -557,8 +581,6 @@
 				B9B5EEF71829545200E8B8F2 /* FirstViewController.m */,
 				B9B5EEF91829545200E8B8F2 /* SecondViewController.h */,
 				B9B5EEFA1829545200E8B8F2 /* SecondViewController.m */,
-				B92250A21834D72700B09C30 /* TestViewController.h */,
-				B92250A31834D72700B09C30 /* TestViewController.m */,
 				B9B5EEFC1829545200E8B8F2 /* Images.xcassets */,
 				B9B5EEE81829545200E8B8F2 /* Supporting Files */,
 				B90A9253183D32A400BFE4CD /* View.xib */,
@@ -686,71 +708,80 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9AD5EBE1891E00A00093C7A /* персон в базе.png in Resources */,
-				B9B5820318662B4900653AE5 /* 2.png in Resources */,
-				B9B5820718662B4900653AE5 /* background.jpg in Resources */,
+				B919D57418B6C6EB00AFC0A2 /* p.png in Resources */,
+				B919D58918B6C6EB00AFC0A2 /* Описание_главы.png in Resources */,
+				B919D56918B6C6EB00AFC0A2 /* 2.png in Resources */,
+				B919D57618B6C6EB00AFC0A2 /* аналитика статистика.png in Resources */,
+				B919D56718B6C6EB00AFC0A2 /* 123.png in Resources */,
 				B9B5EEFD1829545200E8B8F2 /* Images.xcassets in Resources */,
-				B9B582B9186BAD3800653AE5 /* Путов.jpg in Resources */,
-				B99BCC511887DF1D000DA9B4 /* домой@2x.png in Resources */,
+				B919D57718B6C6EB00AFC0A2 /* биография.png in Resources */,
+				B919D58B18B6C6EB00AFC0A2 /* погон.png in Resources */,
 				B9B582BD186BAF8B00653AE5 /* NewsCell.xib in Resources */,
-				B9903D2518A43B39003E8F5F /* icon-person-add.png in Resources */,
+				B919D57118B6C6EB00AFC0A2 /* message-512.png in Resources */,
+				B919D58E18B6C6EB00AFC0A2 /* поиск.png in Resources */,
+				B919D57318B6C6EB00AFC0A2 /* mvdFrame.jpg in Resources */,
+				B919D56E18B6C6EB00AFC0A2 /* icon-person-add.png in Resources */,
+				B919D59818B6C6EB00AFC0A2 /* транспорт.png in Resources */,
 				B99BCC69188DCD76000DA9B4 /* Main.storyboard in Resources */,
-				B9903D2218A43B39003E8F5F /* награждены.png in Resources */,
-				B9B582C8186BBB4500653AE5 /* 147591.b.jpg in Resources */,
 				B9B5821218663FB700653AE5 /* CommonInfoCell.xib in Resources */,
-				B9381AC9188DD4A100019552 /* стрелка_вправо.png in Resources */,
 				B9B5EEEC1829545200E8B8F2 /* InfoPlist.strings in Resources */,
-				B99BCC5B18894C1E000DA9B4 /* структура.png in Resources */,
-				B9AD5EC01891E00A00093C7A /* подарить.png in Resources */,
-				B99BCC551887E287000DA9B4 /* настройки@2x.png in Resources */,
+				B919D59518B6C6EB00AFC0A2 /* стрелка_вправо.png in Resources */,
+				B919D56618B6C6EB00AFC0A2 /* 122.png in Resources */,
+				B919D58A18B6C6EB00AFC0A2 /* персон в базе.png in Resources */,
+				B919D58218B6C6EB00AFC0A2 /* история просмотров@2x.png in Resources */,
+				B919D58118B6C6EB00AFC0A2 /* иконка.png in Resources */,
+				B919D58518B6C6EB00AFC0A2 /* карта.png in Resources */,
 				B90A928418630CEC00BFE4CD /* HumanNameCell.xib in Resources */,
+				B919D59018B6C6EB00AFC0A2 /* поиск_карта.png in Resources */,
+				B919D59318B6C6EB00AFC0A2 /* сми.png in Resources */,
+				B919D57B18B6C6EB00AFC0A2 /* домой.png in Resources */,
+				B919D56B18B6C6EB00AFC0A2 /* background.jpg in Resources */,
+				B919D57218B6C6EB00AFC0A2 /* mvd_dark.png in Resources */,
+				B919D58F18B6C6EB00AFC0A2 /* поиск@2x.png in Resources */,
+				B919D59718B6C6EB00AFC0A2 /* структура.png in Resources */,
 				B9B582B7186BA08A00653AE5 /* HumanIncomeViewController.xib in Resources */,
+				B919D57518B6C6EB00AFC0A2 /* photo_frame.png in Resources */,
 				B90A9254183D32A400BFE4CD /* View.xib in Resources */,
+				B919D57A18B6C6EB00AFC0A2 /* герб мэр.png in Resources */,
+				B919D57F18B6C6EB00AFC0A2 /* звезда.png in Resources */,
+				B919D59118B6C6EB00AFC0A2 /* Путов.jpg in Resources */,
+				B919D56F18B6C6EB00AFC0A2 /* IMG_0792.PNG in Resources */,
+				B919D58418B6C6EB00AFC0A2 /* кадры.png in Resources */,
+				B919D58718B6C6EB00AFC0A2 /* настройки@2x.png in Resources */,
 				B99BCC6118894CCC000DA9B4 /* история.png in Resources */,
+				B919D58818B6C6EB00AFC0A2 /* обновление@2x.png in Resources */,
+				B919D59918B6C6EB00AFC0A2 /* уволен2.png in Resources */,
+				B919D58C18B6C6EB00AFC0A2 /* подарить.png in Resources */,
+				B919D59618B6C6EB00AFC0A2 /* стрелочка светлая.png in Resources */,
+				B919D59418B6C6EB00AFC0A2 /* стрелка.png in Resources */,
+				B919D56A18B6C6EB00AFC0A2 /* 3.png in Resources */,
+				B919D56C18B6C6EB00AFC0A2 /* background_tab.jpg in Resources */,
+				B919D58618B6C6EB00AFC0A2 /* награждены.png in Resources */,
+				B919D56818B6C6EB00AFC0A2 /* 147591.b.jpg in Resources */,
+				B919D56D18B6C6EB00AFC0A2 /* grayBackground.jpg in Resources */,
 				B9903D1D18A432A6003E8F5F /* MinistryAnalyticsViewController.xib in Resources */,
 				B95C076318ACF67600BAD18C /* MinistryStructureDescriptionViewController.xib in Resources */,
+				B919D58D18B6C6EB00AFC0A2 /* подписка.png in Resources */,
+				B919D56518B6C6EB00AFC0A2 /* 1.png in Resources */,
+				B919D58318B6C6EB00AFC0A2 /* история.png in Resources */,
+				B919D58018B6C6EB00AFC0A2 /* земельные участки.png in Resources */,
 				B95C076818ACFF4500BAD18C /* AnalyticsInfoCell.xib in Resources */,
-				B919D51A18B4212700AFC0A2 /* карта.png in Resources */,
-				B9B5820518662B4900653AE5 /* mchs.jpg in Resources */,
-				B9B5820F18663BD700653AE5 /* photo_frame.png in Resources */,
-				B90A92781859DE9200BFE4CD /* 3.png in Resources */,
 				B919D51818B41F8A00AFC0A2 /* BiographyViewController.xib in Resources */,
-				B9AD5EC7189297E500093C7A /* биография.png in Resources */,
-				B99BCC531887E051000DA9B4 /* поиск@2x.png in Resources */,
-				B9B5820D1866366000653AE5 /* background_tab.jpg in Resources */,
-				B9B5820618662B4900653AE5 /* mvdFrame.jpg in Resources */,
-				B9903D15189BE056003E8F5F /* appIcon@2x.jpg in Resources */,
-				B9AD5EBF1891E00A00093C7A /* подписка.png in Resources */,
-				B9B58225186641A600653AE5 /* доходы.png in Resources */,
-				B99BCC6318894E5E000DA9B4 /* стрелочка светлая.png in Resources */,
 				B95C075618ACE0DE00BAD18C /* MinistryStructureViewController.xib in Resources */,
-				B9AD5EB91891BFE400093C7A /* p.png in Resources */,
 				B9B582C6186BB23000653AE5 /* NewsViewController.xib in Resources */,
-				B9AD5EC318928E5400093C7A /* звезда.png in Resources */,
-				B9B5820B18662FFB00653AE5 /* mvd_dark.png in Resources */,
-				B9B5820918662DF900653AE5 /* grayBackground.jpg in Resources */,
-				B99BCC591887E2B0000DA9B4 /* обновление@2x.png in Resources */,
 				B90A928918630E3300BFE4CD /* RankCell.xib in Resources */,
-				B9AD5EC91892AC8100093C7A /* история просмотров@2x.png in Resources */,
-				B99BCC5D18894C2D000DA9B4 /* кадры.png in Resources */,
-				B99BCC5F18894C5D000DA9B4 /* аналитика статистика.png in Resources */,
-				B9B58223186641A600653AE5 /* сми.png in Resources */,
+				B919D59218B6C6EB00AFC0A2 /* рейтинг.png in Resources */,
+				B919D57918B6C6EB00AFC0A2 /* герб мчс.png in Resources */,
 				B9AD5EB71891B86300093C7A /* HumanSectionHeader.xib in Resources */,
+				B919D57818B6C6EB00AFC0A2 /* в кругу друзей.png in Resources */,
+				B919D57E18B6C6EB00AFC0A2 /* жилая недвижимость.png in Resources */,
+				B919D57D18B6C6EB00AFC0A2 /* доходы.png in Resources */,
 				B919D52218B6BAB900AFC0A2 /* BiographyUnitView.xib in Resources */,
-				B9903D2318A43B39003E8F5F /* рейтинг.png in Resources */,
-				B95C076D18AD053A00BAD18C /* Описание_главы.png in Resources */,
 				B90A92651859C8AA00BFE4CD /* HumanCell.xib in Resources */,
-				B9B5820418662B4900653AE5 /* 1.png in Resources */,
-				B9B582CA186BBBF000653AE5 /* стрелка.png in Resources */,
+				B919D57C18B6C6EB00AFC0A2 /* домой@2x.png in Resources */,
 				B95C075818ACE8B100BAD18C /* MinistryStructureCell.xib in Resources */,
-				B9903D2418A43B39003E8F5F /* уволен2.png in Resources */,
-				B9903D09189BD55D003E8F5F /* поиск_карта.png in Resources */,
-				B9B5820218662B4900653AE5 /* IMG_0792.PNG in Resources */,
-				B9AD5EC11891E00A00093C7A /* message-512.png in Resources */,
-				B9903D17189EA8FE003E8F5F /* иконка.png in Resources */,
-				B9AD5EC6189297E500093C7A /* в кругу друзей.png in Resources */,
+				B919D57018B6C6EB00AFC0A2 /* mchs.jpg in Resources */,
 				B9306E32186CFB3F0002678A /* MinistryViewController.xib in Resources */,
-				B9B582BB186BAE1B00653AE5 /* погон.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,7 +805,6 @@
 				B9AA6221189B0A7200D3244D /* AnalyticsViewController.m in Sources */,
 				B95C075018AC368B00BAD18C /* MinistryInformation.m in Sources */,
 				B9306E31186CFB3F0002678A /* MinistryViewController.m in Sources */,
-				B92250A41834D72700B09C30 /* TestViewController.m in Sources */,
 				B919D51718B41F8A00AFC0A2 /* BiographyViewController.m in Sources */,
 				B95C075E18ACF5AC00BAD18C /* CommonButtonContainer.m in Sources */,
 				B9B5EEFB1829545200E8B8F2 /* SecondViewController.m in Sources */,
