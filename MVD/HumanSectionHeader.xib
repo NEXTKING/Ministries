@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RfG-sU-99F">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Путов.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="4cH-sB-4Pt">
+                    <rect key="frame" x="202" y="11" width="108" height="134"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="134" id="1nX-kb-FFC"/>
+                        <constraint firstAttribute="width" constant="108" id="Mez-w6-h3Z"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHk-hS-KbB">
+                    <rect key="frame" x="0.0" y="100" width="180" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIn-xf-jQ9">
+                    <rect key="frame" x="0.0" y="179" width="300" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 января 1954 (59 лет)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="vyV-1g-czD">
+                    <rect key="frame" x="20" y="76" width="160" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="HjI-Oo-Nhz"/>
+                        <constraint firstAttribute="height" constant="21" id="UZA-mL-Eyg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Путов Валерий Владимирович" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" preferredMaxLayoutWidth="164" translatesAutoresizingMaskIntoConstraints="NO" id="dlx-lG-daW">
+                    <rect key="frame" x="20" y="20" width="164" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="164" id="BRy-XD-gX0"/>
+                        <constraint firstAttribute="height" constant="48" id="M2v-jw-AW5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wrc-N6-hiT">
+                    <rect key="frame" x="237" y="148" width="39" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="DSN-qk-hJ6"/>
+                        <constraint firstAttribute="width" constant="39" id="bdP-Ck-sXU"/>
+                    </constraints>
+                    <color key="pageIndicatorTintColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Начальник Департамента государтсвенной службы и кадров МВД России" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" preferredMaxLayoutWidth="187" translatesAutoresizingMaskIntoConstraints="NO" id="7IJ-Y9-UMY">
+                    <rect key="frame" x="7" y="109" width="187" height="54"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="85" id="0bn-vq-D6T"/>
+                        <constraint firstAttribute="width" constant="187" id="jno-tt-rQh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Генерал-лейтенант внутренней службы" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="tKW-1i-Yzp">
+                    <rect key="frame" x="7" y="188" width="219" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p.png" translatesAutoresizingMaskIntoConstraints="NO" id="st7-j8-l8A">
+                    <rect key="frame" x="237" y="183" width="63" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u5J-bd-7io">
+                    <rect key="frame" x="0.0" y="221" width="300" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ГУ МВД России по г. Москве. Москва, Петровка 38" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="g2r-CH-xlg">
+                    <rect key="frame" x="7" y="230" width="303" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="4cH-sB-4Pt" secondAttribute="trailing" constant="10" id="4Pl-Pp-C8r"/>
+                <constraint firstItem="4cH-sB-4Pt" firstAttribute="top" secondItem="RfG-sU-99F" secondAttribute="top" constant="11" id="Dec-g1-bq0"/>
+                <constraint firstItem="vyV-1g-czD" firstAttribute="top" secondItem="dlx-lG-daW" secondAttribute="bottom" constant="8" id="Kdc-VW-lKi"/>
+                <constraint firstItem="dlx-lG-daW" firstAttribute="top" secondItem="RfG-sU-99F" secondAttribute="top" constant="20" id="Pjz-lk-75I"/>
+                <constraint firstItem="wrc-N6-hiT" firstAttribute="top" secondItem="4cH-sB-4Pt" secondAttribute="bottom" constant="3" id="RHI-A5-lRj"/>
+                <constraint firstItem="7IJ-Y9-UMY" firstAttribute="top" secondItem="vyV-1g-czD" secondAttribute="bottom" constant="12" id="Ths-WF-eSk"/>
+                <constraint firstAttribute="trailing" secondItem="wrc-N6-hiT" secondAttribute="trailing" constant="44" id="fbO-Kt-XgU"/>
+                <constraint firstItem="vyV-1g-czD" firstAttribute="leading" secondItem="RfG-sU-99F" secondAttribute="leading" constant="20" id="hBy-hL-qJb"/>
+                <constraint firstItem="dlx-lG-daW" firstAttribute="leading" secondItem="RfG-sU-99F" secondAttribute="leading" constant="20" id="ugV-gW-GeI"/>
+                <constraint firstItem="7IJ-Y9-UMY" firstAttribute="leading" secondItem="RfG-sU-99F" secondAttribute="leading" constant="7" id="yqe-sy-UAv"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="p.png" width="100" height="34"/>
+        <image name="Путов.jpg" width="259" height="309"/>
+    </resources>
+</document>
