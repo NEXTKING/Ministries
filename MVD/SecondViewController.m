@@ -43,6 +43,14 @@
 	// Do any additional setup after loading the view, typically from a nib.
     _array =  [NSArray arrayWithObjects:
      @"Москва",
+               @"Центральный ФО",
+               @"Дальневосточный ФО",
+               @"Приволжский ФО",
+               @"Северо-Западный ФО",
+               @"Северо-Кавказский ФО",
+               @"Сибирский ФО",
+               @"Уральский ФО",
+               @"Южный ФО",
      @"Адыгея",
      @"Алтай",
      @"Алтайский край",
@@ -733,6 +741,11 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
     NSInteger row = [_pickeView selectedRowInComponent:0];
     NSString *title = [_pickeView.delegate pickerView:_pickeView titleForRow:row forComponent:0];
     _regionLabel.text = title;
+    
+    MinistryViewController *ministry = [MinistryViewController new];
+    [self.navigationController pushViewController:ministry animated:YES];
+    ministry.region = title;
+    ministry = nil;
 }
 
 #pragma mark - UISearchDisplayController Delegate Methods

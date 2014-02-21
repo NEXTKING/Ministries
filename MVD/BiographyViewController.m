@@ -7,6 +7,7 @@
 //
 
 #import "BiographyViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface BiographyViewController ()
 
@@ -30,6 +31,9 @@
     [super viewDidLoad];
     self.title = @"Биография";
     
+    _imageView.layer.cornerRadius = 44;
+    _imageView.layer.masksToBounds = YES;
+    
     _clipView.scrollView.contentSize = CGSizeMake(1000, 285);
     CGFloat width = _clipView.scrollView.frame.size.width;
     for (int i = 0; i < 5; ++i)
@@ -43,6 +47,8 @@
         [[NSBundle mainBundle] loadNibNamed:@"BiographyUnitView" owner:self options:Nil];
         BiographyUnitView *view = self.biographyView;
         self.biographyView = Nil;
+        
+        view.yearLabel.text = [NSString stringWithFormat:@"%d", 2010 + i];
         
         
         view.contentView.layer.borderWidth = 1.0;

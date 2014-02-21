@@ -1,14 +1,15 @@
 //
-//  AnalyticaInfoCell.m
+//  HistoryCell.m
 //  MVD
 //
-//  Created by Denis Kurochkin on 13.02.14.
+//  Created by Denis Kurochkin on 21.02.14.
 //  Copyright (c) 2014 Denis Kurochkin. All rights reserved.
 //
 
-#import "AnalyticaInfoCell.h"
+#import "HistoryCell.h"
+#import <QuartzCore/QuartzCore.h>
 
-@implementation AnalyticaInfoCell
+@implementation HistoryCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -21,10 +22,10 @@
 
 - (void) awakeFromNib
 {
-    UIView *bgColorView = [[UIView alloc] init];
-    bgColorView.backgroundColor = [UIColor colorWithRed:128.0/255.0 green:153.0/255.0 blue:157.0/255.0 alpha:1.0];
-    [self setSelectedBackgroundView:bgColorView];
+    //self.imageView.layer.cornerRadius = self.frame.size.width/2;
 }
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {

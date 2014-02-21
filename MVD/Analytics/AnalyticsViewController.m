@@ -46,7 +46,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 1;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,6 +65,11 @@
     return 0;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier"];
@@ -75,15 +80,7 @@
             AnalyticaInfoCell *infoCell = [[[NSBundle mainBundle] loadNibNamed:@"AnalyticsInfoCell" owner:self options:nil] objectAtIndex:0];
             if (indexPath.row == 0)
             {
-                infoCell.nameLabel.text = @"За месяц";
-            }
-            else if (indexPath.row == 1)
-            {
-                infoCell.nameLabel.text = @"С начала года";
-            }
-            else if (indexPath.row == 2)
-            {
-                infoCell.nameLabel.text = @"С последнего просмотра";
+                infoCell.nameLabel.text = @"Выбрать период";
             }
         
             cell = infoCell;

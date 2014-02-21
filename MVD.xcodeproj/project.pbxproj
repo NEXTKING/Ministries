@@ -43,8 +43,6 @@
 		B919D57818B6C6EB00AFC0A2 /* в кругу друзей.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54318B6C6EB00AFC0A2 /* в кругу друзей.png */; };
 		B919D57918B6C6EB00AFC0A2 /* герб мчс.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54418B6C6EB00AFC0A2 /* герб мчс.png */; };
 		B919D57A18B6C6EB00AFC0A2 /* герб мэр.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54518B6C6EB00AFC0A2 /* герб мэр.png */; };
-		B919D57B18B6C6EB00AFC0A2 /* домой.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54618B6C6EB00AFC0A2 /* домой.png */; };
-		B919D57C18B6C6EB00AFC0A2 /* домой@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54718B6C6EB00AFC0A2 /* домой@2x.png */; };
 		B919D57D18B6C6EB00AFC0A2 /* доходы.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54818B6C6EB00AFC0A2 /* доходы.png */; };
 		B919D57E18B6C6EB00AFC0A2 /* жилая недвижимость.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54918B6C6EB00AFC0A2 /* жилая недвижимость.png */; };
 		B919D57F18B6C6EB00AFC0A2 /* звезда.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54A18B6C6EB00AFC0A2 /* звезда.png */; };
@@ -55,7 +53,6 @@
 		B919D58418B6C6EB00AFC0A2 /* кадры.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D54F18B6C6EB00AFC0A2 /* кадры.png */; };
 		B919D58518B6C6EB00AFC0A2 /* карта.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55018B6C6EB00AFC0A2 /* карта.png */; };
 		B919D58618B6C6EB00AFC0A2 /* награждены.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55118B6C6EB00AFC0A2 /* награждены.png */; };
-		B919D58718B6C6EB00AFC0A2 /* настройки@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55218B6C6EB00AFC0A2 /* настройки@2x.png */; };
 		B919D58818B6C6EB00AFC0A2 /* обновление@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55318B6C6EB00AFC0A2 /* обновление@2x.png */; };
 		B919D58918B6C6EB00AFC0A2 /* Описание_главы.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55418B6C6EB00AFC0A2 /* Описание_главы.png */; };
 		B919D58A18B6C6EB00AFC0A2 /* персон в базе.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D55518B6C6EB00AFC0A2 /* персон в базе.png */; };
@@ -74,6 +71,19 @@
 		B919D59718B6C6EB00AFC0A2 /* структура.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D56218B6C6EB00AFC0A2 /* структура.png */; };
 		B919D59818B6C6EB00AFC0A2 /* транспорт.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D56318B6C6EB00AFC0A2 /* транспорт.png */; };
 		B919D59918B6C6EB00AFC0A2 /* уволен2.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D56418B6C6EB00AFC0A2 /* уволен2.png */; };
+		B919D59D18B6D7A900AFC0A2 /* 2в цифрах@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D59A18B6D7A900AFC0A2 /* 2в цифрах@2x.png */; };
+		B919D59E18B6D7A900AFC0A2 /* 3история@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D59B18B6D7A900AFC0A2 /* 3история@2x.png */; };
+		B919D59F18B6D7A900AFC0A2 /* 4еще@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D59C18B6D7A900AFC0A2 /* 4еще@2x.png */; };
+		B919D5A218B6DE7500AFC0A2 /* звание1.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D5A018B6DE7500AFC0A2 /* звание1.png */; };
+		B919D5A318B6DE7500AFC0A2 /* медаль3.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D5A118B6DE7500AFC0A2 /* медаль3.png */; };
+		B919D5A618B6E96A00AFC0A2 /* DottedLine.m in Sources */ = {isa = PBXBuildFile; fileRef = B919D5A518B6E96A00AFC0A2 /* DottedLine.m */; };
+		B919D5A818B6FEBE00AFC0A2 /* машина.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D5A718B6FEBE00AFC0A2 /* машина.png */; };
+		B919D5AC18B7045600AFC0A2 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B919D5AB18B7045600AFC0A2 /* HistoryViewController.m */; };
+		B919D5AE18B704D800AFC0A2 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B919D5AD18B704D800AFC0A2 /* HistoryCell.xib */; };
+		B919D5B118B70C4500AFC0A2 /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B919D5B018B70C4500AFC0A2 /* HistoryCell.m */; };
+		B919D5B518B711AE00AFC0A2 /* настройки.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D5B218B711AE00AFC0A2 /* настройки.png */; };
+		B919D5B618B711AE00AFC0A2 /* о приложении.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D5B318B711AE00AFC0A2 /* о приложении.png */; };
+		B919D5B718B711AE00AFC0A2 /* оценить приложение.png in Resources */ = {isa = PBXBuildFile; fileRef = B919D5B418B711AE00AFC0A2 /* оценить приложение.png */; };
 		B92250A61834D87700B09C30 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92250A51834D87700B09C30 /* QuartzCore.framework */; };
 		B9306E2D186CE4760002678A /* PointView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9306E2C186CE4760002678A /* PointView.m */; };
 		B9306E31186CFB3F0002678A /* MinistryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9306E2F186CFB3F0002678A /* MinistryViewController.m */; };
@@ -177,8 +187,6 @@
 		B919D54318B6C6EB00AFC0A2 /* в кругу друзей.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "в кругу друзей.png"; sourceTree = "<group>"; };
 		B919D54418B6C6EB00AFC0A2 /* герб мчс.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "герб мчс.png"; sourceTree = "<group>"; };
 		B919D54518B6C6EB00AFC0A2 /* герб мэр.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "герб мэр.png"; sourceTree = "<group>"; };
-		B919D54618B6C6EB00AFC0A2 /* домой.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "домой.png"; sourceTree = "<group>"; };
-		B919D54718B6C6EB00AFC0A2 /* домой@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "домой@2x.png"; sourceTree = "<group>"; };
 		B919D54818B6C6EB00AFC0A2 /* доходы.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "доходы.png"; sourceTree = "<group>"; };
 		B919D54918B6C6EB00AFC0A2 /* жилая недвижимость.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "жилая недвижимость.png"; sourceTree = "<group>"; };
 		B919D54A18B6C6EB00AFC0A2 /* звезда.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "звезда.png"; sourceTree = "<group>"; };
@@ -189,7 +197,6 @@
 		B919D54F18B6C6EB00AFC0A2 /* кадры.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "кадры.png"; sourceTree = "<group>"; };
 		B919D55018B6C6EB00AFC0A2 /* карта.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "карта.png"; sourceTree = "<group>"; };
 		B919D55118B6C6EB00AFC0A2 /* награждены.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "награждены.png"; sourceTree = "<group>"; };
-		B919D55218B6C6EB00AFC0A2 /* настройки@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "настройки@2x.png"; sourceTree = "<group>"; };
 		B919D55318B6C6EB00AFC0A2 /* обновление@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "обновление@2x.png"; sourceTree = "<group>"; };
 		B919D55418B6C6EB00AFC0A2 /* Описание_главы.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Описание_главы.png"; sourceTree = "<group>"; };
 		B919D55518B6C6EB00AFC0A2 /* персон в базе.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "персон в базе.png"; sourceTree = "<group>"; };
@@ -208,6 +215,22 @@
 		B919D56218B6C6EB00AFC0A2 /* структура.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "структура.png"; sourceTree = "<group>"; };
 		B919D56318B6C6EB00AFC0A2 /* транспорт.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "транспорт.png"; sourceTree = "<group>"; };
 		B919D56418B6C6EB00AFC0A2 /* уволен2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "уволен2.png"; sourceTree = "<group>"; };
+		B919D59A18B6D7A900AFC0A2 /* 2в цифрах@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2в цифрах@2x.png"; sourceTree = "<group>"; };
+		B919D59B18B6D7A900AFC0A2 /* 3история@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3история@2x.png"; sourceTree = "<group>"; };
+		B919D59C18B6D7A900AFC0A2 /* 4еще@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "4еще@2x.png"; sourceTree = "<group>"; };
+		B919D5A018B6DE7500AFC0A2 /* звание1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "звание1.png"; sourceTree = "<group>"; };
+		B919D5A118B6DE7500AFC0A2 /* медаль3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "медаль3.png"; sourceTree = "<group>"; };
+		B919D5A418B6E96A00AFC0A2 /* DottedLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DottedLine.h; sourceTree = "<group>"; };
+		B919D5A518B6E96A00AFC0A2 /* DottedLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DottedLine.m; sourceTree = "<group>"; };
+		B919D5A718B6FEBE00AFC0A2 /* машина.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "машина.png"; sourceTree = "<group>"; };
+		B919D5AA18B7045600AFC0A2 /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		B919D5AB18B7045600AFC0A2 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		B919D5AD18B704D800AFC0A2 /* HistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
+		B919D5AF18B70C4400AFC0A2 /* HistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
+		B919D5B018B70C4500AFC0A2 /* HistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
+		B919D5B218B711AE00AFC0A2 /* настройки.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "настройки.png"; sourceTree = "<group>"; };
+		B919D5B318B711AE00AFC0A2 /* о приложении.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "о приложении.png"; sourceTree = "<group>"; };
+		B919D5B418B711AE00AFC0A2 /* оценить приложение.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "оценить приложение.png"; sourceTree = "<group>"; };
 		B92250A51834D87700B09C30 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B9306E2B186CE4760002678A /* PointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointView.h; sourceTree = "<group>"; };
 		B9306E2C186CE4760002678A /* PointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointView.m; sourceTree = "<group>"; };
@@ -360,6 +383,15 @@
 		B919D52F18B6C6EB00AFC0A2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B919D5B218B711AE00AFC0A2 /* настройки.png */,
+				B919D5B318B711AE00AFC0A2 /* о приложении.png */,
+				B919D5B418B711AE00AFC0A2 /* оценить приложение.png */,
+				B919D5A718B6FEBE00AFC0A2 /* машина.png */,
+				B919D5A018B6DE7500AFC0A2 /* звание1.png */,
+				B919D5A118B6DE7500AFC0A2 /* медаль3.png */,
+				B919D59A18B6D7A900AFC0A2 /* 2в цифрах@2x.png */,
+				B919D59B18B6D7A900AFC0A2 /* 3история@2x.png */,
+				B919D59C18B6D7A900AFC0A2 /* 4еще@2x.png */,
 				B919D53018B6C6EB00AFC0A2 /* 1.png */,
 				B919D53118B6C6EB00AFC0A2 /* 122.png */,
 				B919D53218B6C6EB00AFC0A2 /* 123.png */,
@@ -382,8 +414,6 @@
 				B919D54318B6C6EB00AFC0A2 /* в кругу друзей.png */,
 				B919D54418B6C6EB00AFC0A2 /* герб мчс.png */,
 				B919D54518B6C6EB00AFC0A2 /* герб мэр.png */,
-				B919D54618B6C6EB00AFC0A2 /* домой.png */,
-				B919D54718B6C6EB00AFC0A2 /* домой@2x.png */,
 				B919D54818B6C6EB00AFC0A2 /* доходы.png */,
 				B919D54918B6C6EB00AFC0A2 /* жилая недвижимость.png */,
 				B919D54A18B6C6EB00AFC0A2 /* звезда.png */,
@@ -394,7 +424,6 @@
 				B919D54F18B6C6EB00AFC0A2 /* кадры.png */,
 				B919D55018B6C6EB00AFC0A2 /* карта.png */,
 				B919D55118B6C6EB00AFC0A2 /* награждены.png */,
-				B919D55218B6C6EB00AFC0A2 /* настройки@2x.png */,
 				B919D55318B6C6EB00AFC0A2 /* обновление@2x.png */,
 				B919D55418B6C6EB00AFC0A2 /* Описание_главы.png */,
 				B919D55518B6C6EB00AFC0A2 /* персон в базе.png */,
@@ -415,6 +444,18 @@
 				B919D56418B6C6EB00AFC0A2 /* уволен2.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		B919D5A918B7043800AFC0A2 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				B919D5AA18B7045600AFC0A2 /* HistoryViewController.h */,
+				B919D5AB18B7045600AFC0A2 /* HistoryViewController.m */,
+				B919D5AD18B704D800AFC0A2 /* HistoryCell.xib */,
+				B919D5AF18B70C4400AFC0A2 /* HistoryCell.h */,
+				B919D5B018B70C4500AFC0A2 /* HistoryCell.m */,
+			);
+			name = History;
 			sourceTree = "<group>";
 		};
 		B9306E33186CFB470002678A /* Ministry */ = {
@@ -520,6 +561,8 @@
 				B9B582B3186BA08A00653AE5 /* HumanIncomeViewController.h */,
 				B9B582B4186BA08A00653AE5 /* HumanIncomeViewController.m */,
 				B9B582B5186BA08A00653AE5 /* HumanIncomeViewController.xib */,
+				B919D5A418B6E96A00AFC0A2 /* DottedLine.h */,
+				B919D5A518B6E96A00AFC0A2 /* DottedLine.m */,
 			);
 			name = HumanIncome;
 			sourceTree = "<group>";
@@ -568,6 +611,7 @@
 		B9B5EEE71829545200E8B8F2 /* MVD */ = {
 			isa = PBXGroup;
 			children = (
+				B919D5A918B7043800AFC0A2 /* History */,
 				B919D52F18B6C6EB00AFC0A2 /* Images */,
 				B919D51318B41F4E00AFC0A2 /* Biography */,
 				B9903D0B189BD5B4003E8F5F /* Photo browser */,
@@ -709,16 +753,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B919D57418B6C6EB00AFC0A2 /* p.png in Resources */,
+				B919D5A818B6FEBE00AFC0A2 /* машина.png in Resources */,
 				B919D58918B6C6EB00AFC0A2 /* Описание_главы.png in Resources */,
 				B919D56918B6C6EB00AFC0A2 /* 2.png in Resources */,
+				B919D59D18B6D7A900AFC0A2 /* 2в цифрах@2x.png in Resources */,
 				B919D57618B6C6EB00AFC0A2 /* аналитика статистика.png in Resources */,
 				B919D56718B6C6EB00AFC0A2 /* 123.png in Resources */,
 				B9B5EEFD1829545200E8B8F2 /* Images.xcassets in Resources */,
 				B919D57718B6C6EB00AFC0A2 /* биография.png in Resources */,
 				B919D58B18B6C6EB00AFC0A2 /* погон.png in Resources */,
+				B919D5AE18B704D800AFC0A2 /* HistoryCell.xib in Resources */,
+				B919D5A318B6DE7500AFC0A2 /* медаль3.png in Resources */,
 				B9B582BD186BAF8B00653AE5 /* NewsCell.xib in Resources */,
 				B919D57118B6C6EB00AFC0A2 /* message-512.png in Resources */,
 				B919D58E18B6C6EB00AFC0A2 /* поиск.png in Resources */,
+				B919D59E18B6D7A900AFC0A2 /* 3история@2x.png in Resources */,
 				B919D57318B6C6EB00AFC0A2 /* mvdFrame.jpg in Resources */,
 				B919D56E18B6C6EB00AFC0A2 /* icon-person-add.png in Resources */,
 				B919D59818B6C6EB00AFC0A2 /* транспорт.png in Resources */,
@@ -730,11 +779,11 @@
 				B919D58A18B6C6EB00AFC0A2 /* персон в базе.png in Resources */,
 				B919D58218B6C6EB00AFC0A2 /* история просмотров@2x.png in Resources */,
 				B919D58118B6C6EB00AFC0A2 /* иконка.png in Resources */,
+				B919D59F18B6D7A900AFC0A2 /* 4еще@2x.png in Resources */,
 				B919D58518B6C6EB00AFC0A2 /* карта.png in Resources */,
 				B90A928418630CEC00BFE4CD /* HumanNameCell.xib in Resources */,
 				B919D59018B6C6EB00AFC0A2 /* поиск_карта.png in Resources */,
 				B919D59318B6C6EB00AFC0A2 /* сми.png in Resources */,
-				B919D57B18B6C6EB00AFC0A2 /* домой.png in Resources */,
 				B919D56B18B6C6EB00AFC0A2 /* background.jpg in Resources */,
 				B919D57218B6C6EB00AFC0A2 /* mvd_dark.png in Resources */,
 				B919D58F18B6C6EB00AFC0A2 /* поиск@2x.png in Resources */,
@@ -747,10 +796,11 @@
 				B919D59118B6C6EB00AFC0A2 /* Путов.jpg in Resources */,
 				B919D56F18B6C6EB00AFC0A2 /* IMG_0792.PNG in Resources */,
 				B919D58418B6C6EB00AFC0A2 /* кадры.png in Resources */,
-				B919D58718B6C6EB00AFC0A2 /* настройки@2x.png in Resources */,
 				B99BCC6118894CCC000DA9B4 /* история.png in Resources */,
 				B919D58818B6C6EB00AFC0A2 /* обновление@2x.png in Resources */,
+				B919D5A218B6DE7500AFC0A2 /* звание1.png in Resources */,
 				B919D59918B6C6EB00AFC0A2 /* уволен2.png in Resources */,
+				B919D5B718B711AE00AFC0A2 /* оценить приложение.png in Resources */,
 				B919D58C18B6C6EB00AFC0A2 /* подарить.png in Resources */,
 				B919D59618B6C6EB00AFC0A2 /* стрелочка светлая.png in Resources */,
 				B919D59418B6C6EB00AFC0A2 /* стрелка.png in Resources */,
@@ -771,14 +821,15 @@
 				B9B582C6186BB23000653AE5 /* NewsViewController.xib in Resources */,
 				B90A928918630E3300BFE4CD /* RankCell.xib in Resources */,
 				B919D59218B6C6EB00AFC0A2 /* рейтинг.png in Resources */,
+				B919D5B518B711AE00AFC0A2 /* настройки.png in Resources */,
 				B919D57918B6C6EB00AFC0A2 /* герб мчс.png in Resources */,
 				B9AD5EB71891B86300093C7A /* HumanSectionHeader.xib in Resources */,
 				B919D57818B6C6EB00AFC0A2 /* в кругу друзей.png in Resources */,
 				B919D57E18B6C6EB00AFC0A2 /* жилая недвижимость.png in Resources */,
+				B919D5B618B711AE00AFC0A2 /* о приложении.png in Resources */,
 				B919D57D18B6C6EB00AFC0A2 /* доходы.png in Resources */,
 				B919D52218B6BAB900AFC0A2 /* BiographyUnitView.xib in Resources */,
 				B90A92651859C8AA00BFE4CD /* HumanCell.xib in Resources */,
-				B919D57C18B6C6EB00AFC0A2 /* домой@2x.png in Resources */,
 				B95C075818ACE8B100BAD18C /* MinistryStructureCell.xib in Resources */,
 				B919D57018B6C6EB00AFC0A2 /* mchs.jpg in Resources */,
 				B9306E32186CFB3F0002678A /* MinistryViewController.xib in Resources */,
@@ -803,6 +854,7 @@
 				B90A928718630D5F00BFE4CD /* HumanNameCell.m in Sources */,
 				B9903D1C18A432A6003E8F5F /* MinistryAnalyticsViewController.m in Sources */,
 				B9AA6221189B0A7200D3244D /* AnalyticsViewController.m in Sources */,
+				B919D5AC18B7045600AFC0A2 /* HistoryViewController.m in Sources */,
 				B95C075018AC368B00BAD18C /* MinistryInformation.m in Sources */,
 				B9306E31186CFB3F0002678A /* MinistryViewController.m in Sources */,
 				B919D51718B41F8A00AFC0A2 /* BiographyViewController.m in Sources */,
@@ -824,7 +876,9 @@
 				B95C076218ACF67600BAD18C /* MinistryStructureDescriptionViewController.m in Sources */,
 				B9903D0E189BD5B4003E8F5F /* ATPictureDescriptionViewController.m in Sources */,
 				B9B582B6186BA08A00653AE5 /* HumanIncomeViewController.m in Sources */,
+				B919D5A618B6E96A00AFC0A2 /* DottedLine.m in Sources */,
 				B9AA6224189BA92300D3244D /* RectButton.m in Sources */,
+				B919D5B118B70C4500AFC0A2 /* HistoryCell.m in Sources */,
 				B9B582C0186BAFA500653AE5 /* NewsCell.m in Sources */,
 				B95C076B18ACFFA800BAD18C /* AnalyticaInfoCell.m in Sources */,
 				B9B5EEEE1829545200E8B8F2 /* main.m in Sources */,

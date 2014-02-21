@@ -35,7 +35,7 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:51.0/255.0 green:93.0/255.0 blue:107.0/255.0 alpha:1.0];
-    self.title = @"Путов";
+    self.title = @"Путов В.В.";
     //UIImageView* image =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1.png"]];
     //image.frame = _tableView.frame;
     //self.tableView.backgroundView = image;

@@ -24,20 +24,24 @@
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Путов получил предложение по улучшению работы МВД" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="173" translatesAutoresizingMaskIntoConstraints="NO" id="0Mm-qN-5Jd">
-                        <rect key="frame" x="127" y="7" width="173" height="47"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Путов получил предложение по улучшению работы МВД" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" preferredMaxLayoutWidth="162" translatesAutoresizingMaskIntoConstraints="NO" id="0Mm-qN-5Jd">
+                        <rect key="frame" x="127" y="7" width="162" height="47"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Москва, 24 мая. Заместитель главы МВД должен внести ему предложение для повышения..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="173" translatesAutoresizingMaskIntoConstraints="NO" id="LUG-at-Rlf">
-                        <rect key="frame" x="127" y="55" width="173" height="52"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Москва, 24 мая. Заместитель главы МВД должен внести ему предложение для повышения..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" preferredMaxLayoutWidth="167" translatesAutoresizingMaskIntoConstraints="NO" id="LUG-at-Rlf">
+                        <rect key="frame" x="127" y="55" width="167" height="52"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3nQ-hO-itX">
                         <rect key="frame" x="15" y="115" width="305" height="1"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="стрелка.png" translatesAutoresizingMaskIntoConstraints="NO" id="k9n-N2-LSq">
+                        <rect key="frame" x="291" y="46" width="26" height="23"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                 </subviews>
@@ -47,5 +51,6 @@
     <resources>
         <image name="147591.b.jpg" width="640" height="524"/>
         <image name="background.jpg" width="640" height="1136"/>
+        <image name="стрелка.png" width="30" height="48"/>
     </resources>
 </document>

@@ -29,8 +29,14 @@
 
 - (void) viewDidLoad
 {
+    if (_region && ![_region isEqualToString:@""])
+    {
+        _regionLabel.hidden = NO;
+        _regionLabel.text = [NSString stringWithFormat:@"Регион: %@", _region];
+        [_regionLabel sizeToFit];
+    }
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:51.0/255.0 green:93.0/255.0 blue:107.0/255.0 alpha:1.0];
-    self.title = @"МВД";
+    self.title = @"МВД России";
     //UIImageView* image =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1.png"]];
     //image.frame = _tableView.frame;
     //self.tableView.backgroundView = image;

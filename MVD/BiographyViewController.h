@@ -13,6 +13,7 @@
 @interface BiographyViewController : UIViewController <UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet BiographyUnitView *biographyView;
 @property (weak, nonatomic) IBOutlet ClipView *clipView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 @end

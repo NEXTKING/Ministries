@@ -10,6 +10,9 @@
 #import "CommonInfoCell.h"
 
 @interface HumanIncomeViewController ()
+{
+    BOOL _isRightSwiped;
+}
 
 @end
 
@@ -20,6 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        _isRightSwiped = NO;
     }
     return self;
 }
@@ -30,8 +34,6 @@
     //_segmentedControl.backgroundColor = [UIColor colorWithRed:51.0/255.0 green:93.0/255.0 blue:107.0/255.0 alpha:1.0];
     
     self.title = @"Доходы";
-    _background.image = [UIImage imageNamed:@"grayBackground.jpg"];
-    _tableview.backgroundColor = [UIColor clearColor];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -89,6 +91,98 @@
     
     return cell;
 }
+
+- (IBAction)leftSwipeSelector:(UISwipeGestureRecognizer*) sender
+{
+    if (!_isRightSwiped)
+        return;
+    else
+        _isRightSwiped = NO;
+    [self animateCharts:sender.direction];
+    _prevLabel.text = @"2013";
+    _nextLabel.text = @"2014";
+    
+}
+
+- (IBAction)rightSwipeSelector:(UISwipeGestureRecognizer *)sender
+{
+    if (_isRightSwiped)
+        return;
+    else
+        _isRightSwiped = YES;
+    
+    _prevLabel.text = @"2012";
+    _nextLabel.text = @"2013";
+    [self animateCharts:sender.direction];
+}
+
+- (void) animateCharts: (UISwipeGestureRecognizerDirection) direction
+{
+    NSInteger deltaWife =  _isRightSwiped ? 15:-15;
+    NSInteger deltaMan =  _isRightSwiped  ? 25:-25;
+    
+    NSInteger deltaWifeRight = _isRightSwiped  ? 50:-50;
+    NSInteger deltaManRight = _isRightSwiped  ? 25:-25;
+   // _incomeManLeft.layer.anchorPoint = CGPointMake(0.5,1);
+    
+    NSInteger deltaPropertyManLeft =  _isRightSwiped ? 15:-15;
+    NSInteger deltaPropertyManRight =  _isRightSwiped  ? 25:-25;
+    
+    
+    [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        
+        //Left Income
+        {
+        CGRect wifeRect = _incomeWifeLeft.frame;
+        wifeRect.origin.y += (deltaMan + deltaWife);
+        wifeRect.size.height -= deltaWife;
+        _incomeWifeLeft.frame = wifeRect;
+        
+        CGRect manRect = _incomeManLeft.frame;
+        manRect.size.height -= deltaMan;
+        manRect.origin.y +=deltaMan;
+        _incomeManLeft.frame = manRect;
+        }
+        
+        {
+        //Right income
+        CGRect manRect = _incomeManRighr.frame;
+        manRect.size.height -= deltaManRight;
+        manRect.origin.y += (deltaManRight + deltaWifeRight);
+        _incomeManRighr.frame = manRect;
+            
+            CGRect wifeRect = _incomeWifeRight.frame;
+            wifeRect.origin.y += (deltaWifeRight);
+            wifeRect.size.height -= deltaWifeRight;
+            _incomeWifeRight.frame = wifeRect;
+        }
+        
+        //left property
+        {
+            CGRect manRect = _propertyManLeft.frame;
+            manRect.size.height -= deltaPropertyManLeft;
+            manRect.origin.y +=deltaPropertyManLeft;
+            _propertyManLeft.frame = manRect;
+        }
+        
+        //right property
+        {
+            CGRect wifeRect = _propertyWifeRight.frame;
+            wifeRect.origin.y += (deltaPropertyManRight);
+            _propertyWifeRight.frame = wifeRect;
+            
+            CGRect manRect = _propertyManRight.frame;
+            manRect.size.height -= deltaPropertyManRight;
+            manRect.origin.y +=deltaPropertyManRight;
+            _propertyManRight.frame = manRect;
+        }
+        
+        
+        
+    } completion:^(BOOL finished) {
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

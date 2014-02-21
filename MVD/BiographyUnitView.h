@@ -10,5 +10,6 @@
 
 @interface BiographyUnitView : UIView
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 
 @end

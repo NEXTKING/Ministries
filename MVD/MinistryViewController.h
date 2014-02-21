@@ -10,6 +10,8 @@
 
 @interface MinistryViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *regionLabel;
+@property (nonatomic, copy) NSString *region;
 
 - (IBAction)buttonAction:(UIButton *)sender;
 

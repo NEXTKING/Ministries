@@ -9,9 +9,24 @@
 #import <UIKit/UIKit.h>
 
 @interface HumanIncomeViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-@property (weak, nonatomic) IBOutlet UITableView *tableview;
-@property (weak, nonatomic) IBOutlet UIImageView *background;
+
+
+- (IBAction)leftSwipeSelector:(UISwipeGestureRecognizer*) sender;
+
+- (IBAction)rightSwipeSelector:(UISwipeGestureRecognizer*) sender;
+
+@property (weak, nonatomic) IBOutlet UIView *incomeWifeLeft;
+@property (weak, nonatomic) IBOutlet UIView *incomeManLeft;
+@property (weak, nonatomic) IBOutlet UIView *incomeWifeRight;
+
+@property (weak, nonatomic) IBOutlet UIView *incomeManRighr;
+@property (weak, nonatomic) IBOutlet UIView *propertyWifeRight;
+
+@property (weak, nonatomic) IBOutlet UIView *propertyManLeft;
+@property (weak, nonatomic) IBOutlet UIView *propertyManRight;
+@property (weak, nonatomic) IBOutlet UILabel *nextLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *prevLabel;
 
 
 @end
