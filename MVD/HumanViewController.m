@@ -14,6 +14,7 @@
 #import "HumanIncomeViewController.h"
 #import "NewsViewController.h"
 #import "ATPictureDescriptionViewController.h"
+#import "FriendsViewController.h"
 
 @interface HumanViewController ()
 
@@ -69,7 +70,7 @@
 - (IBAction) favourites: (id) sender
 {
     
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Выберите дествие" delegate:self cancelButtonTitle:@"Отмена" destructiveButtonTitle:Nil otherButtonTitles:@"На контроль", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Выберите дествие" delegate:self cancelButtonTitle:@"Отмена" destructiveButtonTitle:Nil otherButtonTitles:@"На контроль", @"Добавить в контакты", @"Отправить на почту", @"Отправить на печать", nil];
     [actionSheet showInView:_scrollView];
 }
 
@@ -152,7 +153,25 @@
                 cell = [[UITableViewCell alloc] init];
                 cell.textLabel.adjustsFontSizeToFitWidth = YES;
                 cell.textLabel.minimumScaleFactor = 0.5;
-                cell.textLabel.text = @"2 Января 1954 (59 лет)";
+                
+                //Estimating persons' age
+                
+                NSDateComponents *comps = [[NSDateComponents alloc] init];
+                [comps setDay:2];
+                [comps setMonth:1];
+                [comps setYear:1954];
+                
+                NSDate *birthday = [[NSCalendar currentCalendar] dateFromComponents:comps];
+                
+                NSDate* now = [NSDate date];
+                NSDateComponents* ageComponents = [[NSCalendar currentCalendar]
+                                                   components:NSYearCalendarUnit
+                                                   fromDate:birthday
+                                                   toDate:now
+                                                   options:0];
+                NSInteger age = [ageComponents year];
+                
+                cell.textLabel.text = [NSString stringWithFormat: @"2 Января 1954 (%d лет)", age];
                 CGRect rect = cell.textLabel.frame;
                 rect.origin.x = 40;
                 cell.textLabel.frame = rect;
@@ -207,6 +226,11 @@
     if (indexPath.row == 1)
     {
         HumanIncomeViewController *income = [[HumanIncomeViewController alloc] init];
+        [self.navigationController pushViewController:income animated:YES];
+    }
+    if (indexPath.row == 2)
+    {
+        FriendsViewController *income = [[FriendsViewController alloc] init];
         [self.navigationController pushViewController:income animated:YES];
     }
     if (indexPath.row == 3)

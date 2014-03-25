@@ -9,8 +9,9 @@
 #import "MinistryViewController.h"
 #import "CommonInfoCell.h"
 #import "NewsViewController.h"
-#import "MinistryAnalyticsViewController.h"
+#import "AnalyticsViewController.h"
 #import "MinistryStructureViewController.h"
+#import "EmployeesViewController.h"
 
 @interface MinistryViewController ()
 
@@ -58,13 +59,22 @@
 
 - (IBAction)buttonAction:(UIButton *)sender
 {
+    UIStoryboard *storyboard = nil;
+    EmployeesViewController *employees = nil;
     UIViewController *viewController = nil;
     switch (sender.tag) {
         case 0:
             viewController = [[MinistryStructureViewController alloc] init];
             break;
+        case 1:
+            viewController = [[EmployeesViewController alloc] init];
+            employees = (EmployeesViewController *)viewController;
+            employees.type = ETypeCommon;
+            break;
         case 2:
-            viewController =  [[MinistryAnalyticsViewController alloc] init];
+            //viewController =  [[AnalyticsViewController alloc] init];
+            storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+            viewController = [storyboard instantiateViewControllerWithIdentifier:@"Analytics"];
             break;
         case 3:
              viewController =  [[NewsViewController alloc] init];

@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *firstName;
 @property (nonatomic, copy) NSString *lastName;
+@property (nonatomic, copy) NSString *givenName;
 @property (nonatomic, copy) NSString *rank;
 
 @end

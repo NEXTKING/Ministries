@@ -22,8 +22,11 @@
 
 - (void) awakeFromNib
 {
-    //self.imageView.layer.cornerRadius = self.frame.size.width/2;
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorWithRed:128.0/255.0 green:153.0/255.0 blue:157.0/255.0 alpha:1.0];
+    [self setSelectedBackgroundView:bgColorView];
 }
+
 
 
 

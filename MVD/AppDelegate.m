@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "SecondViewController.h"
+
 
 @implementation AppDelegate
+{
+     int _networkIndicatorCounter;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -22,13 +27,30 @@
                                                                                                   NSForegroundColorAttributeName,
                                                                                                   nil]
                                                                                         forState:UIControlStateNormal];
+    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"product_ids"
+                                         withExtension:@"plist"];
+    NSArray *productIdentifiers = [NSArray arrayWithContentsOfURL:url];
+    NSArray *array = [NSArray arrayWithObject:@"qwe"];
+    
+    [self validateProductIdentifiers:array];
+
+    
     return YES;
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+- (void) tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    UINavigationController *mainNavigation = tabBarController.viewControllers[0];
+    SecondViewController *searchController = mainNavigation.viewControllers[0];
+    searchController.tabBarPressed = YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -56,6 +78,54 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+// Custom method
+- (void)validateProductIdentifiers:(NSArray *)productIdentifiers
+{
+    SKProductsRequest *productsRequest = [[SKProductsRequest alloc]
+                                          initWithProductIdentifiers:[NSSet setWithArray:productIdentifiers]];
+    productsRequest.delegate = self;
+    [productsRequest start];
+}
+
+// SKProductsRequestDelegate protocol method
+- (void)productsRequest:(SKProductsRequest *)request
+     didReceiveResponse:(SKProductsResponse *)response
+{
+    self.products = response.products;
+    
+    for (NSString *invalidIdentifier in response.invalidProductIdentifiers) {
+        NSLog(@"Invalid Identifier: %@", invalidIdentifier);
+    }
+    
+    //[self displayStoreUI]; // Custom method
+}
+
+#pragma mark - Network Indicator
+- (void) enableNetworkIndicator
+{
+    ++_networkIndicatorCounter;
+    [self performSelector:@selector(networkIndicatorUpdate) withObject:Nil afterDelay:1];
+}
+
+- (void) disableNetworkIndicator
+{
+    --_networkIndicatorCounter;
+    [self performSelector:@selector(networkIndicatorUpdate) withObject:Nil afterDelay:1];
+}
+
+- (void) networkIndicatorUpdate
+{
+    if ( _networkIndicatorCounter <= 0 )
+    {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        _networkIndicatorCounter = 0;
+    }
+    else
+    {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    }
 }
 
 @end

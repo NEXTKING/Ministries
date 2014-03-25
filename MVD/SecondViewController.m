@@ -28,9 +28,13 @@
     NSMutableArray *_sortedArchive;
     BOOL _isEmpty;
     BOOL _emptyString;
+    BOOL _controllerIsPushed;
     NSInteger _numberOfFoundSections;
     NSInteger _currentPage;
+    CGFloat _currentOffset;
 }
+
+@property (nonatomic, strong) UISearchDisplayController *searchController;
 
 @end
 
@@ -39,7 +43,11 @@
 
 - (void)viewDidLoad
 {
+    self.searchController = self.searchDisplayController;
     [super viewDidLoad];
+    _currentOffset = 320.0;
+    _tabBarPressed = NO;
+    _controllerIsPushed = NO;
 	// Do any additional setup after loading the view, typically from a nib.
     _array =  [NSArray arrayWithObjects:
      @"Москва",
@@ -141,6 +149,14 @@
     
     {
         MinistryInformation *ministry = [[MinistryInformation alloc] init];
+        ministry.shortName = @"ФСТЭК";
+        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
+        ministry.image = @"мид россии.png";
+        [tempMinistries addObject:ministry];
+    }
+    
+    {
+        MinistryInformation *ministry = [[MinistryInformation alloc] init];
         ministry.shortName = @"МВД России";
         ministry.fullName = @"Министерство внутренних дел Российской Федерации";
         ministry.image = @"1.png";
@@ -164,34 +180,122 @@
         [tempMinistries addObject:ministry];
     }
     
+    {
+        MinistryInformation *ministry = [[MinistryInformation alloc] init];
+        ministry.shortName = @"МИД России";
+        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
+        ministry.image = @"мид россии.png";
+        [tempMinistries addObject:ministry];
+    }
+    
+    {
+        MinistryInformation *ministry = [[MinistryInformation alloc] init];
+        ministry.shortName = @"Минобороны России";
+        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
+        ministry.image = @"мид россии.png";
+        [tempMinistries addObject:ministry];
+    }
+    
+    {
+        MinistryInformation *ministry = [[MinistryInformation alloc] init];
+        ministry.shortName = @"Россотрудничество";
+        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
+        ministry.image = @"мид россии.png";
+        [tempMinistries addObject:ministry];
+    }
+    
+    {
+        MinistryInformation *ministry = [[MinistryInformation alloc] init];
+        ministry.shortName = @"ФСВТС России";
+        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
+        ministry.image = @"мид россии.png";
+        [tempMinistries addObject:ministry];
+    }
+    
+    {
+        MinistryInformation *ministry = [[MinistryInformation alloc] init];
+        ministry.shortName = @"ФСТЭК";
+        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
+        ministry.image = @"мид россии.png";
+        [tempMinistries addObject:ministry];
+    }
+    
+    {
+        MinistryInformation *ministry = [[MinistryInformation alloc] init];
+        ministry.shortName = @"МВД России";
+        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
+        ministry.image = @"1.png";
+        [tempMinistries addObject:ministry];
+        
+    }
+    
     _ministries = [NSArray arrayWithArray:tempMinistries];
 
+
     
-    UIImageView* firstView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 0, _scrollview.frame.size.width-40, _scrollview.frame.size.height)];
-    firstView.image = [UIImage imageNamed:@"1.png"];
+    UIImageView* firstView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    firstView.image = [UIImage imageNamed:@"125.png"];
     firstView.alpha = 1;
      [_scrollview addSubview:firstView];
     firstView.contentMode = UIViewContentModeScaleAspectFit;
     
-    UIImageView* secondView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    
+    UIImageView* secondView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*2, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
     secondView.image = [UIImage imageNamed:@"2.png"];
     [_scrollview addSubview:secondView];
     secondView.contentMode = UIViewContentModeScaleAspectFit;
     
     
-    UIImageView* thirdView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*2, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    UIImageView* thirdView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*3, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
     thirdView.image = [UIImage imageNamed:@"3.png"];
     [_scrollview addSubview:thirdView];
     thirdView.contentMode = UIViewContentModeScaleAspectFit;
     
+    UIImageView* fourthView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*4, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    fourthView.image = [UIImage imageNamed:@"мид россии.png"];
+    [_scrollview addSubview:fourthView];
+    fourthView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    UIImageView* fifthView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*5, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    fifthView.image = [UIImage imageNamed:@"минобороны россии.png"];
+    [_scrollview addSubview:fifthView];
+    fifthView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    UIImageView* sixthView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*6, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    sixthView.image = [UIImage imageNamed:@"россотрудничество.png"];
+    [_scrollview addSubview:sixthView];
+    sixthView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    UIImageView* seventh = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*7, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    seventh.image = [UIImage imageNamed:@"фсвтс россии.png"];
+    [_scrollview addSubview:seventh];
+    seventh.contentMode = UIViewContentModeScaleAspectFit;
+    
+    UIImageView* eights = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*8, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    eights.image = [UIImage imageNamed:@"фстэк.png"];
+    [_scrollview addSubview:eights];
+    eights.contentMode = UIViewContentModeScaleAspectFit;
+    
+    //copied images
+    UIImageView* firstCopy = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    firstCopy.image = [UIImage imageNamed:@"фстэк.png"];
+    [_scrollview addSubview:firstCopy];
+    firstCopy.contentMode = UIViewContentModeScaleAspectFit;
+    
+    UIImageView* lastCopy = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*9, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    lastCopy.image = [UIImage imageNamed:@"125.png"];
+    lastCopy.alpha = 1;
+    [_scrollview addSubview:lastCopy];
+    lastCopy.contentMode = UIViewContentModeScaleAspectFit;
     
     //UIImageView* fourthView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*3, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
     //fourthView.backgroundColor = [UIColor greenColor];
     //[_scrollview addSubview:fourthView];
     
     _scrollview.pagingEnabled = YES;
-    _scrollview.contentSize = CGSizeMake(_scrollview.frame.size.width*3, _scrollview.frame.size.height);
+    _scrollview.contentSize = CGSizeMake(_scrollview.frame.size.width*10, _scrollview.frame.size.height);
     _scrollview.decelerationRate = UIScrollViewDecelerationRateFast;
+    [_scrollview setContentOffset:CGPointMake(_scrollview.frame.size.width, 0) animated:NO];
     
     UITableView *table = self.searchDisplayController.searchResultsTableView;
     table.backgroundColor = [UIColor colorWithWhite:0.3 alpha:0.8];
@@ -211,31 +315,37 @@
     HumanInformation *h1 = [[HumanInformation alloc] init];
     h1.firstName = @"Иван";
     h1.lastName = @"Петров";
+    h1.givenName = @"Иванович";
     h1.rank = @"Генерал-Полковник";
     
     HumanInformation *h2 = [[HumanInformation alloc] init];
     h2.firstName = @"Иван";
     h2.lastName = @"Иванов";
+    h2.givenName = @"Дмитриевич";
     h2.rank = @"Генерал-Лейтенант";
     
     HumanInformation *h3 = [[HumanInformation alloc] init];
     h3.firstName = @"Василий";
     h3.lastName = @"Медведев";
+    h3.givenName = @"Петрович";
     h3.rank = @"Генерал-Майор";
     
     HumanInformation *h4 = [[HumanInformation alloc] init];
     h4.firstName = @"Дмитрий";
     h4.lastName = @"Минин";
+    h4.givenName = @"Константинович";
     h4.rank = @"Генерал-Лейтенант";
     
     HumanInformation *h5 = [[HumanInformation alloc] init];
     h5.firstName = @"Дмитрий";
     h5.lastName = @"Морозов";
+    h5.givenName = @"Александрович";
     h5.rank = @"Генерал-Лейтенант";
     
     HumanInformation *h6 = [[HumanInformation alloc] init];
     h6.firstName = @"Иннокентий";
     h6.lastName = @"Филатов";
+    h6.givenName = @"Михайлович";
     h6.rank = @"Генерал-Лейтенант";
     
     [_humans addObject:h3];
@@ -296,6 +406,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    if (self.tabBarPressed)
+    {
+        self.searchDisplayController.active = NO;
+        _tabBarPressed = NO;
+    }
+    
     [super viewWillAppear:animated];
 }
 
@@ -359,35 +475,39 @@
 {
     //This is the index of the "page" that we will be landing at
     
+    if (_currentOffset == 0)
+    {
+        [_scrollview scrollRectToVisible:CGRectMake(8*_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
+        _currentPage = _ministries.count - 1;
+    }
+    
     if (sender == _rightTap && _currentPage != _ministries.count - 1)
         _currentPage++;
     else if (sender == _leftTap && _currentPage != 0)
         _currentPage--;
-    else
-        return;
+    
+    //if (sender == _leftTap && _currentPage == 0)
+   // {
+   //     [self checkImagesLoop];
+   //     _currentPage = _ministries.count-1;
+    //}
     
     MinistryInformation *info = _ministries[_currentPage];
     _ministryLabel.text = info.shortName;
     
-    [self checkArrowsHighlight];
     
     //This is the actual x position in the scroll view
     
-    [_scrollview setContentOffset:CGPointMake(_scrollview.bounds.size.width * _currentPage, 0) animated:YES];
+    _currentOffset = _scrollview.contentOffset.x;
+    if (sender == _leftTap)
+        _currentOffset-=_scrollview.frame.size.width;
+    else
+        _currentOffset+=_scrollview.frame.size.width;
+    
+    [_scrollview setContentOffset:CGPointMake(_currentOffset, 0) animated:YES];
+    
 }
 
-- (void) checkArrowsHighlight
-{
-    if (_currentPage == 0)
-        _leftArrow.alpha = 0.3;
-    else
-        _leftArrow.alpha = 1.0;
-    
-    if (_currentPage == _ministries.count - 1)
-        _rightArrow.alpha = 0.3;
-    else
-        _rightArrow.alpha = 1.0;
-}
 
 
 - (void) scrollViewWillEndDragging:(UIScrollView *)scroll withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
@@ -396,9 +516,8 @@
     NSUInteger nearestIndex = (NSUInteger)(targetContentOffset->x / _scrollview.bounds.size.width + 0.5f);
     
     //Just to make sure we don't scroll past your content
-    nearestIndex = MAX( MIN( nearestIndex, 4 - 1 ), 0 );
+    nearestIndex = MAX( MIN( nearestIndex, 10 ), 0 );
     _currentPage = nearestIndex;
-    [self checkArrowsHighlight];
     
     //This is the actual x position in the scroll view
     CGFloat xOffset = nearestIndex * _scrollview.bounds.size.width;
@@ -418,6 +537,34 @@
     {
         NSUInteger currentIndex = (NSUInteger)(scrollView.contentOffset.x / scrollView.bounds.size.width);
         [scrollView setContentOffset:CGPointMake(scrollView.bounds.size.width * currentIndex, 0) animated:YES];
+    }
+}
+
+
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self checkImagesLoop];
+}
+
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self checkImagesLoop];
+}
+
+- (void) checkImagesLoop
+{
+    if (_scrollview.contentOffset.x == 0) {
+        // user is scrolling to the left from image 1 to image 10.
+        // reposition offset to show image 10 that is on the right in the scroll view
+        [_scrollview scrollRectToVisible:CGRectMake(8*_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
+        _currentPage = _ministries.count - 1;
+        
+    }
+    else if (_scrollview.contentOffset.x == 9*_scrollview.frame.size.width) {
+        // user is scrolling to the right from image 10 to image 1.
+        // reposition offset to show image 1 that is on the left in the scroll view
+        [_scrollview scrollRectToVisible:CGRectMake(_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
+        _currentPage = 0;
     }
 }
 
@@ -450,9 +597,14 @@
     return _array.count;
 }
 
-- (NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+
+- (UIView *) pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
-    return _array[row];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 37)];
+    label.text = _array[row];
+    label.textAlignment = NSTextAlignmentLeft;
+    label.backgroundColor = [UIColor clearColor];
+    return label;
 }
 
 #pragma mark - Table view data source
@@ -582,7 +734,7 @@
         {
             HumanInformation *human = (HumanInformation*) infoObject;
             humanCell.nameLabel.text = [NSString stringWithFormat:@"%@ %@", human.lastName, human.firstName];
-            humanCell.rankLabel.text = human.rank;
+            humanCell.rankLabel.text = human.givenName;
             humanCell.photoView.image = [UIImage imageNamed:@"Путов.jpg"];
             humanCell.photoView.layer.cornerRadius = 30;
             humanCell.photoView.layer.masksToBounds = YES;
@@ -591,8 +743,9 @@
         {
             MinistryInformation *minisrty = (MinistryInformation*) infoObject;
             humanCell.photoView.image = [UIImage imageNamed:minisrty.image];
-            humanCell.nameLabel.text = minisrty.shortName;
-            humanCell.rankLabel.text = @"Дополнительная информация";
+            humanCell.centeralLabel.text = minisrty.shortName;
+            humanCell.rankLabel.text = @"";
+            humanCell.nameLabel.text = @"";
         }
         
         cell = humanCell;
@@ -727,6 +880,16 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
     [__textfield becomeFirstResponder];
 }
 
+- (BOOL) searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    if (_controllerIsPushed)
+    {
+        _controllerIsPushed = NO;
+        return NO;
+    }
+    return YES;
+}
+
 - (IBAction)scrllTapHandler:(id)sender
 {
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -739,7 +902,7 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
 {
     [__textfield resignFirstResponder];
     NSInteger row = [_pickeView selectedRowInComponent:0];
-    NSString *title = [_pickeView.delegate pickerView:_pickeView titleForRow:row forComponent:0];
+    NSString *title = _array[row];
     _regionLabel.text = title;
     
     MinistryViewController *ministry = [MinistryViewController new];
@@ -775,7 +938,10 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
    //     [self.navigationController pushViewController:ministry animated:YES];
    // }
     if (indexPath.section == 0 && _sorted.count > 0)
+    {
         [self performSegueWithIdentifier:@"PushHuman" sender:nil];
+        _controllerIsPushed = YES;
+    }
     else
     {
         MinistryViewController *minVC = [[MinistryViewController alloc] init];
@@ -815,7 +981,6 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
    //[controller.searchBar.delegate searchBar:controller.searchBar textDidChange:@" "];
 }
 
-
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
 {
     //j[self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:searchOption];
@@ -823,5 +988,7 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
     // Return YES to cause the search result table view to be reloaded.
     return YES;
 }
+
+
 
 @end

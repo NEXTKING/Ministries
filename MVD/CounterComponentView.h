@@ -10,4 +10,13 @@
 
 @interface CounterComponentView : UIView
 
+@property (nonatomic, strong, readonly) UILabel *mainLabel;
+
+//TEMPORARY!
+@property (nonatomic, assign) NSUInteger iterations;
+@property (nonatomic, assign) NSUInteger number;
+
+- (void) animateComponent;
+
+
 @end

@@ -16,6 +16,7 @@
     NSArray *mainOffices;
     NSArray *offices;
     NSArray *centers;
+    NSArray *_array;
 }
 
 @end
@@ -86,6 +87,102 @@
                @"ФКУ НПО «Спецтехника и Связь»",
                @"Всероссийский научно-исследовательский институт",
                @"ФКУ \"Центр кинологического обеспечения МВД России\"", nil];
+    self.tableView.tableFooterView = _localUnitsView;
+    _localUnitsTextField.inputView = _pickerView;
+    _localUnitsTextField.inputAccessoryView = _toolbar;
+    
+    _array =  [NSArray arrayWithObjects:
+               @"Москва",
+               @"Центральный ФО",
+               @"Дальневосточный ФО",
+               @"Приволжский ФО",
+               @"Северо-Западный ФО",
+               @"Северо-Кавказский ФО",
+               @"Сибирский ФО",
+               @"Уральский ФО",
+               @"Южный ФО",
+               @"Адыгея",
+               @"Алтай",
+               @"Алтайский край",
+               @"Амурская область",
+               @"Архангельская область",
+               @"Астраханская область",
+               @"Башкортостан",
+               @"Белгородская область",
+               @"Брянская область",
+               @"Бурятия",
+               @"Владимирская область",
+               @"Волгоградская область",
+               @"Вологодская область",
+               @"Воронежская область",
+               @"Дагестан",
+               @"Еврейская АО",
+               @"Забайкальский край",
+               @"Ивановская область",
+               @"Ингушетия",
+               @"Иркутская область",
+               @"Кабардино-Балкария",
+               @"Калининградская область",
+               @"Калмыкия",
+               @"Калужская область",
+               @"Камчатский край",
+               @"Карачаево-Черкесия",
+               @"Карелия",
+               @"Кемеровская область",
+               @"Кировская область",
+               @"Коми",
+               @"Костромская область",
+               @"Краснодарский край",
+               @"Красноярский край",
+               @"Курганская область",
+               @"Курская область",
+               @"Ленинградская область",
+               @"Липецкая область",
+               @"Магаданская область",
+               @"Марий Эл",
+               @"Мордовия",
+               @"Московская область",
+               @"Мурманская область",
+               @"Ненецкий АО",
+               @"Нижегородская область",
+               @"Новгородская область",
+               @"Новосибирская область",
+               @"Омская область",
+               @"Оренбургская область",
+               @"Орловская область",
+               @"Пензенская область",
+               @"Пермский край",
+               @"Приморский край",
+               @"Псковская область",
+               @"Ростовская область",
+               @"Рязанская область",
+               @"Самарская область",
+               @"Санкт-Петербург",
+               @"Саратовская область",
+               @"Саха (Якутия)",
+               @"Сахалинская область",
+               @"Свердловская область",
+               @"Северная Осетия — Алания",
+               @"Смоленская область",
+               @"Ставропольский край",
+               @"Тамбовская область",
+               @"Татарстан",
+               @"Тверская область",
+               @"Томская область",
+               @"Тульская область",
+               @"Тыва (Тува)",
+               @"Тюменская область",
+               @"Удмуртия",
+               @"Ульяновская область",
+               @"Хабаровский край",
+               @"Хакасия",
+               @"Ханты-Мансийский АО",
+               @"Челябинская область",
+               @"Чечня",
+               @"Чувашия",
+               @"Чукотский АО",
+               @"Ямало-Ненецкий АО",
+               @"Ярославская область", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -93,6 +190,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction) tapHandler:(id)sender
+{
+    [_localUnitsTextField becomeFirstResponder];
+}
+
+- (IBAction)doneButtonHandler:(id)sender
+{
+    [_localUnitsTextField resignFirstResponder];
+}
+
+
 
 #pragma mark - Table data source
 
@@ -108,6 +217,8 @@
     [hf.textLabel setFont:[UIFont fontWithName:@"HelveticaNeue-light" size:20]];
 }
 
+
+
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (section == 0)
@@ -119,6 +230,7 @@
     else
         return centers.count;
 }
+
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -156,6 +268,14 @@
         cell.mainLabel.text = centers[indexPath.row];
     cell.backgroundColor = [UIColor clearColor];
     
+    if (indexPath.row == [self.tableView numberOfRowsInSection:indexPath.section]-1 && indexPath.section == 3)
+    {
+        CALayer *TopBorder = [CALayer layer];
+        TopBorder.frame = CGRectMake(0, 70-0.5, cell.frame.size.width, 0.5f);
+        TopBorder.backgroundColor = self.tableView.separatorColor.CGColor;
+        [cell.layer addSublayer:TopBorder];
+    }
+    
     return cell;
 }
 
@@ -166,6 +286,26 @@
     [self.navigationController pushViewController:description animated:YES];
     
     
+}
+
+- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return _array.count;
+}
+
+
+- (UIView *) pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 37)];
+    label.text = _array[row];
+    label.textAlignment = NSTextAlignmentLeft;
+    label.backgroundColor = [UIColor clearColor];
+    return label;
 }
 
 @end

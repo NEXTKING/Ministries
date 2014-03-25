@@ -17,6 +17,7 @@
     {
         _firstName = nil;
         _lastName = nil;
+        _givenName = nil;
         _rank = nil;
     }
     

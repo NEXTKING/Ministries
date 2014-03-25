@@ -33,6 +33,8 @@ UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *leftArrow;
 @property (weak, nonatomic) IBOutlet UIImageView *rightArrow;
 
+@property (nonatomic, assign) BOOL tabBarPressed;
+
 
 
 @end

@@ -99,6 +99,7 @@
     else
         _isRightSwiped = NO;
     [self animateCharts:sender.direction];
+    _leftYearLabel.text = @"2012";
     _prevLabel.text = @"2013";
     _nextLabel.text = @"2014";
     
@@ -111,6 +112,7 @@
     else
         _isRightSwiped = YES;
     
+    _leftYearLabel.text = @"2011";
     _prevLabel.text = @"2012";
     _nextLabel.text = @"2013";
     [self animateCharts:sender.direction];
@@ -142,6 +144,10 @@
         manRect.size.height -= deltaMan;
         manRect.origin.y +=deltaMan;
         _incomeManLeft.frame = manRect;
+            
+        CGRect incomeLeftLabel = _incomeLabelLeft.frame;
+            incomeLeftLabel.origin.y += (deltaMan + deltaWife);
+            _incomeLabelLeft.frame = incomeLeftLabel;
         }
         
         {
@@ -155,6 +161,10 @@
             wifeRect.origin.y += (deltaWifeRight);
             wifeRect.size.height -= deltaWifeRight;
             _incomeWifeRight.frame = wifeRect;
+            
+            CGRect incomeRightLabel = _incomeLabelRight.frame;
+            incomeRightLabel.origin.y += (deltaManRight + deltaWifeRight);
+            _incomeLabelRight.frame = incomeRightLabel;
         }
         
         //left property
@@ -163,6 +173,11 @@
             manRect.size.height -= deltaPropertyManLeft;
             manRect.origin.y +=deltaPropertyManLeft;
             _propertyManLeft.frame = manRect;
+            
+            CGRect incomeLeftLabel = _propertyLabelLeft.frame;
+            incomeLeftLabel.origin.y += deltaPropertyManLeft;
+            _propertyLabelLeft.frame = incomeLeftLabel;
+            
         }
         
         //right property
@@ -175,6 +190,10 @@
             manRect.size.height -= deltaPropertyManRight;
             manRect.origin.y +=deltaPropertyManRight;
             _propertyManRight.frame = manRect;
+            
+            CGRect incomeLeftLabel = _propertyLabelRight.frame;
+            incomeLeftLabel.origin.y += deltaPropertyManRight;
+            _propertyLabelRight.frame = incomeLeftLabel;
         }
         
         

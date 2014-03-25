@@ -8,6 +8,7 @@
 
 #import "AnalyticsViewController.h"
 #import "AnalyticaInfoCell.h"
+#import "EmployeesViewController.h"
 
 @interface AnalyticsViewController ()
 
@@ -24,11 +25,29 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     _tableView.backgroundColor = [UIColor clearColor];
+    [self repeatAnimation:Nil];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(repeatAnimation:)];
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+    
 	// Do any additional setup after loading the view.
+}
+
+- (IBAction)repeatAnimation:(id)sender
+{
+    NSArray *components = [NSArray arrayWithObjects:_component0, _component1, _component2, _component3, _component4, _component5, nil];
+    for (int i = 0; i < components.count; ++i)
+    {
+        CounterComponentView *componentView = components[i];
+        componentView.iterations = 5+ 8*i;
+        componentView.number = (rand() % 10);
+        [componentView animateComponent];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,6 +108,33 @@
     }
     
     return cell;
+}
+
+- (IBAction)buttonHandler:(UIButton*)sender
+{
+    NSInteger tag = sender.tag;
+    EmployeesViewController *employees = [[EmployeesViewController alloc] init];
+    
+    switch (tag) {
+        case 0:
+            employees.type = ETypeHired;
+            break;
+        case 1:
+            employees.type = ETypeFired;
+            break;
+        case 2:
+            employees.type = ETypeAwarded;
+            break;
+        case 3:
+            employees.type = ETypePromoted;
+            break;
+            
+            
+        default:
+            break;
+    }
+    
+    [self.navigationController pushViewController:employees animated:YES];
 }
 
 

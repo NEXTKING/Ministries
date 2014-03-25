@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
@@ -29,6 +29,17 @@
                         <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="pcv-ci-LJE">
+                        <rect key="frame" x="78" y="17" width="209" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="209" id="LC0-J8-mik"/>
+                            <constraint firstAttribute="height" constant="21" id="c2b-86-kNG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-0b-yQX">
                         <rect key="frame" x="78" y="30" width="201" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,10 +52,13 @@
                 <constraints>
                     <constraint firstItem="eIB-ka-jJk" firstAttribute="leading" secondItem="Ov7-3u-5P7" secondAttribute="leading" constant="12" id="6Nq-BJ-OMh"/>
                     <constraint firstItem="eIB-ka-jJk" firstAttribute="top" secondItem="Ov7-3u-5P7" secondAttribute="top" id="8km-d7-1T6"/>
+                    <constraint firstItem="pcv-ci-LJE" firstAttribute="leading" secondItem="eIB-ka-jJk" secondAttribute="trailing" constant="8" id="Xhp-ZC-WQq"/>
+                    <constraint firstItem="pcv-ci-LJE" firstAttribute="top" secondItem="Ov7-3u-5P7" secondAttribute="top" constant="17" id="kcX-wz-L01"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="centeralLabel" destination="pcv-ci-LJE" id="HeA-cP-wZy"/>
                 <outlet property="nameLabel" destination="a3r-jb-RaQ" id="jZm-l7-78a"/>
                 <outlet property="photoView" destination="eIB-ka-jJk" id="VoU-4S-apW"/>
                 <outlet property="rankLabel" destination="cyc-0b-yQX" id="PdI-kd-PuD"/>
