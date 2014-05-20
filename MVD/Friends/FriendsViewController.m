@@ -27,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"В кругу друзей";
+    
+    _nameLabel.text = [NSString stringWithFormat:@"%@ %@.%@.", _humanInfo.lastName, [_humanInfo.firstName substringToIndex:1], [_humanInfo.givenName substringToIndex:1]];
     
     NSArray *picturesArray = [NSArray arrayWithObjects:@"Путов.jpg", @"Путов.jpg", @"Путов.jpg", @"Путов.jpg", @"Путов.jpg", @"Путов.jpg", @"Путов.jpg", @"Путов.jpg", @"Путов.jpg",@"Путов.jpg", nil];
     Carousel *carousel = [[Carousel alloc] initWithArrayOfPictures:picturesArray delegate:self];
@@ -36,11 +39,13 @@
     
     _photoImage.layer.borderWidth = 2.0;
     _photoImage.layer.borderColor = [UIColor colorWithRed:201.0/255.0 green:212.0/255.0 blue:216.0/255.0 alpha:1.0].CGColor;
+    _photoImage.image = _humanInfo.image;
+    [_photoImage setClipsToBounds:YES];
     
     CALayer *TopBorder = [CALayer layer];
     TopBorder.frame = CGRectMake(0, _infoLabel.frame.size.height-0.5, _infoLabel.frame.size.width, 0.5f);
     TopBorder.backgroundColor = [UIColor colorWithRed:51.0/255.0 green:93.0/255.0 blue:107.0/255.0 alpha:1.0].CGColor;
-    //[_infoLabel.layer addSublayer:TopBorder];
+    [_infoLabel.layer addSublayer:TopBorder];
     
     CALayer *bottomBorder = [CALayer layer];
     bottomBorder.frame = CGRectMake(0, 0, _infoLabel.frame.size.width, 0.5f);

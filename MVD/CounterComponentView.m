@@ -40,8 +40,8 @@ static double __componentVelocity = 0.05;
 - (void) setNumber:(NSUInteger)number
 {
     _number = number;
-    _mainLabel.text = [NSString stringWithFormat:@"%d", _number];
-    upperLabel.text = [NSString stringWithFormat:@"%d", _number+1];
+    _mainLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)_number];
+    upperLabel.text = [NSString stringWithFormat:@"%u", _number+1];
 }
 
 - (void) addLabels
@@ -49,7 +49,7 @@ static double __componentVelocity = 0.05;
     
     _mainLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
     _mainLabel.font = [UIFont fontWithName:@"HelveticaNeue-thin" size:48.0];
-    _mainLabel.text = [NSString stringWithFormat:@"%d", _number];
+    _mainLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_number];
     _mainLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_mainLabel];
     
@@ -64,7 +64,7 @@ static double __componentVelocity = 0.05;
     upperLabel.backgroundColor = [UIColor clearColor];
     upperLabel.textAlignment = NSTextAlignmentCenter;
     upperLabel.font = [UIFont fontWithName:@"HelveticaNeue-thin" size:48.0];
-    upperLabel.text = [NSString stringWithFormat:@"%d", _number+1];
+    upperLabel.text = [NSString stringWithFormat:@"%u", _number+1];
     
     [self addSubview:upperLabel];
 }

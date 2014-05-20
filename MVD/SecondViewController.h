@@ -7,15 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MCPServer.h"
 
 @interface SecondViewController : UIViewController
     <UITableViewDataSource,
     UITableViewDelegate,
     UISearchBarDelegate,
     UIScrollViewDelegate,
-UISearchDisplayDelegate,
-UIPickerViewDataSource,
-UIPickerViewDelegate>
+    UISearchDisplayDelegate,
+    UIPickerViewDataSource,
+    UIPickerViewDelegate,
+    PersonsDelegate,
+    RanksDelegate,
+    PostsDelegate,
+    ResourcesExchangeDelegate>
+
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollview;
 @property (weak, nonatomic) IBOutlet UILabel *ministryLabel;
 @property (strong, nonatomic) IBOutlet UIPickerView *pickeView;
@@ -34,6 +41,10 @@ UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *rightArrow;
 
 @property (nonatomic, assign) BOOL tabBarPressed;
+
+//Loading Screen
+@property (weak, nonatomic) IBOutlet UIView *loadingView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingActivity;
 
 
 

@@ -138,7 +138,7 @@
         NSLog(@"%f", self.frame.size.width);
         
         carouselViews = [[NSMutableArray alloc] initWithCapacity:[_array count]];
-        int c = [_array count];
+        long c = [_array count];
     for (int q =0; q<c; q++)
         {
             UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureRecognizer:)];

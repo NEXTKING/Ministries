@@ -16,6 +16,10 @@
 #import "ATPictureDescriptionViewController.h"
 #import "FriendsViewController.h"
 
+#import <AddressBook/AddressBook.h>
+
+static const char* GroupName = "iЧиновники";
+
 @interface HumanViewController ()
 
 @end
@@ -36,10 +40,9 @@
 {
     [super viewDidLoad];
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:51.0/255.0 green:93.0/255.0 blue:107.0/255.0 alpha:1.0];
-    self.title = @"Путов В.В.";
-    //UIImageView* image =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1.png"]];
-    //image.frame = _tableView.frame;
-    //self.tableView.backgroundView = image;
+    
+    //Creating acknowledgements
+    self.title = [NSString stringWithFormat:@"%@ %@.%@.", _humanInfo.lastName, [_humanInfo.firstName substringToIndex:1], [_humanInfo.givenName substringToIndex:1]];
     _backgroundView.image = [UIImage imageNamed:@"grayBackground.jpg"];
     self.navigationController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     
@@ -59,11 +62,69 @@
     
     _tableView.backgroundColor = [UIColor clearColor];
     [self setNeedsStatusBarAppearanceUpdate];
+    [_photoImage setClipsToBounds:YES];
+    
+    [self fillViewWithData];
+    
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (void) fillViewWithData
+{
+    //Setting name
+    _nameLabel.text = [NSString stringWithFormat:@"%@ %@ %@", _humanInfo.lastName, _humanInfo.firstName, _humanInfo.givenName];
+    
+    //Setting rank
+    if (_humanInfo.rank)
+        _rankLabel.text = _humanInfo.rankName;
+    else
+        _rankLabel.text = @"-";
+    
+    //Setting post
+    
+    if (_humanInfo.post)
+        _postLabel.text = _humanInfo.postName;
+    else
+        _postLabel.text = @"-";
+    
+    //Setting birth date
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+    
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    
+    [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"ru_RU"]];
+    
+    
+    NSString *birthDate = [dateFormatter stringFromDate:_humanInfo.birthDate];
+    
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:_humanInfo.birthDate];
+    NSDateComponents *currentComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+    
+    NSInteger age = [currentComponents year] - [components year];
+    NSString *postAgeString = @"лет";
+    
+    switch (age % 10) {
+        case 1:
+            postAgeString = @"год";
+            break;
+        case 2:
+        case 3:
+        case 4:
+            postAgeString = @"года";
+            break;
+        default:
+            break;
+    }
+    
+    _birthdayLabel.text = [NSString stringWithFormat:@"%@ (%ld %@)", birthDate, (long)age, postAgeString];
+    _photoImage.image = _humanInfo.image;
     _photoImage.layer.borderWidth = 2.0;
     _photoImage.layer.borderColor = [UIColor colorWithRed:201.0/255.0 green:212.0/255.0 blue:216.0/255.0 alpha:1.0].CGColor;
     
-    //self.navigationController.navigationBarHidden = NO;
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 
@@ -132,53 +193,6 @@
     
     if (cell == nil)
     {
-        if (tableView == _littleTableView)
-        {
-            if (indexPath.row == 0)
-            {
-                HumanNameCell *nameCell = [[[NSBundle mainBundle] loadNibNamed:@"HumanNameCell" owner:self options:nil] objectAtIndex:0];
-                nameCell.nameLabel.text = @"Путов Валерий";
-                nameCell.givenNameLabel.text = @"Владимирович";
-                cell = nameCell;
-            }
-            else if (indexPath.row == 2)
-            {
-                RankCell *rank = [[[NSBundle mainBundle] loadNibNamed:@"RankCell" owner:self options:nil] objectAtIndex:0];
-                rank.rankLabel.text = @"Генерал-полковник";
-                rank.rankImage.image = [UIImage imageNamed:@"погон.png"];
-                cell = rank;
-            }
-            else
-            {
-                cell = [[UITableViewCell alloc] init];
-                cell.textLabel.adjustsFontSizeToFitWidth = YES;
-                cell.textLabel.minimumScaleFactor = 0.5;
-                
-                //Estimating persons' age
-                
-                NSDateComponents *comps = [[NSDateComponents alloc] init];
-                [comps setDay:2];
-                [comps setMonth:1];
-                [comps setYear:1954];
-                
-                NSDate *birthday = [[NSCalendar currentCalendar] dateFromComponents:comps];
-                
-                NSDate* now = [NSDate date];
-                NSDateComponents* ageComponents = [[NSCalendar currentCalendar]
-                                                   components:NSYearCalendarUnit
-                                                   fromDate:birthday
-                                                   toDate:now
-                                                   options:0];
-                NSInteger age = [ageComponents year];
-                
-                cell.textLabel.text = [NSString stringWithFormat: @"2 Января 1954 (%d лет)", age];
-                CGRect rect = cell.textLabel.frame;
-                rect.origin.x = 40;
-                cell.textLabel.frame = rect;
-            }
-        }
-        else
-        {
             CommonInfoCell *infoCell = [[[NSBundle mainBundle] loadNibNamed:@"CommonInfoCell" owner:self options:nil] objectAtIndex:0];
             if (indexPath.row == 0)
             {
@@ -210,7 +224,6 @@
             }
         }
         cell.backgroundColor = [UIColor clearColor];
-    }
     
     return cell;
 }
@@ -221,16 +234,19 @@
     if (indexPath.row == 0)
     {
         BiographyViewController *biography = [[BiographyViewController alloc] init];
+        biography.humanInfo = _humanInfo;
         [self.navigationController pushViewController:biography animated:YES];
     }
     if (indexPath.row == 1)
     {
         HumanIncomeViewController *income = [[HumanIncomeViewController alloc] init];
+        income.humanInfo = _humanInfo;
         [self.navigationController pushViewController:income animated:YES];
     }
     if (indexPath.row == 2)
     {
         FriendsViewController *income = [[FriendsViewController alloc] init];
+        income.humanInfo = _humanInfo;
         [self.navigationController pushViewController:income animated:YES];
     }
     if (indexPath.row == 3)
@@ -241,11 +257,125 @@
         
 }
 
+#pragma mark - Photo browser
+
 - (IBAction) gestureHandler:(id)sender
 {
-    NSMutableArray *pictures = [NSMutableArray arrayWithObjects:@"Путов.jpg", @"mvd_dark.png", @"кадры.png" ,nil];
-    ATPictureDescriptionViewController *description = [[ATPictureDescriptionViewController alloc] initWithType:0 picture:0 division:pictures];
+    
+    NSMutableArray *pictures = [NSMutableArray new];
+    if (_humanInfo.image)
+        [pictures addObject:_humanInfo.image];
+    
+    for (NSUInteger i = 0; i<_humanInfo.photos.count - 1; ++i)
+         [pictures addObject:[NSNull null]];
+    
+    ATPictureDescriptionViewController *description = [[ATPictureDescriptionViewController alloc] initWithPictures:pictures];
+    description.links = _humanInfo.photos;
     [self.navigationController pushViewController:description animated:YES];
+}
+
+#pragma mark - Person Favourites
+
+- (void) dismissActionSheet : (UIActionSheet*) actionSheet
+{
+    [actionSheet dismissWithClickedButtonIndex:100 animated:YES];
+}
+
+- (void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    ABAddressBookRef addressBook = nil;
+    
+    
+    switch (buttonIndex) {
+        case 1:
+            addressBook = ABAddressBookCreateWithOptions(NULL, nil);
+            
+            //[self performSelectorOnMainThread:@selector(dismissActionSheet:) withObject:actionSheet waitUntilDone:YES];
+            
+            __block BOOL accessGranted = NO;
+            if (ABAddressBookRequestAccessWithCompletion != NULL) { // we're on iOS 6
+                //dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+                ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error) {
+                    accessGranted = granted;
+                    if (accessGranted) {
+                        [self continueAddPerson:addressBook];
+                    }
+                });
+                //dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+            }
+        break;
+    }
+}
+
+- (void) continueAddPerson: (ABRecordRef) addressBook
+{
+    ABNewPersonViewController* newPersonVc = [[ABNewPersonViewController alloc] init];
+    CFArrayRef array =  ABAddressBookCopyArrayOfAllGroups(addressBook);
+    CFIndex numberOfGoups = CFArrayGetCount(array);
+    CFStringRef preferedGroupName = CFStringCreateWithCString(kCFAllocatorDefault, GroupName, kCFStringEncodingUTF8);
+    
+    
+    ABRecordRef foundGroup = NULL;
+    
+    //Trying to find specified group
+    
+    for (int i =0; i<numberOfGoups; ++i)
+    {
+        ABRecordRef currentGroup = CFArrayGetValueAtIndex(array, i);
+        CFStringRef groupName = ABRecordCopyValue(currentGroup, kABGroupNameProperty);
+        
+        if (CFStringCompare(groupName, preferedGroupName, 0) == 0)
+        {
+            foundGroup = currentGroup;
+            break;
+        }
+    }
+    
+    //If there's no such group then create it ourselves
+    
+    if (foundGroup == NULL)
+    {
+        foundGroup = ABGroupCreate();
+        ABRecordSetValue(foundGroup, kABGroupNameProperty, preferedGroupName, nil);
+        ABAddressBookAddRecord(addressBook, foundGroup, nil);
+    }
+    
+    CFRelease(array);
+    CFRelease(preferedGroupName);
+    
+    
+    //Creating person and filling info
+    ABRecordRef person = ABPersonCreate();
+    ABRecordSetValue(person, kABPersonFirstNameProperty, (__bridge CFTypeRef)(_humanInfo.firstName), nil);
+    ABRecordSetValue(person, kABPersonLastNameProperty, CFBridgingRetain(_humanInfo.lastName), nil);
+    ABRecordSetValue(person, kABPersonJobTitleProperty, CFBridgingRetain(_humanInfo.postName), nil);
+    ABRecordSetValue(person, kABPersonBirthdayProperty, CFBridgingRetain(_humanInfo.birthDate), nil);
+    ABPersonSetImageData(person, (__bridge CFDataRef)(UIImagePNGRepresentation(_photoImage.image)), nil);
+    
+    newPersonVc.displayedPerson = person;
+    newPersonVc.addressBook = addressBook;
+    newPersonVc.parentGroup = foundGroup;
+    newPersonVc.newPersonViewDelegate = self;
+    
+    UINavigationController* navCont = [[UINavigationController alloc] initWithRootViewController:newPersonVc];
+    
+    [self presentViewController:navCont animated:YES completion:nil];
+}
+
+- (void) newPersonViewController:(ABNewPersonViewController *)newPersonView didCompleteWithNewPerson:(ABRecordRef)person
+{
+    if (person)
+    {
+        CFErrorRef err = nil;
+        
+        ABGroupAddMember(newPersonView.parentGroup, person, &err);
+        if (!err)
+            ABAddressBookSave(newPersonView.addressBook, &err);
+        
+       // CFRelease(err);
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

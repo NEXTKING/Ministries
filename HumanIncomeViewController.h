@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HumanInformation.h"
 
 @interface HumanIncomeViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 
@@ -35,6 +36,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *nextLabel;
 @property (weak, nonatomic) IBOutlet UILabel *prevLabel;
 @property (weak, nonatomic) IBOutlet UILabel *leftYearLabel;
+
+//UI Data
+
+@property (strong, nonatomic) HumanInformation* humanInfo;
+@property (weak, nonatomic) IBOutlet UILabel *personNameLabel;
+
+
 
 
 @end

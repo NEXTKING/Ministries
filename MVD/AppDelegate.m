@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //getting server address for connetion to web-service
+    [self getAddress];
+    
     // Override point for customization after application launch.
     [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                                                                   [UIColor whiteColor],
@@ -30,9 +33,9 @@
     [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"product_ids"
-                                         withExtension:@"plist"];
-    NSArray *productIdentifiers = [NSArray arrayWithContentsOfURL:url];
+   // NSURL *url = [[NSBundle mainBundle] URLForResource:@"product_ids"
+     //                                    withExtension:@"plist"];
+   // NSArray *productIdentifiers = [NSArray arrayWithContentsOfURL:url];
     NSArray *array = [NSArray arrayWithObject:@"qwe"];
     
     [self validateProductIdentifiers:array];
@@ -126,6 +129,14 @@
     {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     }
+}
+
+- (void) getAddress
+{
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Customisation" ofType:@"plist"]];
+    
+    if ([[dictionary objectForKey:@"Server"] isKindOfClass:[NSString class]])
+        self.serverAddress = [dictionary objectForKey:@"Server"];
 }
 
 @end

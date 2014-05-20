@@ -11,5 +11,6 @@
 @interface BiographyUnitView : UIView
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end

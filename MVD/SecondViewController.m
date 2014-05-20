@@ -18,6 +18,9 @@
 {
     NSArray *_array;
     NSMutableArray *_humans;
+    NSDictionary *_ranks;
+    NSDictionary *_posts;
+    
     NSMutableArray *_results;
     NSMutableArray *_sorted;
     NSMutableArray *_splitedArray;
@@ -32,6 +35,8 @@
     NSInteger _numberOfFoundSections;
     NSInteger _currentPage;
     CGFloat _currentOffset;
+    
+    NSUInteger __requestCount;
 }
 
 @property (nonatomic, strong) UISearchDisplayController *searchController;
@@ -41,11 +46,69 @@
 
 @implementation SecondViewController
 
+- (void) personsComplete:(NSArray *)persons
+{
+    if (persons && persons.count > 0)
+    {
+        _humans = [[NSMutableArray alloc] initWithArray:persons];
+        _archive  = [NSArray arrayWithArray:_humans];
+        [_loadingActivity stopAnimating];
+        _loadingView.hidden = YES;
+    }
+}
+
+- (void) ranksComplete:(NSDictionary *)ranks
+{
+    if (ranks)
+    {
+        _ranks = [[NSDictionary alloc] initWithDictionary:ranks];
+    }
+        
+}
+
+- (void) postsComplete:(NSDictionary *)posts
+{
+    if (posts)
+    {
+        _posts = [[NSDictionary alloc] initWithDictionary:posts];
+    }
+}
+
+- (void) getImageComplete:(int)result image:(UIImage *)image imgId:(NSString*)imageId reqId:(id)requestId
+{
+    if ( image && requestId )
+    {
+        NSIndexPath *indexPath = (NSIndexPath*)requestId;
+        if ( [indexPath indexAtPosition:2] == __requestCount )
+        {
+            NSIndexPath *index = [NSIndexPath indexPathForRow:[indexPath indexAtPosition:0] inSection:0];
+            HumanInformation *info = [_sorted objectAtIndex:[indexPath indexAtPosition:0]];
+            info.image = image;
+            
+            [self.searchDisplayController.searchResultsTableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationNone];
+        }
+    }
+}
+
 - (void)viewDidLoad
 {
+    //NETWORKING!!
+    
+    
+    
+    [[MCPServer instance] persons:self];
+    [_loadingActivity startAnimating];
+    [[MCPServer instance] ranks:self];
+    [[MCPServer instance] posts:self];
+    
+    
+    //NETWORKING !!!
+    
+    
     self.searchController = self.searchDisplayController;
     [super viewDidLoad];
     _currentOffset = 320.0;
+    __requestCount = 0;
     _tabBarPressed = NO;
     _controllerIsPushed = NO;
 	// Do any additional setup after loading the view, typically from a nib.
@@ -53,6 +116,7 @@
      @"Москва",
                @"Центральный ФО",
                @"Дальневосточный ФО",
+               @"Крымский ФО",
                @"Приволжский ФО",
                @"Северо-Западный ФО",
                @"Северо-Кавказский ФО",
@@ -92,6 +156,7 @@
      @"Костромская область",
      @"Краснодарский край",
      @"Красноярский край",
+     @"Крым",
      @"Курганская область",
      @"Курская область",
      @"Ленинградская область",
@@ -120,6 +185,7 @@
      @"Саха (Якутия)",
      @"Сахалинская область",
      @"Свердловская область",
+     @"Севастополь",
      @"Северная Осетия — Алания",
      @"Смоленская область",
      @"Ставропольский край",
@@ -149,9 +215,9 @@
     
     {
         MinistryInformation *ministry = [[MinistryInformation alloc] init];
-        ministry.shortName = @"ФСТЭК";
-        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
-        ministry.image = @"мид россии.png";
+        ministry.shortName = @"ФТС России";
+        ministry.fullName = @"Федеральная Таможенная служба Российской Федерации";
+        ministry.image = @"фтс.png";
         [tempMinistries addObject:ministry];
     }
     
@@ -166,37 +232,37 @@
     
     {
         MinistryInformation *ministry = [[MinistryInformation alloc] init];
-        ministry.shortName = @"МЧС России";
-        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
-        ministry.image = @"2.png";
+        ministry.shortName = @"Ген. прокуратура РФ";
+        ministry.fullName = @"Генеральная прокуратура Российской Федерации";
+        ministry.image = @"ген прокуратура.png";
         [tempMinistries addObject:ministry];
     }
     
     {
         MinistryInformation *ministry = [[MinistryInformation alloc] init];
-        ministry.shortName = @"МЭР России";
-        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
-        ministry.image = @"3.png";
+        ministry.shortName = @"След. коммитет РФ";
+        ministry.fullName = @"Следственный коммитет Российской Федерации";
+        ministry.image = @"следственный коммитет.png";
         [tempMinistries addObject:ministry];
     }
     
     {
         MinistryInformation *ministry = [[MinistryInformation alloc] init];
-        ministry.shortName = @"МИД России";
-        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
-        ministry.image = @"мид россии.png";
+        ministry.shortName = @"ФСКН России";
+        ministry.fullName = @"Федеральная служба Российской Федерации по контролю за оборотом наркотиков";
+        ministry.image = @"фскн1.png";
         [tempMinistries addObject:ministry];
     }
     
     {
         MinistryInformation *ministry = [[MinistryInformation alloc] init];
-        ministry.shortName = @"Минобороны России";
-        ministry.fullName = @"Министерство внутренних дел Российской Федерации";
-        ministry.image = @"мид россии.png";
+        ministry.shortName = @"ФТС России";
+        ministry.fullName = @"Федеральная Таможенная служба Российской Федерации";
+        ministry.image = @"фтс.png";
         [tempMinistries addObject:ministry];
     }
     
-    {
+    /* {
         MinistryInformation *ministry = [[MinistryInformation alloc] init];
         ministry.shortName = @"Россотрудничество";
         ministry.fullName = @"Министерство внутренних дел Российской Федерации";
@@ -218,7 +284,7 @@
         ministry.fullName = @"Министерство внутренних дел Российской Федерации";
         ministry.image = @"мид россии.png";
         [tempMinistries addObject:ministry];
-    }
+    } */
     
     {
         MinistryInformation *ministry = [[MinistryInformation alloc] init];
@@ -241,44 +307,30 @@
     
     
     UIImageView* secondView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*2, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
-    secondView.image = [UIImage imageNamed:@"2.png"];
+    secondView.image = [UIImage imageNamed:@"ген прокуратура.png"];
     [_scrollview addSubview:secondView];
     secondView.contentMode = UIViewContentModeScaleAspectFit;
     
     
     UIImageView* thirdView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*3, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
-    thirdView.image = [UIImage imageNamed:@"3.png"];
+    thirdView.image = [UIImage imageNamed:@"следственный коммитет.png"];
     [_scrollview addSubview:thirdView];
     thirdView.contentMode = UIViewContentModeScaleAspectFit;
     
     UIImageView* fourthView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*4, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
-    fourthView.image = [UIImage imageNamed:@"мид россии.png"];
+    fourthView.image = [UIImage imageNamed:@"фскн1.png"];
     [_scrollview addSubview:fourthView];
     fourthView.contentMode = UIViewContentModeScaleAspectFit;
     
     UIImageView* fifthView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*5, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
-    fifthView.image = [UIImage imageNamed:@"минобороны россии.png"];
+    fifthView.image = [UIImage imageNamed:@"фтс.png"];
     [_scrollview addSubview:fifthView];
     fifthView.contentMode = UIViewContentModeScaleAspectFit;
     
-    UIImageView* sixthView = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*6, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
-    sixthView.image = [UIImage imageNamed:@"россотрудничество.png"];
-    [_scrollview addSubview:sixthView];
-    sixthView.contentMode = UIViewContentModeScaleAspectFit;
-    
-    UIImageView* seventh = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*7, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
-    seventh.image = [UIImage imageNamed:@"фсвтс россии.png"];
-    [_scrollview addSubview:seventh];
-    seventh.contentMode = UIViewContentModeScaleAspectFit;
-    
-    UIImageView* eights = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*8, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
-    eights.image = [UIImage imageNamed:@"фстэк.png"];
-    [_scrollview addSubview:eights];
-    eights.contentMode = UIViewContentModeScaleAspectFit;
     
     //copied images
     UIImageView* firstCopy = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
-    firstCopy.image = [UIImage imageNamed:@"фстэк.png"];
+    firstCopy.image = [UIImage imageNamed:@"фтс.png"];
     [_scrollview addSubview:firstCopy];
     firstCopy.contentMode = UIViewContentModeScaleAspectFit;
     
@@ -293,7 +345,7 @@
     //[_scrollview addSubview:fourthView];
     
     _scrollview.pagingEnabled = YES;
-    _scrollview.contentSize = CGSizeMake(_scrollview.frame.size.width*10, _scrollview.frame.size.height);
+    _scrollview.contentSize = CGSizeMake(_scrollview.frame.size.width*7, _scrollview.frame.size.height);
     _scrollview.decelerationRate = UIScrollViewDecelerationRateFast;
     [_scrollview setContentOffset:CGPointMake(_scrollview.frame.size.width, 0) animated:NO];
     
@@ -311,51 +363,6 @@
     frame.origin.y = 0;
     _pointView.frame = frame;
     
-    _humans = [[NSMutableArray alloc] init];
-    HumanInformation *h1 = [[HumanInformation alloc] init];
-    h1.firstName = @"Иван";
-    h1.lastName = @"Петров";
-    h1.givenName = @"Иванович";
-    h1.rank = @"Генерал-Полковник";
-    
-    HumanInformation *h2 = [[HumanInformation alloc] init];
-    h2.firstName = @"Иван";
-    h2.lastName = @"Иванов";
-    h2.givenName = @"Дмитриевич";
-    h2.rank = @"Генерал-Лейтенант";
-    
-    HumanInformation *h3 = [[HumanInformation alloc] init];
-    h3.firstName = @"Василий";
-    h3.lastName = @"Медведев";
-    h3.givenName = @"Петрович";
-    h3.rank = @"Генерал-Майор";
-    
-    HumanInformation *h4 = [[HumanInformation alloc] init];
-    h4.firstName = @"Дмитрий";
-    h4.lastName = @"Минин";
-    h4.givenName = @"Константинович";
-    h4.rank = @"Генерал-Лейтенант";
-    
-    HumanInformation *h5 = [[HumanInformation alloc] init];
-    h5.firstName = @"Дмитрий";
-    h5.lastName = @"Морозов";
-    h5.givenName = @"Александрович";
-    h5.rank = @"Генерал-Лейтенант";
-    
-    HumanInformation *h6 = [[HumanInformation alloc] init];
-    h6.firstName = @"Иннокентий";
-    h6.lastName = @"Филатов";
-    h6.givenName = @"Михайлович";
-    h6.rank = @"Генерал-Лейтенант";
-    
-    [_humans addObject:h3];
-    [_humans addObject:h1];
-    [_humans addObject:h2];
-    [_humans addObject:h4];
-    [_humans addObject:h5];
-    [_humans addObject:h6];
-    
-    _archive = [NSArray arrayWithArray:_humans];
     
     _sorted = [[NSMutableArray alloc] init];
     _results = [[NSMutableArray alloc] init];
@@ -516,7 +523,7 @@
     NSUInteger nearestIndex = (NSUInteger)(targetContentOffset->x / _scrollview.bounds.size.width + 0.5f);
     
     //Just to make sure we don't scroll past your content
-    nearestIndex = MAX( MIN( nearestIndex, 10 ), 0 );
+    nearestIndex = MAX( MIN( nearestIndex, 7 ), 0 );
     _currentPage = nearestIndex;
     
     //This is the actual x position in the scroll view
@@ -556,11 +563,11 @@
     if (_scrollview.contentOffset.x == 0) {
         // user is scrolling to the left from image 1 to image 10.
         // reposition offset to show image 10 that is on the right in the scroll view
-        [_scrollview scrollRectToVisible:CGRectMake(8*_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
+        [_scrollview scrollRectToVisible:CGRectMake(5*_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
         _currentPage = _ministries.count - 1;
         
     }
-    else if (_scrollview.contentOffset.x == 9*_scrollview.frame.size.width) {
+    else if (_scrollview.contentOffset.x == 6*_scrollview.frame.size.width) {
         // user is scrolling to the right from image 10 to image 1.
         // reposition offset to show image 1 that is on the left in the scroll view
         [_scrollview scrollRectToVisible:CGRectMake(_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
@@ -735,9 +742,20 @@
             HumanInformation *human = (HumanInformation*) infoObject;
             humanCell.nameLabel.text = [NSString stringWithFormat:@"%@ %@", human.lastName, human.firstName];
             humanCell.rankLabel.text = human.givenName;
-            humanCell.photoView.image = [UIImage imageNamed:@"Путов.jpg"];
             humanCell.photoView.layer.cornerRadius = 30;
             humanCell.photoView.layer.masksToBounds = YES;
+            humanCell.photoView.image = human.image;
+            
+            NSUInteger indexesID[] = {indexPath.row, 0, __requestCount};
+            NSIndexPath *indexPathID =  [NSIndexPath indexPathWithIndexes:indexesID length:3];
+            
+            NSArray *indexes = [tableView indexPathsForVisibleRows];
+            for (NSIndexPath *index in indexes) {
+                if (index.row == indexPath.row) {
+                    if (!human.image && human.photos && human.photos.count>0)
+                        [[MCPServer instance] getImage:human.photos[0] reqId:indexPathID delegate:self];
+                }
+            }
         }
         else
         {
@@ -749,6 +767,7 @@
         }
         
         cell = humanCell;
+        
     }
     
     return cell;
@@ -758,6 +777,7 @@
 
 - (void) processSearch: (NSString*) searchString
 {
+    __requestCount++;
     [_results removeAllObjects];
     [_sortedMinistries removeAllObjects];
     [_sortedArchive removeAllObjects];
@@ -814,6 +834,14 @@
     [_sortedArchive addObjectsFromArray:_sorted];
     [_sortedMinistries removeAllObjects];
     [_sortedMinistries insertObjects:sortedMinistries atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, sortedMinistries.count)]];
+    
+    for (NSUInteger i =0; i < _sorted.count; ++i)
+    {
+        //HumanInformation *info = _sorted[i];
+        
+        //if (info.photos && info.photos.count > 0 && !info.image)
+        //    [[MCPServer instance] getImage:info.photos[0] reqId:indexPath delegate:self];
+    }
 }
 
 NSInteger lastNameFirstNameSort(id person1, id person2, void *reverse)
@@ -925,7 +953,8 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
     else
         _emptyString = NO;
     
-    [self processSearch: searchString];
+    if (![searchString isEqualToString:@""])
+        [self processSearch: searchString];
     return YES;
 }
 
@@ -939,7 +968,7 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
    // }
     if (indexPath.section == 0 && _sorted.count > 0)
     {
-        [self performSegueWithIdentifier:@"PushHuman" sender:nil];
+        [self performSegueWithIdentifier:@"PushHuman" sender:indexPath];
         _controllerIsPushed = YES;
     }
     else
@@ -953,6 +982,21 @@ NSInteger lastNameFirstNameSortMinistry (id ministry1, id ministry2, void *rever
 {
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
+    if ([[segue identifier] isEqualToString:@"PushHuman"])
+    {
+        // Get reference to the destination view controller
+        HumanViewController *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        
+        NSIndexPath *indexPath = (NSIndexPath*) sender;
+        HumanInformation *selectedHuman = _sorted[indexPath.row];
+        selectedHuman.rankName = [_ranks objectForKey:[NSNumber numberWithInt:selectedHuman.rank]];
+        selectedHuman.postName = [_posts objectForKey:[NSNumber numberWithInt:selectedHuman.post]];
+        vc.humanInfo = selectedHuman;
+        vc.photoImage.image = selectedHuman.image;
+    }
 }
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didShowSearchResultsTableView:(UITableView *)tableView

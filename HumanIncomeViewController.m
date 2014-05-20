@@ -33,6 +33,8 @@
     [super viewDidLoad];
     //_segmentedControl.backgroundColor = [UIColor colorWithRed:51.0/255.0 green:93.0/255.0 blue:107.0/255.0 alpha:1.0];
     
+    _personNameLabel.text = [NSString stringWithFormat:@"- %@ %@.%@.", _humanInfo.lastName, [_humanInfo.firstName substringToIndex:1], [_humanInfo.givenName substringToIndex:1]];
+    
     self.title = @"Доходы";
     // Do any additional setup after loading the view from its nib.
 }

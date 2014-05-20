@@ -192,9 +192,11 @@
 }
  */
 
-- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
-{
-    [Logger log:self method:NSStringFromSelector(_cmd) format:@"canAuthenticateAgainstProtectionSpace"];
+
+
+//- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
+//{
+//    [Logger log:self method:NSStringFromSelector(_cmd) format:@"canAuthenticateAgainstProtectionSpace"];
     
     /* [Logger log:self method:NSStringFromSelector(_cmd) format:@"canAuthenticateAgainstProtectionSpace"];
     
@@ -220,11 +222,12 @@
     // If the certificates are not equal we should not talk to the server;
     return areCertificatesEqual; */
     
-    return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
+//    return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
 
-}
+//}
 
 
+/*
 - (void)connection:(NSURLConnection *)connection didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 {
     [Logger log:self method:NSStringFromSelector(_cmd) format:@"didCancelAuthenticationChallenge"];
@@ -242,6 +245,6 @@
 - (BOOL)connectionShouldUseCredentialStorage:(NSURLConnection *)connection
 {
     return YES;
-}
+} */
 
 @end

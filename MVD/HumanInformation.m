@@ -18,7 +18,11 @@
         _firstName = nil;
         _lastName = nil;
         _givenName = nil;
-        _rank = nil;
+        _rank = -1;
+        _post = -1;
+        _birthDate = nil;
+        _photos = nil;
+        _biography = nil;
     }
     
     return  self;

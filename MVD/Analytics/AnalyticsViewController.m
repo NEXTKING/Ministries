@@ -135,6 +135,7 @@
     }
     
     [self.navigationController pushViewController:employees animated:YES];
+    employees.title = @"Назначены";
 }
 
 

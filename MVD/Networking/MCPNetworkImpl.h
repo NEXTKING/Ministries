@@ -15,7 +15,7 @@
 @property (nonatomic, copy, readwrite) NSString *accessToken;
 @property (nonatomic, assign, readwrite) int lastResult;
 
-- (void) hello:(id<HelloDelegate>) delegate;
-- (void) login:(NSString*)name pwd:(NSString *)pwd deviceId:(NSString *)devId devCode:(NSString *)devCode delegate:(id<LoginDelegate>)delegate;
+- (void) persons:(id<PersonsDelegate>)delegate;
+
 
 @end

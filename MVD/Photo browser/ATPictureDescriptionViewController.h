@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MCProtocol.h"
 
-@interface ATPictureDescriptionViewController : UIViewController <UIScrollViewDelegate>{
+@interface ATPictureDescriptionViewController : UIViewController <UIScrollViewDelegate, ResourcesExchangeDelegate>{
     
     UITextView      * _text;
     CGPoint         start;
@@ -18,8 +19,9 @@
 }
 
 @property (nonatomic, strong) NSMutableArray* pictures;
+@property (nonatomic, strong) NSArray *links;
 
--(id) initWithType: (int) typeNumber picture: (int) pictureNumber division: (NSMutableArray*) pictures;
+-(id) initWithPictures: (NSMutableArray*) pictures;
 -(void) showText;
 -(void) swipe;
 -(void) leftSwipe;

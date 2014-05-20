@@ -39,11 +39,28 @@
     
 }
 
+/*
++----------------------------+
+|A                           |
+|+--------+   +------------+ |
+||B       |   |C           | |
+||        |   |+----------+| |
+|+--------+   ||D         || |
+|             |+----------+| |
+|             +------------+ |
++----------------------------+
+ 
+*/
+
 - (UIView *) hitTest:(CGPoint) point withEvent:(UIEvent *)event {
-    if ([self pointInside:point withEvent:event]) {
+    
+    //if touch is produced outside the _scrollview we should transfer the control to _scrollview. Otherwise going with regular way (super).
+    
+    if ([self pointInside:point withEvent:event] && (point.x < (320-185)/2 || point.x > 185 + (320-185)/2)) {
         return _scrollView;
     }
-    return nil;
+    else
+       return  [super hitTest:point withEvent:event];
 }
 
 /*

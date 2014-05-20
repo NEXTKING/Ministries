@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>Server</key>
-	<string>http://87.229.194.234:8080/StateEmployee/jzl/data/</string>
+	<string>http://87.229.194.234:8080/StateEmployee/jzl/data</string>
 </dict>
 </plist>

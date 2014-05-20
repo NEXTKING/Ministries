@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSArray *products;
+@property (copy, nonatomic) NSString *serverAddress;
 
 - (void) enableNetworkIndicator;
 - (void) disableNetworkIndicator;

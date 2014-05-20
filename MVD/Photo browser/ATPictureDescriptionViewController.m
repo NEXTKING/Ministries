@@ -8,8 +8,12 @@
 
 #import "ATPictureDescriptionViewController.h"
 #import "UIImage+resize.h"
+#import "MCPServer.h"
 
 @implementation ATPictureDescriptionViewController
+{
+    UIActivityIndicatorView *activityIndicator;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -20,6 +24,18 @@
     return self;
 }
 
+- (void) getImageComplete:(int)result image:(UIImage *)sentImage imgId:(NSString *)imageId reqId:(id)requestId
+{
+    NSInteger reqId = [requestId intValue];
+    [_pictures replaceObjectAtIndex:reqId withObject:sentImage];
+    if (page == reqId)
+    {
+        image.image = sentImage;
+        image.alpha = 1.0;
+    }
+    [activityIndicator stopAnimating];
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -28,23 +44,21 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
--(id) initWithType:(int)typeNumber picture:(int)pictureNumber division:(NSMutableArray*) pictures{
+-(id) initWithPictures:(NSMutableArray *)pictures
+{
     self = [super init];
     if (self) {
         self.pictures = pictures;
         
-        self.title = [NSString stringWithFormat:@"%d/%d", pictureNumber+1, [pictures count]];
-        self.view.tag = typeNumber;
+        self.title = [NSString stringWithFormat:@"%d/%lu", 1,(unsigned long)[pictures count]];
         
-        page = pictureNumber;
+        page = 0;
         
         scrollView    =   [   [UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 470)];
         scrollView.backgroundColor = [UIColor redColor];
         
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
             scrollView.frame = CGRectMake(0, 0, 1024, 655);
-        
-        scrollView.tag  =   typeNumber;
         
         [self.view      addSubview:scrollView];
         [scrollView     setDelegate:self];
@@ -56,7 +70,7 @@
 
         
         
-        image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[pictures objectAtIndex:pictureNumber]]];
+        image = [[UIImageView alloc] initWithImage:pictures[0]];
         image.frame = scrollView.frame;
         image.contentMode = UIViewContentModeScaleAspectFit;
         [scrollView addSubview:image];
@@ -87,6 +101,16 @@
         UISwipeGestureRecognizer *leftSwipe     =   [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe)];
         leftSwipe.direction     =   UISwipeGestureRecognizerDirectionLeft;
         [self.view addGestureRecognizer:leftSwipe];
+        
+        activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        CGRect activityFrame = activityIndicator.frame;
+        activityFrame.origin.x = (self.view.frame.size.width)/2 - activityFrame.size.width/2;
+        activityFrame.origin.y = self.view.frame.size.height/2 - activityFrame.size.height/2;
+        activityIndicator.frame = activityFrame;
+        [self.view addSubview:activityIndicator];
+        activityIndicator.hidesWhenStopped = YES;
+        [activityIndicator stopAnimating];
+        
     }
     return self;
 }
@@ -114,13 +138,33 @@
      
                      completion:^(BOOL  completed){
                          page++;
-                         [image setImage:   [UIImage imageNamed:    _pictures[page]]];
+                         if ([_pictures[page] isKindOfClass:[UIImage class]])
+                         {
+                             [image setImage:   _pictures[page]];
+                             [activityIndicator stopAnimating];
+                         }
+                         else
+                         {
+                             [activityIndicator startAnimating];
+                             if ([_pictures[page] isKindOfClass:[NSNull class]])
+                             {
+                                     [[MCPServer instance] getImage:_links[page] reqId:[NSNumber numberWithInt:page] delegate:self];
+                                     image.image = nil;
+                                     [_pictures replaceObjectAtIndex:page withObject:[_links objectAtIndex:page]];
+                             }
+                            else
+                             {
+                                 return;
+                             }
+                         }
+                         
                          _text.text             =   @"Some text";
-                         self.title             =   [NSString stringWithFormat:@"%d/%d", page+1, [_pictures count]];
+                         self.title             =   [NSString stringWithFormat:@"%d/%lu", page+1, (unsigned long)[_pictures count]];
                          
                          [UIView animateWithDuration:0.5
                           
                                           animations:^{ 
+                                              
                                               
                                               [image    setAlpha:1.0];
                                               
@@ -152,9 +196,29 @@
          
                          completion:^(BOOL  completed){
                              page--;
-                             [image setImage:[UIImage imageNamed:_pictures[page]]];
+                             
+                             if ([_pictures[page] isKindOfClass:[UIImage class]])
+                             {
+                                 [image setImage:  _pictures[page]];
+                                 [activityIndicator stopAnimating];
+                             }
+                             else
+                             {
+                                 [activityIndicator startAnimating];
+                                 if ([_pictures[page] isKindOfClass:[NSNull class]])
+                                 {
+                                     [[MCPServer instance] getImage:_links[page] reqId:[NSNumber numberWithInt:page] delegate:self];
+                                     image.image = nil;
+                                     [_pictures replaceObjectAtIndex:page withObject:[_links objectAtIndex:page]];
+                                 }
+                                 else
+                                 {
+                                     return;
+                                 }
+                             }
+                             
                              _text.text = @"Some text";
-                             self.title = [NSString stringWithFormat:@"%d/%d", page+1, [_pictures count]];
+                             self.title = [NSString stringWithFormat:@"%d/%lu", page+1, (unsigned long)[_pictures count]];
                              
                              [UIView animateWithDuration:0.5
                               

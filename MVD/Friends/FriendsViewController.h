@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "Carousel.h"
+#import "HumanInformation.h"
 
 @interface FriendsViewController : UIViewController <CarouselDelegate>
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIImageView *photoImage;
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
+
+@property (strong, nonatomic) HumanInformation* humanInfo;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
 
 @end

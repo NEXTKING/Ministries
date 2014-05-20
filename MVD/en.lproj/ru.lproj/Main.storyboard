@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Second View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
-                <viewController title="Second" id="QUy-BD-bpt" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController id="QUy-BD-bpt" customClass="SecondViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ghy-bI-BL9"/>
                         <viewControllerLayoutGuide type="bottom" id="XX0-TH-AIx"/>
@@ -29,7 +29,7 @@
                                     <outletCollection property="gestureRecognizers" destination="lpn-r4-ij4" appends="YES" id="wDn-fm-6CX"/>
                                 </connections>
                             </scrollView>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0792.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="Pvg-gl-5ML">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="карта с крымом светлая.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pvg-gl-5ML">
                                 <rect key="frame" x="0.0" y="297" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -72,6 +72,8 @@
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Поиск" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vca-J0-Sbd">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -98,11 +100,40 @@
                                 <rect key="frame" x="144" y="407" width="42" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChJ-Gk-vkq">
+                                <rect key="frame" x="1" y="0.0" width="319" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Kyq-9m-UKf">
+                                        <rect key="frame" x="141" y="259" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка данных..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGH-5t-MUA">
+                                        <rect key="frame" x="87" y="304" width="145" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="HGH-5t-MUA" firstAttribute="top" secondItem="Kyq-9m-UKf" secondAttribute="bottom" constant="8" id="G1s-Ht-XGI"/>
+                                    <constraint firstItem="Kyq-9m-UKf" firstAttribute="centerX" secondItem="HGH-5t-MUA" secondAttribute="centerX" id="e1m-3G-2zR"/>
+                                    <constraint firstAttribute="centerX" secondItem="Kyq-9m-UKf" secondAttribute="centerX" id="g5l-b8-x08"/>
+                                    <constraint firstAttribute="centerY" secondItem="Kyq-9m-UKf" secondAttribute="centerY" constant="6.5" id="qMR-os-EKy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ChJ-Gk-vkq" secondAttribute="trailing" id="0N6-9h-Gly"/>
+                            <constraint firstItem="XX0-TH-AIx" firstAttribute="top" secondItem="ChJ-Gk-vkq" secondAttribute="bottom" constant="-49" id="N8b-S2-6Zi"/>
+                            <constraint firstItem="ChJ-Gk-vkq" firstAttribute="top" secondItem="Ghy-bI-BL9" secondAttribute="bottom" constant="-20" id="O8D-AH-To4"/>
                             <constraint firstItem="Pvg-gl-5ML" firstAttribute="leading" secondItem="eO2-5o-JfC" secondAttribute="leading" id="TFV-aa-vO5"/>
                             <constraint firstItem="XX0-TH-AIx" firstAttribute="top" secondItem="Pvg-gl-5ML" secondAttribute="bottom" constant="6" id="huk-Ak-aoC"/>
+                            <constraint firstItem="ChJ-Gk-vkq" firstAttribute="top" secondItem="Ghy-bI-BL9" secondAttribute="bottom" constant="-20" id="str-N1-vDX"/>
+                            <constraint firstItem="ChJ-Gk-vkq" firstAttribute="leading" secondItem="eO2-5o-JfC" secondAttribute="leading" constant="1" id="yi1-3P-SbO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="Z7h-1E-pvt"/>
@@ -113,6 +144,8 @@
                         <outlet property="_textfield" destination="v73-5z-haq" id="0sh-i2-XcN"/>
                         <outlet property="leftArrow" destination="nB8-23-XFp" id="bPr-lR-It8"/>
                         <outlet property="leftTap" destination="l9e-mL-dUD" id="Ebs-sz-Mzv"/>
+                        <outlet property="loadingActivity" destination="Kyq-9m-UKf" id="2ba-pA-cvg"/>
+                        <outlet property="loadingView" destination="ChJ-Gk-vkq" id="Yax-dr-G1r"/>
                         <outlet property="mapImage" destination="Pvg-gl-5ML" id="fFU-vr-2yN"/>
                         <outlet property="ministryLabel" destination="xFe-vA-Joa" id="GPK-Yq-wp7"/>
                         <outlet property="pickeView" destination="nhc-oV-QAr" id="Qcf-Kw-RhW"/>
@@ -153,9 +186,12 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
-                        <barButtonItem title="Купить еще..." id="g2r-VC-JLx"/>
+                        <barButtonItem title="Купить еще..." id="g2r-VC-JLx">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5PZ-hT-BcA"/>
                         <barButtonItem title="Готово" id="xCE-aw-3gJ">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="doneButtonHandler:" destination="QUy-BD-bpt" id="ond-cs-Rxd"/>
                             </connections>
@@ -201,11 +237,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mvd_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="wQg-YV-qfR">
+                                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mvd_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="wQg-YV-qfR">
                                                 <rect key="frame" x="0.0" y="230" width="320" height="250"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="250" id="y7i-r6-3LN"/>
+                                                </constraints>
                                             </imageView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EID-nf-rop">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EID-nf-rop">
                                                 <rect key="frame" x="0.0" y="272" width="320" height="296"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -214,14 +253,18 @@
                                                     <outlet property="delegate" destination="Li1-jj-xdY" id="qiF-a6-5eI"/>
                                                 </connections>
                                             </tableView>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4LZ-xC-tfN">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LZ-xC-tfN">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Путов.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ggl-Uh-lUQ">
+                                                    <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Путов.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ggl-Uh-lUQ">
                                                         <rect key="frame" x="202" y="20" width="108" height="134"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <gestureRecognizers/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="134" id="QcA-Ao-o4N"/>
+                                                            <constraint firstAttribute="width" constant="108" id="zTG-LM-nQb"/>
+                                                        </constraints>
                                                         <connections>
                                                             <outletCollection property="gestureRecognizers" destination="dWM-uV-Hyi" appends="YES" id="omD-iX-UUc"/>
                                                         </connections>
@@ -236,15 +279,15 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 января 1954 (60 лет)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="QyS-Qo-rOp">
-                                                        <rect key="frame" x="20" y="76" width="160" height="21"/>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 января 1954 (60 лет)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="QyS-Qo-rOp">
+                                                        <rect key="frame" x="15" y="71" width="174" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Путов Валерий Владимирович" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" preferredMaxLayoutWidth="164" translatesAutoresizingMaskIntoConstraints="NO" id="gC3-1W-d70">
-                                                        <rect key="frame" x="20" y="20" width="164" height="48"/>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Путов Валерий Владимирович" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" preferredMaxLayoutWidth="174" translatesAutoresizingMaskIntoConstraints="NO" id="gC3-1W-d70">
+                                                        <rect key="frame" x="15" y="15" width="174" height="48"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                         <nil key="highlightedColor"/>
@@ -254,20 +297,20 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <color key="pageIndicatorTintColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     </pageControl>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Начальник Департамента государтсвенной службы и кадров МВД России" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" preferredMaxLayoutWidth="187" translatesAutoresizingMaskIntoConstraints="NO" id="dQS-tK-46E">
-                                                        <rect key="frame" x="7" y="109" width="187" height="54"/>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Начальник Департамента государтсвенной службы и кадров МВД России" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" preferredMaxLayoutWidth="174" translatesAutoresizingMaskIntoConstraints="NO" id="dQS-tK-46E">
+                                                        <rect key="frame" x="15" y="105" width="174" height="70"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Генерал-лейтенант внутренней службы" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="tBK-Fs-tWL">
-                                                        <rect key="frame" x="7" y="188" width="219" height="21"/>
+                                                        <rect key="frame" x="15" y="188" width="209" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p.png" translatesAutoresizingMaskIntoConstraints="NO" id="NPv-QA-oln">
-                                                        <rect key="frame" x="237" y="183" width="63" height="34"/>
+                                                        <rect key="frame" x="228" y="183" width="63" height="34"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1S-2f-dSV">
@@ -276,18 +319,32 @@
                                                         <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ГУ МВД России по г. Москве. Москва, Петровка 38" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="0cQ-EG-cnn">
-                                                        <rect key="frame" x="7" y="230" width="303" height="21"/>
+                                                        <rect key="frame" x="15" y="230" width="295" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Ggl-Uh-lUQ" secondAttribute="trailing" constant="10" id="1Nc-8q-JG4"/>
+                                                    <constraint firstItem="Ggl-Uh-lUQ" firstAttribute="top" secondItem="4LZ-xC-tfN" secondAttribute="top" constant="20" id="wOg-Tl-qjt"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="4LZ-xC-tfN" firstAttribute="leading" secondItem="wQg-YV-qfR" secondAttribute="leading" id="1dB-Uz-mU3"/>
+                                            <constraint firstItem="4LZ-xC-tfN" firstAttribute="trailing" secondItem="wQg-YV-qfR" secondAttribute="trailing" id="9Ri-8o-nGz"/>
+                                            <constraint firstAttribute="bottom" secondItem="4LZ-xC-tfN" secondAttribute="bottom" constant="304" id="EEU-zz-zlT"/>
+                                            <constraint firstAttribute="bottom" secondItem="EID-nf-rop" secondAttribute="bottom" id="FQR-NJ-IyT"/>
+                                            <constraint firstItem="4LZ-xC-tfN" firstAttribute="leading" secondItem="kz4-ib-KIY" secondAttribute="leading" id="HXg-5V-xxp"/>
+                                            <constraint firstItem="4LZ-xC-tfN" firstAttribute="trailing" secondItem="EID-nf-rop" secondAttribute="trailing" id="PWl-RF-KPW"/>
                                             <constraint firstAttribute="height" constant="568" id="a7E-Op-mmI"/>
+                                            <constraint firstAttribute="bottom" secondItem="wQg-YV-qfR" secondAttribute="bottom" constant="88" id="amn-43-1gN"/>
+                                            <constraint firstItem="4LZ-xC-tfN" firstAttribute="top" secondItem="kz4-ib-KIY" secondAttribute="top" id="f4h-YM-nIj"/>
+                                            <constraint firstItem="EID-nf-rop" firstAttribute="top" secondItem="4LZ-xC-tfN" secondAttribute="bottom" constant="8" symbolic="YES" id="gsV-SC-PGq"/>
+                                            <constraint firstItem="4LZ-xC-tfN" firstAttribute="leading" secondItem="EID-nf-rop" secondAttribute="leading" id="tNQ-J8-BXj"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -310,7 +367,7 @@
                         </constraints>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Item" image="звезда.png" id="LcD-2x-PSc">
+                        <barButtonItem image="звезда.png" id="LcD-2x-PSc">
                             <connections>
                                 <action selector="favourites:" destination="Li1-jj-xdY" id="NWX-o4-HdA"/>
                             </connections>
@@ -323,8 +380,12 @@
                     <connections>
                         <outlet property="backgroundView" destination="kz4-ib-KIY" id="4xL-At-Mp6"/>
                         <outlet property="barButtonItem" destination="LcD-2x-PSc" id="HIb-RX-jVf"/>
+                        <outlet property="birthdayLabel" destination="QyS-Qo-rOp" id="ges-Oo-am3"/>
                         <outlet property="headlineView" destination="4LZ-xC-tfN" id="cmN-ld-CTl"/>
+                        <outlet property="nameLabel" destination="gC3-1W-d70" id="rdN-do-uZY"/>
                         <outlet property="photoImage" destination="Ggl-Uh-lUQ" id="G3Y-Dk-SYb"/>
+                        <outlet property="postLabel" destination="dQS-tK-46E" id="nnn-lv-5ht"/>
+                        <outlet property="rankLabel" destination="tBK-Fs-tWL" id="buc-Xr-2Au"/>
                         <outlet property="scrollView" destination="lvv-kV-434" id="J9A-os-AXs"/>
                         <outlet property="tableView" destination="EID-nf-rop" id="BpK-ax-hd0"/>
                     </connections>
@@ -414,7 +475,7 @@
         <!--View Controller - Настройки-->
         <scene sceneID="5tP-hg-oFi">
             <objects>
-                <viewController title="Настройки" id="Kst-3G-iGd" sceneMemberID="viewController">
+                <viewController id="Kst-3G-iGd" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HzS-oa-eBE"/>
                         <viewControllerLayoutGuide type="bottom" id="70O-ol-0al"/>
@@ -585,10 +646,10 @@
             </objects>
             <point key="canvasLocation" x="1251" y="1672"/>
         </scene>
-        <!--Analytics View Controller - First-->
+        <!--Analytics View Controller - В цифрах-->
         <scene sceneID="5Vg-es-g5G">
             <objects>
-                <viewController storyboardIdentifier="Analytics" title="First" id="dLi-jd-4zb" customClass="AnalyticsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Analytics" id="dLi-jd-4zb" customClass="AnalyticsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5PH-tE-kY6"/>
                         <viewControllerLayoutGuide type="bottom" id="lJF-IW-04I"/>
@@ -757,7 +818,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.6588235294" green="0.71764705880000002" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Поиск" image="поиск.png" id="Ggb-Am-0NP"/>
+                    <tabBarItem key="tabBarItem" title="" image="поиск.png" id="Ggb-Am-0NP"/>
                     <navigationItem key="navigationItem" title="В цифрах" id="WPq-l3-XX4"/>
                     <connections>
                         <outlet property="component0" destination="hkY-33-xaP" id="Wvl-2R-Uwt"/>
@@ -838,7 +899,6 @@
         <image name="2в цифрах.png" width="25" height="23"/>
         <image name="3история.png" width="25" height="25"/>
         <image name="4еще.png" width="25" height="25"/>
-        <image name="IMG_0792.PNG" width="657" height="374"/>
         <image name="background.jpg" width="640" height="1136"/>
         <image name="icon-person-add.png" width="512" height="512"/>
         <image name="mvd_dark.png" width="320" height="198"/>
@@ -847,6 +907,7 @@
         <image name="Путов.jpg" width="259" height="309"/>
         <image name="звание1.png" width="43" height="124"/>
         <image name="звезда.png" width="20" height="19"/>
+        <image name="карта с крымом светлая.png" width="623" height="342"/>
         <image name="медаль3.png" width="67" height="107"/>
         <image name="настройки.png" width="311" height="491"/>
         <image name="о приложении.png" width="256" height="256"/>
@@ -860,6 +921,7 @@
         <image name="стрелочка светлая.png" width="169" height="160"/>
         <image name="уволен2.png" width="512" height="512"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

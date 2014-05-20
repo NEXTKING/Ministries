@@ -33,49 +33,11 @@
 {
     [super viewDidLoad];
     
+    self.navigationController.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
+    
     _humans = [[NSMutableArray alloc] init];
-    HumanInformation *h1 = [[HumanInformation alloc] init];
-    h1.firstName = @"Иван";
-    h1.lastName = @"Петров";
-    h1.givenName = @"Иванович";
-    h1.rank = @"Генерал-Полковник";
+
     
-    HumanInformation *h2 = [[HumanInformation alloc] init];
-    h2.firstName = @"Иван";
-    h2.lastName = @"Иванов";
-    h2.givenName = @"Дмитриевич";
-    h2.rank = @"Генерал-Лейтенант";
-    
-    HumanInformation *h3 = [[HumanInformation alloc] init];
-    h3.firstName = @"Василий";
-    h3.lastName = @"Медведев";
-    h3.givenName = @"Петрович";
-    h3.rank = @"Генерал-Майор";
-    
-    HumanInformation *h4 = [[HumanInformation alloc] init];
-    h4.firstName = @"Дмитрий";
-    h4.lastName = @"Минин";
-    h4.givenName = @"Константинович";
-    h4.rank = @"Генерал-Лейтенант";
-    
-    HumanInformation *h5 = [[HumanInformation alloc] init];
-    h5.firstName = @"Дмитрий";
-    h5.lastName = @"Морозов";
-    h5.givenName = @"Александрович";
-    h5.rank = @"Генерал-Лейтенант";
-    
-    HumanInformation *h6 = [[HumanInformation alloc] init];
-    h6.firstName = @"Иннокентий";
-    h6.lastName = @"Филатов";
-    h6.givenName = @"Михайлович";
-    h6.rank = @"Генерал-Лейтенант";
-    
-    [_humans addObject:h3];
-    [_humans addObject:h1];
-    [_humans addObject:h2];
-    [_humans addObject:h4];
-    [_humans addObject:h5];
-    [_humans addObject:h6];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
