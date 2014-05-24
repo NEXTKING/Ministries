@@ -1,4 +1,4 @@
-//
+ //
 //  NewsCell.m
 //  MVD
 //

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -7,21 +7,37 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HumanIncomeViewController">
             <connections>
-                <outlet property="incomeLabelLeft" destination="w4e-Mb-bGf" id="L3l-Ue-n4B"/>
-                <outlet property="incomeLabelRight" destination="RkA-2o-srY" id="Lbj-I8-cgp"/>
-                <outlet property="incomeManLeft" destination="HOx-SL-mI7" id="GL4-3U-7Dp"/>
-                <outlet property="incomeManRighr" destination="sEI-iU-xcO" id="hTf-K8-2f0"/>
-                <outlet property="incomeWifeLeft" destination="JQp-bU-aTo" id="4eC-UV-vKh"/>
-                <outlet property="incomeWifeRight" destination="7TJ-vt-Hpc" id="IWJ-jl-A0j"/>
-                <outlet property="leftYearLabel" destination="brh-ft-LvW" id="qnf-Vl-Hsh"/>
-                <outlet property="nextLabel" destination="Den-gh-38e" id="zBh-mV-1WB"/>
+                <outlet property="estateLabelLeft" destination="mDj-Pd-6Hc" id="85t-CK-XGX"/>
+                <outlet property="estateLabelMiddle" destination="gUe-Sx-Piz" id="dHz-RZ-Aml"/>
+                <outlet property="estateLabelRight" destination="ozn-nR-aZq" id="AIR-9b-DUt"/>
+                <outlet property="estateLeftMan" destination="63H-BF-u4r" id="A6P-li-pAI"/>
+                <outlet property="estateLeftWife" destination="1bK-ct-7i8" id="NEB-dM-zS4"/>
+                <outlet property="estateMiddleMan" destination="gzN-jN-UF4" id="ko3-VQ-EIu"/>
+                <outlet property="estateMiddleWife" destination="IWn-TG-EA3" id="74T-2D-sCt"/>
+                <outlet property="estateRightMan" destination="Np1-qH-HJO" id="BI8-ac-fmN"/>
+                <outlet property="estateRightWife" destination="TKo-c7-wL2" id="Z6V-n7-M5C"/>
+                <outlet property="leftYearLabel" destination="brh-ft-LvW" id="LIl-9U-AOU"/>
+                <outlet property="middleYearLabel" destination="22h-Hd-s1h" id="pwS-VU-T9t"/>
+                <outlet property="moneyLabelMiddle" destination="RkA-2o-srY" id="JiQ-fo-eXq"/>
+                <outlet property="moneyLabelRight" destination="xQq-Yw-H6A" id="f2c-lO-vuV"/>
+                <outlet property="moneyLableLeft" destination="w4e-Mb-bGf" id="haO-PW-S0u"/>
+                <outlet property="moneyLeftMan" destination="HOx-SL-mI7" id="WE5-ou-UX6"/>
+                <outlet property="moneyLeftWife" destination="JQp-bU-aTo" id="Ufl-ZR-xkW"/>
+                <outlet property="moneyMiddleMan" destination="sEI-iU-xcO" id="IbR-3E-pOn"/>
+                <outlet property="moneyMiddleWife" destination="7TJ-vt-Hpc" id="0gF-iF-B7U"/>
+                <outlet property="moneyRightMan" destination="Ea6-k1-F2e" id="0i1-oU-ie8"/>
+                <outlet property="moneyRightWife" destination="e0h-fM-oi8" id="4nk-4W-Afv"/>
                 <outlet property="personNameLabel" destination="AUL-vd-KI8" id="T5D-5e-Kn5"/>
-                <outlet property="prevLabel" destination="22h-Hd-s1h" id="GzC-Sx-FU8"/>
-                <outlet property="propertyLabelLeft" destination="mDj-Pd-6Hc" id="6si-D7-RPw"/>
-                <outlet property="propertyLabelRight" destination="gUe-Sx-Piz" id="EDu-Ta-UZf"/>
-                <outlet property="propertyManLeft" destination="63H-BF-u4r" id="PRQ-hU-zcr"/>
-                <outlet property="propertyManRight" destination="gzN-jN-UF4" id="D1y-PY-2yJ"/>
-                <outlet property="propertyWifeRight" destination="IWn-TG-EA3" id="55t-ye-p1H"/>
+                <outlet property="rightYearLabel" destination="Den-gh-38e" id="mWE-Xg-eTh"/>
+                <outlet property="steadLabelLeft" destination="fOG-Ux-ChV" id="2gs-Xb-jGM"/>
+                <outlet property="steadLabelMiddle" destination="KEa-SW-7JK" id="7Mm-df-UVI"/>
+                <outlet property="steadLabelRight" destination="rgU-tD-Ihz" id="KDc-Qw-Z58"/>
+                <outlet property="steadLeftMan" destination="Ub7-eV-HrA" id="zTF-V5-StE"/>
+                <outlet property="steadLeftWife" destination="0sg-V7-3QZ" id="I6H-Uc-gka"/>
+                <outlet property="steadMiddleMan" destination="fP6-rp-SuS" id="Vqg-dN-mpb"/>
+                <outlet property="steadMiddleWife" destination="Bp5-fi-ZIn" id="Awn-f7-qws"/>
+                <outlet property="steadRightMan" destination="2ce-BS-2u2" id="KrG-uI-9Fi"/>
+                <outlet property="steadRightWife" destination="YZH-4a-Td9" id="Fqb-8A-8j1"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -107,32 +123,32 @@
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.79000000000000004" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQp-bU-aTo">
-                    <rect key="frame" x="30" y="84" width="59" height="39"/>
+                    <rect key="frame" x="30" y="82" width="59" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IWn-TG-EA3">
-                    <rect key="frame" x="131" y="217" width="59" height="15"/>
+                    <rect key="frame" x="131" y="216" width="59" height="15"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sEI-iU-xcO">
-                    <rect key="frame" x="131" y="71" width="59" height="28"/>
+                    <rect key="frame" x="130" y="145" width="59" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.79000000000000004" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7TJ-vt-Hpc">
-                    <rect key="frame" x="131" y="98" width="59" height="75"/>
+                    <rect key="frame" x="130" y="70" width="59" height="75"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="63H-BF-u4r">
-                    <rect key="frame" x="30" y="222" width="59" height="50"/>
+                    <rect key="frame" x="30" y="247" width="59" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.79000000000000004" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ub7-eV-HrA">
-                    <rect key="frame" x="30" y="323" width="59" height="50"/>
+                    <rect key="frame" x="30" y="351" width="59" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.79000000000000004" colorSpace="calibratedRGB"/>
                 </view>
@@ -182,12 +198,12 @@
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.19" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0h-fM-oi8">
-                    <rect key="frame" x="231" y="103" width="59" height="70"/>
+                    <rect key="frame" x="230" y="55" width="59" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ea6-k1-F2e">
-                    <rect key="frame" x="231" y="56" width="59" height="48"/>
+                    <rect key="frame" x="230" y="125" width="59" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.79000000000000004" colorSpace="calibratedRGB"/>
                 </view>
@@ -203,7 +219,7 @@
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.79000000000000004" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKo-c7-wL2">
-                    <rect key="frame" x="230" y="211" width="59" height="21"/>
+                    <rect key="frame" x="230" y="210" width="59" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                 </view>
@@ -236,25 +252,25 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="350 кв. м." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDj-Pd-6Hc">
-                    <rect key="frame" x="25" y="204" width="69" height="21"/>
+                    <rect key="frame" x="25" y="214" width="69" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="370 кв. м." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUe-Sx-Piz">
-                    <rect key="frame" x="125" y="199" width="69" height="21"/>
+                    <rect key="frame" x="125" y="198" width="69" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="390 кв. м." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozn-nR-aZq">
-                    <rect key="frame" x="225" y="193" width="69" height="21"/>
+                    <rect key="frame" x="225" y="192" width="69" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1400 кв. м." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOG-Ux-ChV">
-                    <rect key="frame" x="25" y="305" width="69" height="21"/>
+                    <rect key="frame" x="25" y="318" width="69" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
                     <nil key="highlightedColor"/>
@@ -266,7 +282,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1300 кв. м." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgU-tD-Ihz">
-                    <rect key="frame" x="225" y="298" width="69" height="21"/>
+                    <rect key="frame" x="226" y="299" width="69" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
                     <nil key="highlightedColor"/>
@@ -279,6 +295,16 @@
                     <rect key="frame" x="299" y="4" width="13" height="29"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1bK-ct-7i8">
+                    <rect key="frame" x="30" y="232" width="59" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0sg-V7-3QZ">
+                    <rect key="frame" x="30" y="336" width="59" height="15"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.36470588240000001" blue="0.41960784309999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.64313725490196072" green="0.71764705882352942" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
             <gestureRecognizers/>

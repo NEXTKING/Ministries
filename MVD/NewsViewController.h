@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HumanInformation.h"
 
 @interface NewsViewController : UITableViewController
+
+@property (nonatomic, strong) HumanInformation *human;
 
 @end

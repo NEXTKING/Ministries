@@ -8,6 +8,7 @@
 
 #import "MCPServer.h"
 #import "MCPNetworkImpl.h"
+#import "MCPSimulatorImpl.h"
 
 static id<MCProtocol> __inst = Nil;
 
@@ -18,8 +19,8 @@ static id<MCProtocol> __inst = Nil;
 {
     if ( __inst == nil )
     {
-        __inst = [[MCPNetworkImpl alloc] init]; // communication with real web-server
-        //__inst = [[MCPSimulatorImpl alloc] init]; // simulation for test purposes
+        //__inst = [[MCPNetworkImpl alloc] init]; // communication with real web-server
+        __inst = [[MCPSimulatorImpl alloc] init]; // simulation for test purposes
     }
     
     return __inst;

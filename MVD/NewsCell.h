@@ -10,4 +10,10 @@
 
 @interface NewsCell : UITableViewCell
 
+
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *photoImage;
+@property (weak, nonatomic) IBOutlet UILabel *newsLabel;
+
+
 @end

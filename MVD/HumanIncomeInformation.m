@@ -8,6 +8,10 @@
 
 #import "HumanIncomeInformation.h"
 
+@implementation PropertyInformation
+
+@end
+
 @implementation HumanIncomeInformation
 
 @end

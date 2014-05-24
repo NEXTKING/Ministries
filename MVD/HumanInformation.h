@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HumanIncomeInformation.h"
 
 @interface HumanInformation : NSObject
 
@@ -21,6 +22,8 @@
 
 @property (nonatomic, strong) NSArray *photos;
 @property (nonatomic, strong) NSArray *biography;
+@property (nonatomic, strong) HumanIncomeInformation *incomeInformation;
+@property (nonatomic, strong) NSArray* news;
 
 //temp
 

@@ -9,6 +9,7 @@
 #import "NewsViewController.h"
 #import "NewsDescriptionViewController.h"
 #import "NewsCell.h"
+#import "NewsInformation.h"
 
 @interface NewsViewController ()
 
@@ -55,7 +56,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3;
+    return _human.news.count;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,13 +67,26 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NewsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         NewsCell *newsCell = (NewsCell*)[[[NSBundle mainBundle] loadNibNamed:@"NewsCell" owner:self options:nil] objectAtIndex:0];
         cell = newsCell;
         cell.backgroundColor = [UIColor clearColor];
-        
     }
+    
+    NewsInformation *newsInfo = _human.news[indexPath.row];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+    
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    
+    [dateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"ru_RU"]];
+    
+    cell.dateLabel.text = [dateFormatter stringFromDate:newsInfo.date];
+    cell.newsLabel.text = newsInfo.text;
+    
     
     // Configure the cell...
     

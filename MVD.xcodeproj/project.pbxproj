@@ -185,6 +185,9 @@
 		B9D48F8918B81B0500E0C0A7 /* mobiscroll-2.0.3.custom.min.css in Resources */ = {isa = PBXBuildFile; fileRef = B9D48F8418B81B0500E0C0A7 /* mobiscroll-2.0.3.custom.min.css */; };
 		B9D48F8B18B81B4E00E0C0A7 /* 53072c6d137e0RRywJPodbb-pda_item_150xx150.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B9D48F8A18B81B4E00E0C0A7 /* 53072c6d137e0RRywJPodbb-pda_item_150xx150.jpg */; };
 		B9D9CF36192BBEAE002DD718 /* HumanIncomeInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9CF35192BBEAE002DD718 /* HumanIncomeInformation.m */; };
+		B9D9CF39192D37E0002DD718 /* MCPSimulatorImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9CF38192D37E0002DD718 /* MCPSimulatorImpl.m */; };
+		B9D9CF3C192E4511002DD718 /* InfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9CF3B192E4511002DD718 /* InfiniteScrollView.m */; };
+		B9D9CF3F192F5268002DD718 /* NewsInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D9CF3E192F5268002DD718 /* NewsInformation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,6 +450,12 @@
 		B9D48F8A18B81B4E00E0C0A7 /* 53072c6d137e0RRywJPodbb-pda_item_150xx150.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "53072c6d137e0RRywJPodbb-pda_item_150xx150.jpg"; sourceTree = "<group>"; };
 		B9D9CF34192BBEAE002DD718 /* HumanIncomeInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanIncomeInformation.h; sourceTree = "<group>"; };
 		B9D9CF35192BBEAE002DD718 /* HumanIncomeInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanIncomeInformation.m; sourceTree = "<group>"; };
+		B9D9CF37192D37E0002DD718 /* MCPSimulatorImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCPSimulatorImpl.h; sourceTree = "<group>"; };
+		B9D9CF38192D37E0002DD718 /* MCPSimulatorImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCPSimulatorImpl.m; sourceTree = "<group>"; };
+		B9D9CF3A192E4511002DD718 /* InfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteScrollView.h; sourceTree = "<group>"; };
+		B9D9CF3B192E4511002DD718 /* InfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollView.m; sourceTree = "<group>"; };
+		B9D9CF3D192F5268002DD718 /* NewsInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsInformation.h; sourceTree = "<group>"; };
+		B9D9CF3E192F5268002DD718 /* NewsInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsInformation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -769,6 +778,8 @@
 				B9AAF57918E2028D00CED91B /* Logger.m */,
 				B9AAF56B18E2009400CED91B /* MCPNetworkImpl.h */,
 				B9AAF56C18E2009400CED91B /* MCPNetworkImpl.m */,
+				B9D9CF37192D37E0002DD718 /* MCPSimulatorImpl.h */,
+				B9D9CF38192D37E0002DD718 /* MCPSimulatorImpl.m */,
 				B9AAF56D18E2009400CED91B /* MCPServer.h */,
 				B9AAF56E18E2009400CED91B /* MCPServer.m */,
 				B9AAF56F18E2009400CED91B /* Objects */,
@@ -848,6 +859,8 @@
 				B9D48F7B18B815B400E0C0A7 /* NewsDescriptionViewController.h */,
 				B9D48F7C18B815B400E0C0A7 /* NewsDescriptionViewController.m */,
 				B9D48F7D18B815B400E0C0A7 /* NewsDescriptionViewController.xib */,
+				B9D9CF3D192F5268002DD718 /* NewsInformation.h */,
+				B9D9CF3E192F5268002DD718 /* NewsInformation.m */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -909,6 +922,8 @@
 				B9B5EEF71829545200E8B8F2 /* FirstViewController.m */,
 				B9B5EEF91829545200E8B8F2 /* SecondViewController.h */,
 				B9B5EEFA1829545200E8B8F2 /* SecondViewController.m */,
+				B9D9CF3A192E4511002DD718 /* InfiniteScrollView.h */,
+				B9D9CF3B192E4511002DD718 /* InfiniteScrollView.m */,
 				B9B5EEFC1829545200E8B8F2 /* Images.xcassets */,
 				B9B5EEE81829545200E8B8F2 /* Supporting Files */,
 				B90A9253183D32A400BFE4CD /* View.xib */,
@@ -1178,6 +1193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B90A928718630D5F00BFE4CD /* HumanNameCell.m in Sources */,
+				B9D9CF3C192E4511002DD718 /* InfiniteScrollView.m in Sources */,
 				B9AAF57718E2009400CED91B /* NwObject.m in Sources */,
 				B9A6C24118E35DB7002B8C4D /* SBJsonStreamParserAccumulator.m in Sources */,
 				B9903D1C18A432A6003E8F5F /* MinistryAnalyticsViewController.m in Sources */,
@@ -1193,6 +1209,7 @@
 				B95C075E18ACF5AC00BAD18C /* CommonButtonContainer.m in Sources */,
 				B9B5EEFB1829545200E8B8F2 /* SecondViewController.m in Sources */,
 				B90A928C18630E4600BFE4CD /* RankCell.m in Sources */,
+				B9D9CF3F192F5268002DD718 /* NewsInformation.m in Sources */,
 				B9D48F7E18B815B400E0C0A7 /* NewsDescriptionViewController.m in Sources */,
 				B9D9CF36192BBEAE002DD718 /* HumanIncomeInformation.m in Sources */,
 				B946EB5518D22A5100DD515A /* FriendsViewController.m in Sources */,
@@ -1208,6 +1225,7 @@
 				B9A6C24218E35DB7002B8C4D /* SBJsonStreamParserAdapter.m in Sources */,
 				B9A6C24318E35DB7002B8C4D /* SBJsonStreamParserState.m in Sources */,
 				B9AAF57618E2009400CED91B /* MCPServer.m in Sources */,
+				B9D9CF39192D37E0002DD718 /* MCPSimulatorImpl.m in Sources */,
 				B9219663190920230077F001 /* HumanRankParameters.m in Sources */,
 				B95C076618ACFBB900BAD18C /* CounterComponentView.m in Sources */,
 				B9A6C23C18E35DB7002B8C4D /* NSObject+SBJson.m in Sources */,

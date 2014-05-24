@@ -36,6 +36,54 @@
     self.navigationController.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
     
     _humans = [[NSMutableArray alloc] init];
+    
+    {
+        HumanInformation *humanInfo = [HumanInformation new];
+        humanInfo.firstName = @"Владимир";
+        humanInfo.lastName = @"Путов";
+        humanInfo.givenName = @"Владимирович";
+        [_humans addObject:humanInfo];
+    }
+    
+    {
+        HumanInformation *humanInfo = [HumanInformation new];
+        humanInfo.firstName = @"Владимир";
+        humanInfo.lastName = @"Путов";
+        humanInfo.givenName = @"Владимирович";
+        [_humans addObject:humanInfo];
+    }
+    
+    {
+        HumanInformation *humanInfo = [HumanInformation new];
+        humanInfo.firstName = @"Владимир";
+        humanInfo.lastName = @"Путов";
+        humanInfo.givenName = @"Владимирович";
+        [_humans addObject:humanInfo];
+    }
+    
+    {
+        HumanInformation *humanInfo = [HumanInformation new];
+        humanInfo.firstName = @"Владимир";
+        humanInfo.lastName = @"Путов";
+        humanInfo.givenName = @"Владимирович";
+        [_humans addObject:humanInfo];
+    }
+    
+    {
+        HumanInformation *humanInfo = [HumanInformation new];
+        humanInfo.firstName = @"Владимир";
+        humanInfo.lastName = @"Путов";
+        humanInfo.givenName = @"Владимирович";
+        [_humans addObject:humanInfo];
+    }
+    
+    {
+        HumanInformation *humanInfo = [HumanInformation new];
+        humanInfo.firstName = @"Владимир";
+        humanInfo.lastName = @"Путов";
+        humanInfo.givenName = @"Владимирович";
+        [_humans addObject:humanInfo];
+    }
 
     
 

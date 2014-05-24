@@ -252,6 +252,7 @@ static const char* GroupName = "iЧиновники";
     if (indexPath.row == 3)
     {
         NewsViewController *news = [[NewsViewController alloc] init];
+        news.human = _humanInfo;
         [self.navigationController pushViewController:news animated:YES];
     }
         

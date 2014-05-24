@@ -32,8 +32,10 @@
     BOOL _isEmpty;
     BOOL _emptyString;
     BOOL _controllerIsPushed;
+    BOOL _scrollViewHaveDragged;
     NSInteger _numberOfFoundSections;
     NSInteger _currentPage;
+    NSInteger _currentTapPage;
     CGFloat _currentOffset;
     
     NSUInteger __requestCount;
@@ -334,7 +336,7 @@
     [_scrollview addSubview:firstCopy];
     firstCopy.contentMode = UIViewContentModeScaleAspectFit;
     
-    UIImageView* lastCopy = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*9, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
+    UIImageView* lastCopy = [[UIImageView alloc] initWithFrame:CGRectMake(_scrollview.frame.size.width*6, 0, _scrollview.frame.size.width, _scrollview.frame.size.height)];
     lastCopy.image = [UIImage imageNamed:@"125.png"];
     lastCopy.alpha = 1;
     [_scrollview addSubview:lastCopy];
@@ -355,7 +357,8 @@
     [self.searchDisplayController.searchBar setBackgroundImage:[self imageWithColor:[UIColor colorWithRed:51.0/255.0 green:93.0/255.0 blue:107.0/255.0 alpha:1.0]]];
     [self.searchDisplayController.searchBar setScopeBarBackgroundImage:[self imageWithColor:[UIColor colorWithRed:51.0/255.0 green:93.0/255.0 blue:107.0/255.0 alpha:1.0]]];
     
-    _currentPage = 0;
+    _currentPage = 1;
+    _currentTapPage = 1;
     
     [_mapImage addSubview:_pointView];
     CGRect frame = _pointView.frame;
@@ -480,39 +483,50 @@
 
 - (IBAction)tapGestureHandler:(id) sender
 {
-    //This is the index of the "page" that we will be landing at
+    CGFloat pageWidth = _scrollview.frame.size.width;
+    float fractionalPage = _scrollview.contentOffset.x / pageWidth;
+    NSInteger page = lround(fractionalPage);
     
-    if (_currentOffset == 0)
+    if (_scrollViewHaveDragged)
     {
-        [_scrollview scrollRectToVisible:CGRectMake(8*_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
-        _currentPage = _ministries.count - 1;
+        _currentTapPage = page;
+        _scrollViewHaveDragged = NO;
     }
     
-    if (sender == _rightTap && _currentPage != _ministries.count - 1)
-        _currentPage++;
-    else if (sender == _leftTap && _currentPage != 0)
-        _currentPage--;
-    
-    //if (sender == _leftTap && _currentPage == 0)
-   // {
-   //     [self checkImagesLoop];
-   //     _currentPage = _ministries.count-1;
-    //}
-    
-    MinistryInformation *info = _ministries[_currentPage];
-    _ministryLabel.text = info.shortName;
-    
-    
-    //This is the actual x position in the scroll view
-    
-    _currentOffset = _scrollview.contentOffset.x;
     if (sender == _leftTap)
-        _currentOffset-=_scrollview.frame.size.width;
+    {
+        //prevPage --;
+        _currentTapPage --;
+        if (_currentTapPage < 0 )
+        {
+            _currentTapPage = _ministries.count - 3;
+            
+           // CGFloat deltaOffset = abs(320 - _scrollview.contentOffset.x);
+            CGFloat requiredOffset = _scrollview.contentSize.width - 2*_scrollview.frame.size.width;
+            [_scrollview setContentOffset:CGPointMake(requiredOffset, 0)];
+        }
+
+        _currentOffset =(_currentTapPage)*_scrollview.frame.size.width;
+        [_scrollview setContentOffset:CGPointMake(_currentOffset, 0) animated:YES];
+        
+    }
     else
-        _currentOffset+=_scrollview.frame.size.width;
-    
-    [_scrollview setContentOffset:CGPointMake(_currentOffset, 0) animated:YES];
-    
+    {
+        _currentTapPage ++;
+        if (_currentTapPage > _ministries.count - 1)
+        {
+            _currentTapPage = 2;
+            CGFloat requiredOffset = _scrollview.bounds.size.width;
+            [_scrollview setContentOffset:CGPointMake(requiredOffset, 0)];
+        }
+            _currentOffset =(_currentTapPage)*_scrollview.frame.size.width;
+            [_scrollview setContentOffset:CGPointMake(_currentOffset, 0) animated:YES];
+    }
+}
+
+- (void) scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    _scrollViewHaveDragged = YES;
 }
 
 
@@ -520,60 +534,68 @@
 - (void) scrollViewWillEndDragging:(UIScrollView *)scroll withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
     //This is the index of the "page" that we will be landing at
-    NSUInteger nearestIndex = (NSUInteger)(targetContentOffset->x / _scrollview.bounds.size.width + 0.5f);
+   // NSUInteger nearestIndex = (NSUInteger)(targetContentOffset->x  / _scrollview.bounds.size.width);
+    
     
     //Just to make sure we don't scroll past your content
-    nearestIndex = MAX( MIN( nearestIndex, 7 ), 0 );
-    _currentPage = nearestIndex;
+    //nearestIndex = MAX( MIN( nearestIndex, 6 ), 0 );
+    
+    //if (nearestIndex == 0)
+    //    _currentPage = 5;
+    //else if (nearestIndex == 6)
+    //    _currentPage = 1;
     
     //This is the actual x position in the scroll view
-    CGFloat xOffset = nearestIndex * _scrollview.bounds.size.width;
+   // CGFloat xOffset = nearestIndex * _scrollview.bounds.size.width;
     
     //I've found that scroll views will "stick" unless this is done
-    xOffset = xOffset==0?1:xOffset;
+   // xOffset = xOffset==0?1:xOffset;
     
     //Tell the scroll view to land on our page
-    *targetContentOffset = CGPointMake(xOffset, targetContentOffset->y);
-    MinistryInformation *info = _ministries[_currentPage];
-    _ministryLabel.text = info.shortName;
+    //*targetContentOffset = CGPointMake(xOffset, targetContentOffset->y);
+    //MinistryInformation *info = _ministries[_currentPage];
+    //_ministryLabel.text = info.shortName;
 }
 
 - (void) scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if( !decelerate )
-    {
-        NSUInteger currentIndex = (NSUInteger)(scrollView.contentOffset.x / scrollView.bounds.size.width);
-        [scrollView setContentOffset:CGPointMake(scrollView.bounds.size.width * currentIndex, 0) animated:YES];
-    }
+    //if( !decelerate )
+    //{
+    //    NSUInteger currentIndex = (NSUInteger)(scrollView.contentOffset.x / scrollView.bounds.size.width);
+    //    [scrollView setContentOffset:CGPointMake(scrollView.bounds.size.width * currentIndex, 0) animated:YES];
+    //}
 }
 
 
 - (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [self checkImagesLoop];
+   // [self checkImagesLoop];
 }
 
 - (void) scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [self checkImagesLoop];
+    if (self.searchDisplayController.isActive)
+        return;
+    
+    static NSInteger previousPage = 1;
+    CGFloat pageWidth = scrollView.frame.size.width;
+    float fractionalPage = scrollView.contentOffset.x / pageWidth;
+    NSInteger page = lround(fractionalPage);
+    
+    
+    if (previousPage != page) {
+        previousPage = page;
+        
+        _currentPage = page;
+        
+        if (_currentTapPage != _currentPage)
+            _currentPage = _currentTapPage;
+        
+        MinistryInformation *info = _ministries[page];
+        _ministryLabel.text = info.shortName;
+    }
 }
 
-- (void) checkImagesLoop
-{
-    if (_scrollview.contentOffset.x == 0) {
-        // user is scrolling to the left from image 1 to image 10.
-        // reposition offset to show image 10 that is on the right in the scroll view
-        [_scrollview scrollRectToVisible:CGRectMake(5*_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
-        _currentPage = _ministries.count - 1;
-        
-    }
-    else if (_scrollview.contentOffset.x == 6*_scrollview.frame.size.width) {
-        // user is scrolling to the right from image 10 to image 1.
-        // reposition offset to show image 1 that is on the left in the scroll view
-        [_scrollview scrollRectToVisible:CGRectMake(_scrollview.frame.size.width,0,_scrollview.frame.size.width,_scrollview.frame.size.height) animated:NO];
-        _currentPage = 0;
-    }
-}
 
 - (UIStatusBarStyle) preferredStatusBarStyle
 {

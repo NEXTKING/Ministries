@@ -11,6 +11,8 @@
 #import "Logger.h"
 #import "HumanInformation.h"
 #import "BiographyInformation.h"
+#import "HumanIncomeInformation.h"
+#import "NewsInformation.h"
 
 @implementation NwobjPersons
 
@@ -185,11 +187,125 @@
                         humanInfo.biography = biographyObjects;
                     }
                     
+                    //Human property inforation parsing
+                    
                     obj = [currHumanInfo objectForKey:@"property"];
+                    if (obj && [obj isKindOfClass:[NSDictionary class]])
+                    {
+                        NSDictionary *propertyDictionary = obj;
+                        HumanIncomeInformation *humanIncomeInfo = [HumanIncomeInformation new];
+                        
+                        obj = [propertyDictionary objectForKey:@"realEstate"];
+                        if (obj && [obj isKindOfClass:[NSArray class]])
+                        {
+                            NSMutableArray *realEstateArray = [NSMutableArray new];
+                            NSEnumerator *realEstateEnumerator = [realEstateArray objectEnumerator];
+                            NSDictionary *currentDict = nil;
+                            
+                            while (currentDict = [realEstateEnumerator nextObject]) {
+                                PropertyInformation *propertyInfo = [PropertyInformation new];
+                                obj = [currentDict objectForKey:@"area"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.personValue = [obj doubleValue];
+                                obj = [currentDict objectForKey:@"areaWife"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.wifeValue = [obj doubleValue];
+                                obj = [currentDict objectForKey:@"year"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.year = [obj unsignedIntValue];
+                                
+                                [realEstateArray addObject:propertyInfo];
+                            }
+                            
+                            humanIncomeInfo.realEstate = realEstateArray;
+                        }
+                        
+                        obj = [propertyDictionary objectForKey:@"money"];
+                        if (obj && [obj isKindOfClass:[NSArray class]])
+                        {
+                            NSMutableArray *moneyArray = [NSMutableArray new];
+                            NSEnumerator *moneyEnumerator = [moneyArray objectEnumerator];
+                            NSDictionary *currentDict = nil;
+                            
+                            while (currentDict = [moneyEnumerator nextObject]) {
+                                PropertyInformation *propertyInfo = [PropertyInformation new];
+                                obj = [currentDict objectForKey:@"sum"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.personValue = [obj doubleValue];
+                                obj = [currentDict objectForKey:@"sumWife"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.wifeValue = [obj doubleValue];
+                                obj = [currentDict objectForKey:@"year"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.year = [obj unsignedIntValue];
+                                
+                                [moneyArray addObject:propertyInfo];
+                            }
+                            
+                            humanIncomeInfo.money = moneyArray;
+                        }
+                        
+                        obj = [propertyDictionary objectForKey:@"stead"];
+                        if (obj && [obj isKindOfClass:[NSArray class]])
+                        {
+                            NSMutableArray *steadArray = [NSMutableArray new];
+                            NSEnumerator *steadEnumerator = [steadArray objectEnumerator];
+                            NSDictionary *currentDict = nil;
+                            
+                            while (currentDict = [steadEnumerator nextObject]) {
+                                PropertyInformation *propertyInfo = [PropertyInformation new];
+                                obj = [currentDict objectForKey:@"area"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.personValue = [obj doubleValue];
+                                obj = [currentDict objectForKey:@"areaWife"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.wifeValue = [obj doubleValue];
+                                obj = [currentDict objectForKey:@"year"];
+                                if (obj && [obj isKindOfClass:[NSNumber class]])
+                                    propertyInfo.year = [obj unsignedIntValue];
+                                
+                                [steadArray addObject:propertyInfo];
+                            }
+                            
+                            humanIncomeInfo.stead = steadArray;
+                        }
+                        
+                        humanInfo.incomeInformation = humanIncomeInfo;
+                    }
+                    
+                    obj = [currHumanInfo objectForKey:@"news"];
                     if (obj && [obj isKindOfClass:[NSArray class]])
                     {
+                        NSArray *newsArray = obj;
+                        NSEnumerator *newsEnumerator = [newsArray objectEnumerator];
+                        NSDictionary *currentNews = nil;
+                        NSMutableArray* news = [NSMutableArray new];
                         
+                        while (currentNews = [newsEnumerator nextObject]) {
+                            NewsInformation *newsInfo = [NewsInformation new];
+                            
+                            obj = [currentNews objectForKey:@"text"];
+                            if (obj && [obj isKindOfClass:[NSString class]])
+                                newsInfo.text = obj;
+                            
+                            obj = [currentNews objectForKey:@"photo"];
+                            if (obj && [obj isKindOfClass:[NSString class]])
+                                newsInfo.photo = obj;
+                            
+                            obj = [currHumanInfo objectForKey:@"date"];
+                            if ( obj && [obj isKindOfClass:[NSString class]] )
+                            {
+                                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                                [dateFormatter setDateFormat:@"yyyy.MM.dd"];
+                                newsInfo.date = [dateFormatter dateFromString:obj];
+                            }
+                            
+                            [news addObject:newsInfo];
+                        }
+                        
+                        humanInfo.news = news;
                     }
+                    
                     
                     
                     
